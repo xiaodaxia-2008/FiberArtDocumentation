@@ -1,3 +1,10 @@
 site_name: FiberArt 参考文档
 theme:
   name: material
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.blocks.admonition
+  - pymdownx.emoji
+      

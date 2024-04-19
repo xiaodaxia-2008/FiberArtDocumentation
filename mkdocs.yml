@@ -1,4 +1,7 @@
 site_name: FiberArt 参考文档
+copyright: Copyright © 2022 - 2024 Zen Shawn
+site_dir: FiberArtUserGuide
+
 theme:
   name: material
   language: zh
@@ -8,9 +11,8 @@ theme:
     - toc.integrate
     - toc.follow
     - navigation.footer
-
-copyright: Copyright © 2022 - 2024 FiberArt
-
+    - search.suggest
+    - search.highlight
 
 nav:
   - 主页: index.md
@@ -19,8 +21,8 @@ nav:
   - 规划器: ply_planner.md
   - 全局参数: global_parameters.md
   - 节点属性:
-    - node_properties/ply.md
-    - node_properties/tow.md
+      - node_properties/ply.md
+      - node_properties/tow.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
@@ -30,7 +32,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.emoji
   - attr_list
-      
 
 extra:
   generator: false
@@ -40,11 +41,15 @@ extra:
 
 extra_javascript:
   - javascripts/katex.js
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  - javascripts/katex.min.js
+  - javascripts/auto-render.min.js
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
 
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
 
 plugins:
   - offline
+  - search
+      

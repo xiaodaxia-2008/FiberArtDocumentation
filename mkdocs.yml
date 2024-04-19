@@ -18,6 +18,9 @@ nav:
   - 规划参数: plan_parameters.md
   - 规划器: ply_planner.md
   - 全局参数: global_parameters.md
+  - 节点属性:
+    - node_properties/ply.md
+    - node_properties/tow.md
 
 markdown_extensions:
   - pymdownx.arithmatex:

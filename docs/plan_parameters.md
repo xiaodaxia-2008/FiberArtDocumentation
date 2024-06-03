@@ -115,6 +115,16 @@
     - Half：半搭接，允许相邻两组边界预浸带进行搭接重叠，直至重叠距离超过预浸带一半的宽度；
     - Full：完全搭接，允许相邻两组边界预浸带进行搭接重叠，直至重叠距离超过预浸带的宽度；
     - Ignore：不计算相邻两组边界预浸带是否搭接，只使用铺放区域边界进行裁剪；
+- 最短路径延申策略：在计算拐角等处45度方向的轨迹时，边界内的丝束长度往往达不到最短铺放距离，此时需要对此丝束进行延申：
+    - Symmetric: 沿着两端以对称延申，这是默认选项
+    ![symmetric_extend](./images/symmetric_extend_policy.png)
+
+    - Backward：向轨迹方向的反方向延申
+    ![backward_extend](./images/backward_extend_policy.png)
+
+    - Forward: 向轨迹方向延申
+    ![forward_extend](./images/forward_extend_policy.png) 
+
 - 轨迹方向误差：使用固定角度算法规划时，允许路径方向偏离给定方向的范围，从而使有些路径可以直接使用偏移算法，减少空隙与搭接；
 - 相邻组间隙：相邻两组预浸带的间隙（Gap between course and course）；
 

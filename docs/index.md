@@ -22,3 +22,7 @@
 ## 查看版本更新内容
 
 - [v0.9.3](./changelog/v0.9.3.md)
+
+## 第三方库声明
+
+本软件开发过程中，使用了CGAL、boost、cereal等第三方开源软件，完整的列表请查看[这里](./third_parties/LISTS.md)。

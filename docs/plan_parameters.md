@@ -58,8 +58,6 @@
 
 该策略下前一组路径的终点和下一组路径的起点使用直线连接，但是会将该直线投影到铺放曲面上，然后再沿着每点的法向进行偏移，一定程度上避免与铺放曲面的碰撞，同时也可以产生较短距离的连接路径，提高运行效率。
 
-![StraightLink](./images/LinkPolicyStraightProject.png)
-
 
 #### 回退铺放路径 ReverseCurrentHeadPath
 

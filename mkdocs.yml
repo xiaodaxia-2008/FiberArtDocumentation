@@ -54,6 +54,6 @@ plugins:
   - offline
   - search
   - mkdocs-video:
-      is_video: True
-      video_muted: True
+      is_video: False
+      video_muted: False
       

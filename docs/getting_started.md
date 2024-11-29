@@ -1,5 +1,14 @@
 # 快速上手教程
 
+## 平面规划
+
+### 平面零件路径规划
+
+![type:video](//player.bilibili.com/player.html?isOutside=true&aid=113541638265688&bvid=BV1wKBYYhEPA&cid=26997358993&p=1)
+
+### 平面零件铺放仿真
+![type:video](//player.bilibili.com/player.html?isOutside=true&aid=113541638396799&bvid=BV1kKBYYhEwb&cid=26997424330&p=1)
+
 ## 软件界面
 初次打开软件，显示的界面如下图所示：
 

@@ -1,7 +1,7 @@
 # 仿真
 在主菜单栏的功能的下拉菜单中，选中“铺放仿真及后置”，调出仿真后置面板。
 
-![type:video](./images/SimulationSpar.mp4)
+<!-- ![type:video](./images/SimulationSpar.mp4) -->
 
 ## 设置
 - 导轨：设置运动系统的机器人线性导轨

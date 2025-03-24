@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
 """
 Copyright © 2024 Zen Shawn. All rights reserved.
 
@@ -9,51 +7,33 @@ Copyright © 2024 Zen Shawn. All rights reserved.
 @date 17:16:46, April 18, 2024
 """
 
-try:
-    from PySide6 import QtWidgets, QtCore
-    import shiboken6 as shiboken
-except ImportError:
-    from PySide2 import QtWidgets
-    import shiboken2 as shiboken, QtCore
-
 import PyFiberArt
+from FiberArtDefaultPlugins.utils import (
+    QtWidgets,
+    add_plugin_widget,
+    decorator_factory_selected_node,
+)
 
 
 def create_demo():
-    translate = QtCore.QCoreApplication.translate
-    """Create a demo plugin."""
-    win: QtWidgets.QMainWindow = shiboken.wrapInstance(
-        PyFiberArt.GetMainWindow().Ptr(), QtWidgets.QMainWindow
-    )
-
-    # create a simple widget
+    # create the widget
     w = QtWidgets.QWidget()
     layout = QtWidgets.QVBoxLayout()
     w.setLayout(layout)
 
-    label = QtWidgets.QLabel(translate("DemoPlugin", "This is a demo plugin."))
+    label = QtWidgets.QLabel("这是一个示例插件，试试选中一个节点，然后点击按钮")
     layout.addWidget(label)
 
-    btn = QtWidgets.QPushButton(translate("DemoPlugin", "Click Me!"))
+    btn = QtWidgets.QPushButton("显示选中节点")
     layout.addWidget(btn)
 
-    def btn_cb():
-        label.setText(translate("DemoPlugin", f"You clicked me!"))
+    @decorator_factory_selected_node(PyFiberArt.Node)
+    def btn_cb(node: PyFiberArt.Node):
+        label.setText(f"你选择了{node.GetName()}")
 
     btn.clicked.connect(btn_cb)
 
-
-    # add it to FiberArt mainwindow
-    dw = QtWidgets.QDockWidget(translate("DemoPlugin", "Demo Plugin"), win)
-    dw.setWidget(w)
-    win.addDockWidget(QtCore.Qt.RightDockWidgetArea, dw)
-    dw.setVisible(False)
-    dw.setObjectName("_Demo_")
-
-    # add toggle view action
-    menu: QtWidgets.QMenu = win.findChild(QtWidgets.QMenu, "menuPlugins")
-    if menu:
-        menu.addAction(dw.toggleViewAction())
+    add_plugin_widget(w, win_title="自定义插件", visible=True)
 
 
 create_demo()

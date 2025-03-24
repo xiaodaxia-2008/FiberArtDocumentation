@@ -1,38 +1,98 @@
-site_name: FiberArt 参考文档
-copyright: Copyright © 2022 - 2024 Zen Shawn
-site_dir: FiberArtUserGuide
+site_name: FiberArt 自动铺丝软件
+site_url: https://fiberart.myshawn.com
+site_author: Zen Shawn
+site_description: >
+  FiberArt 是国产自主开发的自动铺丝轨迹规划及仿真软件，可以输出G代码等格式的数控程序，可用于各种复杂曲面的铺丝规划和仿真，
+  同时可以适配各种设备。
+
+# repo_name: xiaodaxia-2008/FiberArtDocumentation
+# repo_url: https://github.com/xiaodaxia-2008/FiberArtDocumentation
+
+
+copyright: Copyright © 2022 - 2025 Zen Shawn
 
 theme:
   name: material
   language: zh
-  logo: images/logo.svg
+  logo: assets/logo.svg
   features:
-    - navigation.path
-    - toc.integrate
-    - toc.follow
+    - navigation.sections
+    - navigation.indexes
+    - navigation.tabs
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    - navigation.tracking
+    - navigation.top
     - navigation.footer
-    - search.suggest
-    - search.highlight
+    - toc.follow
+    - header.autohide
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
 nav:
   - 主页: index.md
-  - 快速上手: getting_started.md
-  - 规划参数: plan_parameters.md
-  - 规划器: ply_planner.md
-  - 仿真及后置: simulation.md
-  - 全局参数: global_parameters.md
-  - 节点属性:
-      - node_properties/ply.md
-      - node_properties/tow.md
+  - 用户手册:
+    - user_guides/index.md
+    - 快速上手: user_guides/getting_started.md
+    - 规划参数: user_guides/plan_parameters.md
+    - 规划器: user_guides/ply_planner.md
+    - 仿真及后置: user_guides/simulation.md
+    - 全局参数: user_guides/global_parameters.md
+    - 进阶使用:
+      - 节点属性:
+          - user_guides/node_properties/ply.md
+          - user_guides/node_properties/tow.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+  - attr_list
+  - tables
+  - md_in_html
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  - pymdownx.emoji
-  - attr_list
+  - footnotes
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.blocks.caption
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
 
 extra:
   generator: false
@@ -56,4 +116,3 @@ plugins:
   - mkdocs-video:
       is_video: False
       video_muted: False
-      

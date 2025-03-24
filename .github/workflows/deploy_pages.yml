@@ -3,7 +3,7 @@ name: Deploy MkDocs to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change this to your default branch if it's not 'main'
+      - master  # Change this to your default branch if it's not 'main'
 
 jobs:
   deploy:

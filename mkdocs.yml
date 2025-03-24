@@ -62,10 +62,14 @@ nav:
     - 规划器: user_guides/ply_planner.md
     - 仿真及后置: user_guides/simulation.md
     - 全局参数: user_guides/global_parameters.md
+    - 节点属性:
+      - user_guides/node_properties/ply.md
+      - user_guides/node_properties/tow.md
     - 进阶使用:
-      - 节点属性:
-          - user_guides/node_properties/ply.md
-          - user_guides/node_properties/tow.md
+      - advanced/index.md
+      - 运动学求解设置: advanced/kinematics.md
+      - 后处理定制: advanced/post_process.md
+      - 自定义插件: advanced/plugin.md
   - 联系我们: contact.md
 
 markdown_extensions:
@@ -74,20 +78,22 @@ markdown_extensions:
   - attr_list
   - tables
   - md_in_html
+  - footnotes
   - admonition
   - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - footnotes
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
-  - pymdownx.blocks.caption
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -99,9 +105,6 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.tabbed:
-      alternate_style: true
-      combine_header_slug: true
 
 extra:
   generator: false
@@ -136,7 +139,3 @@ plugins:
       background: white
       shadow: true
       manual: false
-  - mkdocs-video:
-      is_video: True
-      video_autoplay: False
-      video_muted: False

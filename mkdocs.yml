@@ -13,9 +13,12 @@ copyright: Copyright © 2022 - 2025 Zen Shawn
 
 theme:
   name: material
+  custom_dir: overrides
   language: zh
   logo: assets/logo.svg
+  favicon: assets/logo.png
   features:
+    - announce.dismiss
     - navigation.sections
     - navigation.indexes
     - navigation.tabs
@@ -51,6 +54,7 @@ theme:
 
 nav:
   - 主页: index.md
+  - 试用申请: trial/index.md
   - 用户手册:
     - user_guides/index.md
     - 快速上手: user_guides/getting_started.md
@@ -62,6 +66,7 @@ nav:
       - 节点属性:
           - user_guides/node_properties/ply.md
           - user_guides/node_properties/tow.md
+  - 联系我们: contact.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
@@ -71,7 +76,11 @@ markdown_extensions:
   - md_in_html
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - footnotes
   - pymdownx.critic
   - pymdownx.caret
@@ -113,6 +122,21 @@ extra_css:
 plugins:
   - offline
   - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: auto
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: true
+      caption_position: bottom
+      background: white
+      shadow: true
+      manual: false
   - mkdocs-video:
-      is_video: False
+      is_video: True
+      video_autoplay: False
       video_muted: False

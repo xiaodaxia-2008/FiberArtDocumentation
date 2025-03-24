@@ -1,14 +1,16 @@
 # 快速上手教程
 
 ## 软件界面基础操作
+
 初次打开软件，显示的界面如下图所示：
 
 ![FiberArt Initial Window](./images/fiberart_window.png)
 
 ### 菜单栏
+
 菜单栏是软件所有功能的入口，单机每个菜单可以下拉打开子菜单，比如软件的规划、仿真等功能通过点击*功能*选项，勾选相关的复选框，可以显示或者隐藏对应功能的界面。
 
-![](./images/fiberart_function.png)
+![菜单栏](./images/fiberart_function.png)
 
 ### 工具栏
 
@@ -28,6 +30,7 @@ FiberArt软件会把功能类似的交互放置在一个子窗口中，所有的
 ## 规划及仿真模块
 
 ### 操作逻辑
+
 FiberArt软件的轨迹规划及仿真的操作逻辑如下图所示：
 
 ```mermaid
@@ -48,6 +51,7 @@ flowchart LR
 ```
 
 ### 机翼零件轨迹规划及仿真案例
+
 下面通过一个实际的曲面路径规划及仿真后处理示例来演示软件的相关功能。
 
 <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114215931157250&bvid=BV1JzokYiEyo&cid=29041493012&p=1&autoplay=0&muted=0" 
@@ -55,7 +59,7 @@ scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="tru
 </iframe>
 
 
-!!!note "规划参数设置"
+???+ note "规划参数设置"
     在上述过程中，我们仅涉及到必要的设置步骤，其他都采取了默认的参数设置，实际规划中，我们可能需要修改很多参数，比如铺放根数、剪切距离等等，
     这些参数可以在 **铺层** 的属性编辑中进行设置，详细的参考[规划参数设置](./plan_parameters.md)。
 

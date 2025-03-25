@@ -1,0 +1,1546 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="FiberArt 是国产自主开发的自动铺丝轨迹规划及仿真软件，可以输出G代码等格式的数控程序，可用于各种复杂曲面的铺丝规划和仿真， 同时可以适配各种设备。
+">
+      
+      
+        <meta name="author" content="Zen Shawn">
+      
+      
+        <link rel="canonical" href="https://fiberart.myshawn.com/user_guides/plan_parameters.html">
+      
+      
+        <link rel="prev" href="getting_started.html">
+      
+      
+        <link rel="next" href="ply_planner.html">
+      
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
+    
+    
+      
+        <title>规划参数 - FiberArt 自动铺丝软件</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="不再显示此消息">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+FiberArt 软件网站上线，您可限时<a href="/trial" style="color: red;">申请 30 天免费试用！</a>
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../index.html" title="FiberArt 自动铺丝软件" class="md-header__button md-logo" aria-label="FiberArt 自动铺丝软件" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FiberArt 自动铺丝软件
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              规划参数
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  主页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../trial/index.html" class="md-tabs__link">
+        
+  
+    
+  
+  试用申请
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+    
+  
+  用户手册
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../contact.html" class="md-tabs__link">
+        
+  
+    
+  
+  联系我们
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="FiberArt 自动铺丝软件" class="md-nav__button md-logo" aria-label="FiberArt 自动铺丝软件" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    FiberArt 自动铺丝软件
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trial/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    试用申请
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    用户手册
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            用户手册
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting_started.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    快速上手
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    规划参数
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="plan_parameters.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    规划参数
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      铺放路径定义
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="铺放路径定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      关键点定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      区间定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      速度定义
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-path-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      路径连接策略
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="路径连接策略">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      直线
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      回退铺放路径
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      双向铺放
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      参数说明
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="参数说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      材料
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      铺放头
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      规划器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      后处理参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      高级参数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-modify-ply-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何修改铺层参数
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ply_planner.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    规划器
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="simulation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    仿真及后置
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="global_parameters.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    全局参数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    节点属性
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            节点属性
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="node_properties/ply.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    铺层(Ply)属性
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="node_properties/tow.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    丝束(Tow)属性
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../advanced/index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    进阶使用
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            进阶使用
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/kinematics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    运动学求解设置
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/post_process.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    后处理定制
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/plugin.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    自定义插件
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    联系我们
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      铺放路径定义
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="铺放路径定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      关键点定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      区间定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      速度定义
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-path-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      路径连接策略
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="路径连接策略">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      直线
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      回退铺放路径
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      双向铺放
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      参数说明
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="参数说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      材料
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      铺放头
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      规划器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      后处理参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      高级参数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-modify-ply-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何修改铺层参数
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">铺层规划参数</h1>
+<h2 id="_2">铺放路径定义</h2>
+<p>为了更加直观地说明铺层参数，以下面平板铺放的一条路径为例，来说明一些关键参数：</p>
+<p><a class="glightbox" href="images/FiberArtParameterSpecification.png" data-type="image" data-width="auto" data-height="auto" data-title="layuppath" data-desc-position="bottom"><img alt="layuppath" src="images/FiberArtParameterSpecification.png" /></a></p>
+<p>图中1-12定义了一条典型的铺放头路径的关键点，两个关键点之间的区间是关键区间，对于不同区间的距离、速度都有参数进行设置。</p>
+<h3 id="_3">关键点定义</h3>
+<ul>
+<li>1: 接近芯模表面的点（Approach），也是路径起点； </li>
+<li>2: 接触芯模表面的点（Contact）；</li>
+<li>3: 减速点（Deceleration）；</li>
+<li>4: 重送点（Restart），R字母后面的数字表示要重送的预浸带；</li>
+<li>5: 进入铺放区域边界(PlyStartBoundary)；</li>
+<li>6: 加速点（Acceleration），压辊压紧预浸带后开始高速常规铺放；</li>
+<li>7: 减速点（Deceleration），临近剪切位置，开始低俗铺放；</li>
+<li>8: 剪切点（Cutting），C字母后面的数字表示要剪切的预浸带；</li>
+<li>9: 加速点（Acceleration），剪切完成后，开始高速常规铺放；</li>
+<li>10: 离开铺放区域边界(PlyEndBoundary)；</li>
+<li>11: 准备离开芯模表面的回退点（Detach）；</li>
+<li>12: 离芯模表面上方一定距离的回退点（Depature），也是该条路径的终点；</li>
+</ul>
+<p>上述关键点的位置由下面的<code>区间定义</code>给定的参数计算得到。</p>
+<h3 id="range-definition">区间定义</h3>
+<ul>
+<li>1-2，11-12：端点抬高距离；</li>
+<li>2-4：提前距离；</li>
+<li>4-5：重送距离；</li>
+<li>8-10：剪切距离；</li>
+<li>3-4，5-6，7-8，8-9：重送/剪切速度控制范围；</li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>重送/剪切速度控制范围应该小于2-4提前距离和8-10剪切距离</p>
+</div>
+<ul>
+<li>10-11：滞后距离；</li>
+</ul>
+<h3 id="_4">速度定义</h3>
+<ul>
+<li>重送速度：3-6、7-9区间的速度；</li>
+<li>铺放速度：6-7，9-11区间的速度；</li>
+<li>空转速度：其余区间的速度（1-3，11-12等）；</li>
+</ul>
+<h2 id="link-path-policy">路径连接策略</h2>
+<p>每组预浸带的中心线是其铺放路径（也称为Head Path，铺放头路径），上一组铺放路径的终点和下一组铺放路径的起点之间的过渡路径如何计算，这便是路径连接策略要解决的问题，软件中内置了三种策略。</p>
+<h4 id="_5">直线</h4>
+<p>该策略下前一组路径的终点和下一组路径的起点使用直线连接。</p>
+<p><a class="glightbox" href="images/LinkPolicyStraight.png" data-type="image" data-width="auto" data-height="auto" data-title="StraightLink" data-desc-position="bottom"><img alt="StraightLink" src="images/LinkPolicyStraight.png" /></a></p>
+<p>该策略计算简单，可发挥最大的机器人运动性能，但仅适用于平坦曲面，不然连接路径可能会与模型碰撞。</p>
+<h4 id="_6">回退铺放路径</h4>
+<p>该策略下，铺放头运动到路径终点以后，将刚刚的铺放路径反向，同时朝着曲面的法向偏移一定的距离（该距离由<code>后处理参数/空行程抬高距离</code>定义）生成一条平行于原始铺放路径的过度连接路径；在该路径上按照给定的间隔采样（由<code>后处理参数/空行程路径点距离</code>定义），达到临近下一组铺放路径起点的位置，然后再以直线插补运动过去。</p>
+<p>以下例子假设 <code>A-B</code>、<code>C-D</code>分别是相邻的两组铺放头路径。</p>
+<p><a class="glightbox" href="images/fiberart_cstringer_straight_link.png" data-type="image" data-width="auto" data-height="auto" data-title="CStringerStraightLink" data-desc-position="bottom"><img alt="CStringerStraightLink" src="images/fiberart_cstringer_straight_link.png" /></a>
+上图中，使用<code>Straight</code>策略，路径是<code>A-B-C-D</code>，会导致过度路径从梁的下侧直线穿过（<strong>B-C</strong>段），不可避免地导致碰撞。</p>
+<p><a class="glightbox" href="images/fiberart_cstringer_reverse_current_link.png" data-type="image" data-width="auto" data-height="auto" data-title="CStringerReverseCurrentLink" data-desc-position="bottom"><img alt="CStringerReverseCurrentLink" src="images/fiberart_cstringer_reverse_current_link.png" /></a>
+上图中，使用<code>ReverseCurrentHeadPath</code>，路径是<code>A-B-A'-C-D</code>，过度路径会绕着梁的铺放路径先回退回来(<strong>B-A'</strong>段)，再运动到下一组路径起点（<strong>A'-C</strong>段）。</p>
+<p>该策略适用于回转类零件的90度、±45度铺放路径。</p>
+<h4 id="_7">双向铺放</h4>
+<p>上述的<code>Straight</code>和<code>ReverseCurrentHadPath</code>都受限于铺放头只能<em>单向铺放</em>的约束。如果铺放头可以<strong>双向铺放</strong>，应该使用<code>ReverseNextHeadPath</code>的连接策略，该策略会将下一组铺放路径反向，一般情况下，这会使得上一组路径的终点和下一组路径的起点空间位置足够接近，可以直线运动过去。</p>
+<p><a class="glightbox" href="images/fiberart_cstringer_reverse_next_link.png" data-type="image" data-width="auto" data-height="auto" data-title="CStringReverseNextLink" data-desc-position="bottom"><img alt="CStringReverseNextLink" src="images/fiberart_cstringer_reverse_next_link.png" /></a></p>
+<p>双向铺放时，路径是<code>A-B-D-C</code>，过度路径是<code>B-D</code>，下一组路径原本方向应该是<code>C-D</code>，反向为<code>D-C</code>，从而实现双向铺放。</p>
+<p>使用双向铺放可以提高效率，但是铺放设备应具有相应的功能，且对运动精度要求比较高。</p>
+<h2 id="_8">参数说明</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>FiberArt中长度单位统一为<strong>米（m）</strong>。</p>
+</div>
+<h3 id="_9">材料</h3>
+<ul>
+<li>预浸带宽度：预浸带（Tow）的宽度，典型值是0.0064m (1/4 inch)；</li>
+<li>预浸带厚度：预浸带的厚度；</li>
+<li>预浸带最小转向半径：预浸带在平面弯曲铺放的最小转向半径；</li>
+</ul>
+<h3 id="_10">铺放头</h3>
+<ul>
+<li>最大铺放根数：铺放头一组（Course）最大可以铺放多少根预浸带，典型值如4、8、16、32等；</li>
+<li>重送距离：参见<a href="#range-definition">区间定义</a></li>
+<li>剪切距离：参见<a href="#range-definition">区间定义</a></li>
+<li>最短铺放距离：铺放头可以铺放的最短预浸带长度，通常与重送距离、剪切距离接近；</li>
+<li>压辊半径：铺放头压辊的半径；</li>
+<li>压辊最大变形量：铺放头压辊的最大变形量；</li>
+</ul>
+<h3 id="_11">规划器</h3>
+<ul>
+<li>规划根数：每一组（Course）规划的预浸带数量；</li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p><strong>规划根数</strong>必须小于等于<strong>铺放头最大铺放根数</strong>。</p>
+</div>
+<ul>
+<li>提前距离：参见<a href="#range-definition">区间定义</a></li>
+<li>滞后距离：参见<a href="#range-definition">区间定义</a></li>
+<li>抬高距离：参见<a href="#range-definition">区间定义</a></li>
+<li>重送/剪切速度控制范围：参见<a href="#range-definition">区间定义</a></li>
+<li>搭接：相邻两组预浸带的搭接方式；<ul>
+<li>No：不允许搭接，相邻两组预浸带不会有搭接重叠，但间隙可能较大；</li>
+<li>Half：半搭接，允许相邻两组边界预浸带进行搭接重叠，直至重叠距离超过预浸带一半的宽度；</li>
+<li>Full：完全搭接，允许相邻两组边界预浸带进行搭接重叠，直至重叠距离超过预浸带的宽度；</li>
+<li>Ignore：不计算相邻两组边界预浸带是否搭接，只使用铺放区域边界进行裁剪；</li>
+</ul>
+</li>
+<li>
+<p>最短路径延申策略：在计算拐角等处45度方向的轨迹时，边界内的丝束长度往往达不到最短铺放距离，此时需要对此丝束进行延申：</p>
+<ul>
+<li>
+<p>对称: 沿着两端以对称延申，这是默认选项
+<a class="glightbox" href="images/symmetric_extend_policy.png" data-type="image" data-width="auto" data-height="auto" data-title="对称延申" data-desc-position="bottom"><img alt="对称延申" src="images/symmetric_extend_policy.png" /></a></p>
+</li>
+<li>
+<p>向后：向轨迹方向的反方向延申
+<a class="glightbox" href="images/backward_extend_policy.png" data-type="image" data-width="auto" data-height="auto" data-title="backward_extend" data-desc-position="bottom"><img alt="backward_extend" src="images/backward_extend_policy.png" /></a></p>
+</li>
+<li>
+<p>向前: 向轨迹方向延申
+<a class="glightbox" href="images/forward_extend_policy.png" data-type="image" data-width="auto" data-height="auto" data-title="forward_extend" data-desc-position="bottom"><img alt="forward_extend" src="images/forward_extend_policy.png" /></a> </p>
+</li>
+</ul>
+</li>
+<li>
+<p>轨迹方向误差：使用固定角度算法规划时，允许路径方向偏离给定方向的范围，从而使有些路径可以直接使用偏移算法，减少空隙与搭接；</p>
+</li>
+<li>相邻组间隙：相邻两组预浸带的间隙</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>理论上相邻两组是紧挨在一起的，但是引入一个较小的间隙，有助于实施不同的搭接策略，通常该间隙足够小，如0.1mm，不会导致实际的铺层产生缺陷。</p>
+</div>
+<ul>
+<li>引导线固定角度步长：在引导线上采样点的间距；</li>
+<li>显示每组参考线：规划时，实时显示每一组预浸带的参考中心线；</li>
+<li>显示每根参考线：规划时，实时显示每一根预浸带的边界、中线的参考线；</li>
+</ul>
+<h3 id="_12">后处理参数</h3>
+<ul>
+<li>路径连接策略：参考<a href="#link-path-policy">路径连接策略</a>;</li>
+<li>横向铺层方向：生成连接路径时，是从左向右铺放还是从右向左铺放；</li>
+<li>纵向铺层方向：生成连接路径时，是否对规划的铺放路径方向进行逆转；</li>
+<li>重送速度：重送段铺放头的运动线速度, mm/min;</li>
+<li>铺放速度：正常铺放时铺放头的运动线速度, mm/min;</li>
+<li>空转速度：过度轨迹铺放头的运动线速度, mm/min;</li>
+<li>相邻点距离：铺放路径上采样间隔；</li>
+<li>连接路径抬高距离：连接路径上点相对铺放表面的距离；</li>
+<li>包含原始路径关键点：</li>
+<li>反转法向：反转点的法向</li>
+<li>连接路径平滑次数：对过度路径进行贝塞尔二阶平滑的次数，数值越高，过度路径应该会更加平滑，从而改进机器人运动性能；</li>
+</ul>
+<h3 id="_13">高级参数</h3>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>以下参数，或者不常用，或者不建议普通用户进行修改（除非确切了解该参数的意义）。</p>
+</div>
+<ul>
+<li>位姿精度：计算两个由4x4矩阵表示的位姿是否相同的精度范围；</li>
+<li>姿态精度：计算姿态是否相同的精度范围；</li>
+<li>三维路径相交点精度：空间两条路径交点的计算精度；</li>
+<li>二维路径相交点精度：平面两条路径交点的计算精度；</li>
+<li>
+<p>正交曲线算法：计算位于曲面里的曲线上某点正交于（垂直于）该点切方向的曲线的方法：</p>
+<ul>
+<li>追踪测地线 TracingGeodesic：自然曲线法</li>
+<li>固定角度测地线 FixedAngleGeodesic：固定角度法</li>
+<li>正交平面截断线 OrthogonalPlaneSection：由法平面与曲面的截线计算</li>
+</ul>
+</li>
+<li>
+<p>Mesh上路径相交算法：曲面里的曲线相交计算方法：</p>
+<ul>
+<li>投影 Project：投影计算</li>
+<li>直接 Direct：直接计算</li>
+</ul>
+</li>
+<li>
+<p>曲线偏移采样步长：曲线偏移时，采样点的间隔；</p>
+</li>
+<li>偏移后最大延长量：曲线偏移后，向两端最大的延长长度；</li>
+<li>单次最大偏移距离：沿正交曲线一次最大偏移量，使用较小的值，可以避免偏移后曲线产生的自相交问题；</li>
+<li>使用基曲线计算参考线：使用Course的中心线的基路径计算下一条参考线，设置为false，可以提高计算速度，避免过度计算；设置为true，可以避免当前组中心线比较短导致下一组中心线计算误差较大的问题；</li>
+<li>偏移后去除自相交：偏移曲线后，运行额外的算法来检测曲线是否有自相交；</li>
+<li>偏移后去除折返线：偏移去先后，运行额外的算法来检测曲线是否有折返线；</li>
+</ul>
+<h2 id="how-to-modify-ply-parameters">如何修改铺层参数</h2>
+<p>每一个单独的铺层都保存一份属于自己的独立的参数集，要修改某个铺层的参数：</p>
+<ul>
+<li>在场景树中右击该铺层，在弹出的菜单中，选择“其他/修改参数”</li>
+<li>双击该铺层打开它的属性面板，在<strong>基础</strong>面板下点击<strong>修改铺层参数</strong>，在弹出的界面中进行编辑修改;</li>
+<li>如果正在规划，也可以点击规划器中<strong>修改铺层参数</strong>的按钮；</li>
+</ul>
+<p>铺层参数编辑界面的标题栏会显示当前正在编辑的参数属于哪一个铺层，如果没有铺层，则显示编辑的是<strong>默认铺层参数</strong>。</p>
+<p>创建新的铺层时，会从当前的铺层参数编辑器中复制一份参数集。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="getting_started.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 快速上手">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                快速上手
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="ply_planner.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 规划器">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                规划器
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2022 - 2025 Zen Shawn
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:fiberart@duck.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.8l167.6-182.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "navigation.sections", "navigation.indexes", "navigation.tabs", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "header.autohide", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../javascripts/katex.js"></script>
+      
+        <script src="../javascripts/katex.min.js"></script>
+      
+        <script src="../javascripts/auto-render.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

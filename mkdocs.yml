@@ -3,7 +3,7 @@ site_url: https://fiberart.myshawn.com
 site_author: Zen Shawn
 site_description: >
   FiberArt 是国产自主开发的自动铺丝轨迹规划及仿真软件，可以输出G代码等格式的数控程序，可用于各种复杂曲面的铺丝规划和仿真，
-  同时可以适配各种设备。
+  同时可以适配各种设备。FiberArt软件可以提供试用。
 
 # repo_name: xiaodaxia-2008/FiberArtDocumentation
 # repo_url: https://github.com/xiaodaxia-2008/FiberArtDocumentation
@@ -125,6 +125,7 @@ extra_css:
 plugins:
   - offline
   - search
+  - meta
   - glightbox:
       touchNavigation: true
       loop: false

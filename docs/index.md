@@ -1,9 +1,9 @@
 ---
-title: FiberArt 自动铺丝软件介绍
+title: FiberArt 自动铺丝机软件介绍
 description: >
-    FiberArt是国产自主开发的自动铺丝轨迹规划及仿真软件 (Automated Fiber Placement/AFP trajectory planning and simulation software),
-    可以输出G代码等格式的数控程序，可用于各种复杂曲面的铺丝规划和仿真,
-    同时可以适配各种设备。FiberArt软件提供30天试用。
+    自动铺丝机/自动纤维缠绕机软件FiberArt是国产自主开发的，可以进行铺丝轨迹规划及仿真 (Automated Fiber Placement/AFP trajectory planning and simulation software),
+    可以导出西门子G代码、库卡机器人KRL等格式的数控程序，可用于各种复杂曲面的铺丝规划和仿真,
+    同时可以适配各种龙门式铺丝机、机器人式铺丝机，软件提供30天试用。
 
 hide:
     - navigation
@@ -11,9 +11,9 @@ hide:
     - footer
 ---
 
-# FiberArt 自动铺丝软件介绍
+# FiberArt 自动铺丝软件
 ## 基本介绍
-**FiberArt** 是国产自主开发的用于自动铺丝设备（^^AFP^^， Automated Fiber Placement）轨迹规划及仿真软件。
+**FiberArt** 是国产自主开发的用于自动铺丝机（^^AFP^^， Automated Fiber Placement）的轨迹规划及仿真软件，操作简单，功能完整，性能卓越！
 
 软件目前可试用，请前往 **[试用申请](./trial/index.md)** 页面进行申请。
 

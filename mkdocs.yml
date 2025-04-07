@@ -74,6 +74,7 @@ nav:
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+  - abbr
   - attr_list
   - tables
   - md_in_html
@@ -105,12 +106,16 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.tasklist:
       custom_checkbox: true
+  - toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
 
 extra:
   generator: false
   social:
     - icon: fontawesome/solid/paper-plane
       link: mailto:fiberart@duck.com
+    - icon: simple/qq
+      link: https://qm.qq.com/q/4qmMJzRYt2
 
 extra_javascript:
   - javascripts/katex.js

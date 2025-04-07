@@ -13,9 +13,9 @@ hide:
 
 # FiberArt 自动铺丝软件介绍
 ## 基本介绍
-**FiberArt** 是国产自主开发的用于自动铺丝设备（^^AFP^^，Automated Fiber Placement）轨迹规划及仿真软件。
+**FiberArt** 是国产自主开发的用于自动铺丝设备（^^AFP^^， Automated Fiber Placement）轨迹规划及仿真软件。
 
-软件目前可提供 30 天试用，请前往 [试用申请](./trial/index.md) 页面进行申请。
+软件目前可试用，请前往 **[试用申请](./trial/index.md)** 页面进行申请。
 
 ![plan-spar-deom](./assets/fiberart_plan_spar_demo.gif){ data-title="FiberArt 软件C型梁类零件的铺丝轨迹规划" width=75% }
 ///caption | <

@@ -10,6 +10,7 @@ hide:
 
 您可通过以下方式联系我们：
 
+- 电话：17629042388
 - 邮件: <fiberart@duck.com>
 - QQ: [674936832](mqqwpa://im/chat?chat_type=wpa&uin=674936831)  
     ![qq](./assets/qq.png){width="250px"}

@@ -16,7 +16,7 @@ hide:
 
 ---
 
-<iframe src="https://zen-license-v2.myshawn.com/client/requestLicense/FiberArt" 
+<iframe src="https://zen-license-v2.myshawn.com/client/requestLicense/FiberArt?showAuthToken=false" 
 width="100%" 
 style="border: none; margin-top: 10px"
 class="iframe-license"

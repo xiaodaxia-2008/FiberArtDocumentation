@@ -12,10 +12,13 @@ hide:
 
 - 电话：17629042388
 - 邮件: <fiberart@duck.com>
-- QQ: [674936832](mqqwpa://im/chat?chat_type=wpa&uin=674936831)  
-    ![qq](./assets/qq.png){width="250px"}
+- QQ [674936832](mqqwpa://im/chat?chat_type=wpa&uin=674936831)  
+
+    ![](./assets/qq.png){width="250px"}
+
 - FiberArt 软件交流 QQ 群: [959826007](https://qm.qq.com/q/4qmMJzRYt2)  
-    ![FiberArt 软件交流](./assets/qq_group.jpg){width="250px"}
+
+    ![](./assets/qq_group.jpg){width="250px"}
 
 您也可以直接在下方留言。
 

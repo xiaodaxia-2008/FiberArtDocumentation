@@ -93,12 +93,18 @@ name = "fiberartdocumentation"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "markdown-callouts" },
+    { name = "markdown-captions" },
+    { name = "mdx-wikilink-plus" },
     { name = "mkdocs-glightbox" },
     { name = "mkdocs-material" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "markdown-callouts", specifier = ">=0.4.0" },
+    { name = "markdown-captions", specifier = ">=2.1.2" },
+    { name = "mdx-wikilink-plus", specifier = ">=1.4.1" },
     { name = "mkdocs-glightbox", specifier = ">=0.4.0" },
     { name = "mkdocs-material", specifier = ">=9.6.9" },
 ]
@@ -146,6 +152,27 @@ wheels = [
 ]
 
 [[package]]
+name = "markdown-callouts"
+version = "0.4.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "markdown" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/87/73/ae5aa379f6f7fea9d0bf4cba888f9a31d451d90f80033ae60ae3045770d5/markdown_callouts-0.4.0.tar.gz", hash = "sha256:7ed2c90486967058a73a547781121983839522d67041ae52c4979616f1b2b746", size = 9768 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1d/b5/7b0a0a52c82bfccd830af2a8cc8add1c5bc932e0204922434954a631dd51/markdown_callouts-0.4.0-py3-none-any.whl", hash = "sha256:ed0da38f29158d93116a0d0c6ecaf9df90b37e0d989b5337d678ee6e6d6550b7", size = 7108 },
+]
+
+[[package]]
+name = "markdown-captions"
+version = "2.1.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "markdown" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/81/1d/15ef64ed904c85d0520d632ec6844b7da886a45b0cb7970644be493181d0/markdown-captions-2.1.2.tar.gz", hash = "sha256:1c3ec0b674dd41a4c5f125724188c32a17bd46fd527db29f0c55a001e2d7abaf", size = 3031 }
+
+[[package]]
 name = "markupsafe"
 version = "3.0.2"
 source = { registry = "https://pypi.org/simple" }
@@ -181,6 +208,18 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/0d/80/0985960e4b89922cb5a0bac0ed39c5b96cbc1a536a99f30e8c220a996ed9/MarkupSafe-3.0.2-cp313-cp313t-musllinux_1_2_x86_64.whl", hash = "sha256:131a3c7689c85f5ad20f9f6fb1b866f402c445b220c19fe4308c0b147ccd2ad9", size = 24098 },
     { url = "https://files.pythonhosted.org/packages/82/78/fedb03c7d5380df2427038ec8d973587e90561b2d90cd472ce9254cf348b/MarkupSafe-3.0.2-cp313-cp313t-win32.whl", hash = "sha256:ba8062ed2cf21c07a9e295d5b8a2a5ce678b913b45fdf68c32d95d6c1291e0b6", size = 15208 },
     { url = "https://files.pythonhosted.org/packages/4f/65/6079a46068dfceaeabb5dcad6d674f5f5c61a6fa5673746f42a9f4c233b3/MarkupSafe-3.0.2-cp313-cp313t-win_amd64.whl", hash = "sha256:e444a31f8db13eb18ada366ab3cf45fd4b31e4db1236a4448f68778c1d1a5a2f", size = 15739 },
+]
+
+[[package]]
+name = "mdx-wikilink-plus"
+version = "1.4.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "markdown" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/93/ec/b0967db0ec70bfe249359804319a9854491e20bfc06ed4a5e2470095e76a/mdx_wikilink_plus-1.4.1.tar.gz", hash = "sha256:b82446c00a49a57a5ccab48e6053168397f6ed818d2183a8a0f7472aa0e8e3ca", size = 9896 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bb/9c/47120c866c56c6f0357428e07c057b2ad277a89f5e698d5110fd37688333/mdx_wikilink_plus-1.4.1-py3-none-any.whl", hash = "sha256:bf1a06cdf4e60484c64afb4d2069a07ca70263ebf56387a1da397d1ca182ab70", size = 8920 },
 ]
 
 [[package]]

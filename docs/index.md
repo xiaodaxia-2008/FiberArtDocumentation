@@ -19,13 +19,13 @@ hide:
 
 软件目前可试用，请前往 **[试用申请](./trial/index.md)** 页面进行申请。
 
-![plan-spar-deom](./assets/fiberart_plan_spar_demo.gif){ data-title="FiberArt 软件C型梁类零件的铺丝轨迹规划" width=75% }
-///caption | <
+![](./assets/fiberart_plan_spar_demo.gif){ data-title="FiberArt 软件C型梁类零件的铺丝轨迹规划" width=75% }
+///caption | >
 FiberArt 软件C型梁类零件的铺丝轨迹规划
 ///
 
-![simulation-spar-deom](./assets/fiberart_simulation_spar_demo.gif){ data-title="FiberArt 软件C型梁类零件的铺丝仿真" width=75% }
-///caption | <
+![](./assets/fiberart_simulation_spar_demo.gif){ data-title="FiberArt 软件C型梁类零件的铺丝仿真" width=75% }
+///caption | >
 FiberArt 软件C型梁类零件的铺丝仿真
 ///
 

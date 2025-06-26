@@ -69,6 +69,8 @@ nav:
           - 运动学求解设置: advanced/kinematics.md
           - 后处理定制: advanced/post_process.md
           - 自定义插件: advanced/plugin.md
+  - 技术分享:
+      - blog/index.md
   - 联系我们: contact.md
 
 markdown_extensions:
@@ -80,6 +82,10 @@ markdown_extensions:
   - md_in_html
   - footnotes
   - admonition
+  - callouts
+  - github-callouts
+  - markdown_captions
+  - mdx_wikilink_plus
   - pymdownx.blocks.caption
   - pymdownx.details
   - pymdownx.tabbed:
@@ -131,6 +137,9 @@ plugins:
   - offline
   - search
   - meta
+  - blog:
+      blog_dir: blog
+      blog_toc: true
   - glightbox:
       touchNavigation: true
       loop: false

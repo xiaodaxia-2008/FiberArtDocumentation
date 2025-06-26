@@ -13,24 +13,26 @@
         <meta name="author" content="Zen Shawn">
       
       
-        <link rel="canonical" href="https://fiberart.myshawn.com/user_guides/third_parties/LISTS.html">
+        <link rel="canonical" href="https://fiberart.myshawn.com/blog/2025/06/05/fiberart-%E4%B8%AD%E7%9A%84%E8%BF%9E%E6%8E%A5%E8%B7%AF%E5%BE%84%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95.html">
       
       
       
+        <link rel="next" href="../26/fiberart-%E5%AF%BC%E5%85%A5%E5%A4%96%E9%83%A8%E8%AE%A1%E7%AE%97%E7%9A%84%E9%93%BA%E5%B1%82.html">
       
-      <link rel="icon" href="../../assets/logo.png">
+      
+      <link rel="icon" href="../../../../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
-        <title>LISTS - FiberArt 自动铺丝软件</title>
+        <title>FiberArt 中的连接路径计算方法 - FiberArt 自动铺丝软件</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4af4bdda.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -53,14 +55,14 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -69,7 +71,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,6 +89,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#使用圆柱包络面" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -97,9 +104,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../index.html" title="FiberArt 自动铺丝软件" class="md-header__button md-logo" aria-label="FiberArt 自动铺丝软件" data-md-component="logo">
+    <a href="../../../../index.html" title="FiberArt 自动铺丝软件" class="md-header__button md-logo" aria-label="FiberArt 自动铺丝软件" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  <img src="../../../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -116,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              LISTS
+              FiberArt 中的连接路径计算方法
             
           </span>
         </div>
@@ -221,7 +228,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../index.html" class="md-tabs__link">
+      <a href="../../../../index.html" class="md-tabs__link">
         
   
     
@@ -238,7 +245,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../trial/index.html" class="md-tabs__link">
+      <a href="../../../../trial/index.html" class="md-tabs__link">
         
   
     
@@ -257,7 +264,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../index.html" class="md-tabs__link">
+        <a href="../../../../user_guides/index.html" class="md-tabs__link">
           
   
     
@@ -273,11 +280,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../blog/index.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../index.html" class="md-tabs__link">
           
   
     
@@ -295,7 +304,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../contact.html" class="md-tabs__link">
+      <a href="../../../../contact.html" class="md-tabs__link">
         
   
     
@@ -318,7 +327,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -329,9 +340,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../index.html" title="FiberArt 自动铺丝软件" class="md-nav__button md-logo" aria-label="FiberArt 自动铺丝软件" data-md-component="logo">
+    <a href="../../../../index.html" title="FiberArt 自动铺丝软件" class="md-nav__button md-logo" aria-label="FiberArt 自动铺丝软件" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  <img src="../../../../assets/logo.svg" alt="logo">
 
     </a>
     FiberArt 自动铺丝软件
@@ -346,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../../../../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -367,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../trial/index.html" class="md-nav__link">
+      <a href="../../../../trial/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -425,7 +436,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../index.html" class="md-nav__link ">
+            <a href="../../../../user_guides/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -459,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started.html" class="md-nav__link">
+      <a href="../../../../user_guides/getting_started.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -481,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../plan_parameters.html" class="md-nav__link">
+      <a href="../../../../user_guides/plan_parameters.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -503,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ply_planner.html" class="md-nav__link">
+      <a href="../../../../user_guides/ply_planner.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -525,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation.html" class="md-nav__link">
+      <a href="../../../../user_guides/simulation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -547,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../global_parameters.html" class="md-nav__link">
+      <a href="../../../../user_guides/global_parameters.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -616,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../node_properties/ply.html" class="md-nav__link">
+      <a href="../../../../user_guides/node_properties/ply.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -638,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../node_properties/tow.html" class="md-nav__link">
+      <a href="../../../../user_guides/node_properties/tow.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -697,7 +708,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../advanced/index.html" class="md-nav__link ">
+            <a href="../../../../advanced/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -731,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/kinematics.html" class="md-nav__link">
+      <a href="../../../../advanced/kinematics.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -753,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/post_process.html" class="md-nav__link">
+      <a href="../../../../advanced/post_process.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -775,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/plugin.html" class="md-nav__link">
+      <a href="../../../../advanced/plugin.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -809,6 +820,8 @@
       
   
   
+    
+  
   
   
     
@@ -825,21 +838,24 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../blog/index.html" class="md-nav__link ">
+            <a href="../../../index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -851,13 +867,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             技术分享
@@ -882,17 +898,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -920,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/archive/2025.html" class="md-nav__link">
+      <a href="../../../archive/2025.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -959,17 +978,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -997,7 +1019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/category/fiberart.html" class="md-nav__link">
+      <a href="../../../category/fiberart.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1034,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contact.html" class="md-nav__link">
+      <a href="../../../../contact.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1056,6 +1078,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1066,6 +1090,83 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#使用圆柱包络面" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用圆柱包络面
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#拓展到任意mesh曲面" class="md-nav__link">
+    <span class="md-ellipsis">
+      拓展到任意mesh曲面
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#自动计算最佳的包络面" class="md-nav__link">
+    <span class="md-ellipsis">
+      自动计算最佳的包络面
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="自动计算最佳的包络面">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#自动计算包络圆柱面" class="md-nav__link">
+    <span class="md-ellipsis">
+      自动计算包络圆柱面
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#偏移凸包" class="md-nav__link">
+    <span class="md-ellipsis">
+      偏移凸包
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#拟合凸包为一些常见的形状" class="md-nav__link">
+    <span class="md-ellipsis">
+      拟合凸包为一些常见的形状
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1073,35 +1174,108 @@
             
           
           
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../index.html" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    回到主页
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    元数据
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-06-05 10:11:29+00:00" class="md-ellipsis">2025年6月5日</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            分类于
+                            
+                              <a href="../../../category/fiberart.html">FiberArt</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              需要 1 分钟阅读时间
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
 
 
 
-  <h1>LISTS</h1>
 
-<ul>
-<li><a href="https://github.com/ChaiScript/ChaiScript">chaiscript</a>, <a href="ChaiScript-LICENSE.txt">BSD</a></li>
-<li><a href="https://www.boost.org/">boost</a>, <a href="https://www.boost.org/users/license.html">Boost software license</a></li>
-<li><a href="https://www.python.org/">python</a>, <a href="https://docs.python.org/3/license.html">PSF</a></li>
-<li><a href="https://eigen.tuxfamily.org">eigen</a>, <a href="https://www.mozilla.org/en-US/MPL/2.0/">MPL2.0</a></li>
-<li><a href="https://www.coin3d.org/">coin3d</a>, BSD</li>
-<li><a href="https://github.com/nlohmann/json">nlohmann_json</a>, MIT</li>
-<li><a href="https://assimp.org/">assimp</a>, <a href="Assimp.txt">Open Asset Import Library</a></li>
-<li><a href="http://ceres-solver.org/">ceres-solver</a>, <a href="https://github.com/ceres-solver/ceres-solver?tab=License-1-ov-file">BSD</a></li>
-<li><a href="https://github.com/USCiLab/cereal">cereal</a>, <a href="https://github.com/USCiLab/cereal?tab=BSD-3-Clause-1-ov-file">BSD</a></li>
-<li><a href="https://github.com/gabime/spdlog">spdlog</a>, <a href="SPDLOG-MIT-LICENSE.txt">MIT</a></li>
-<li><a href="https://github.com/Neargye/magic_enum">magic_enum</a>, <a href="Magic-enum-MIT-LICENSE.txt">MIT</a></li>
-<li><a href="https://github.com/palacaze/sigslot">sigslot</a>, <a href="Sigslot-MIT-LICENSE.txt">MIT</a></li>
-<li><a href="https://github.com/leethomason/tinyxml2">tinyxml2</a>, <a href="Tinyxml2-LICENSE.txt">zlib</a></li>
-<li><a href="https://www.freetype.org">freetype</a>, <a href="https://gitlab.freedesktop.org/freetype/freetype/-/blob/master/docs/FTL.TXT">Free Type Project License</a></li>
-<li><a href="https://dev.opencascade.org">opencascade</a>, <a href="https://dev.opencascade.org/resources/licensing">LGPL</a></li>
-<li><a href="https://ngsolve.org/">netgen</a>, <a href="https://ngsolve.org/">LGPL</a></li>
-<li><a href="https://github.com/microsoft/GSL">microsoft.gsl</a>, <a href="GSL-MIT-LICENSE.txt">MIT</a></li>
-<li><a href="https://www.qt.io/">qt</a>, LGPL</li>
-</ul>
+  <h1>FiberArt 中的连接路径计算方法</h1>
+
+<h2 id="使用圆柱包络面">使用圆柱包络面</h2>
+<p>在计算相邻的铺层的连接路径的时候，增加一种投影到包络面的算法。其实这个想法很久之间便有了，当时只是实现了投影到原本的铺放表面，然后再沿着法向量进行偏移，但是法向对于一些稍微复杂一点的曲面，效果不好，投影的路径经常有一半在上面，一半突然到下面。这个原因是当要投影的直线穿过中心点附近时，到上下两面的距离几乎相等，所以投影后的点会跳跃，造成投影曲线不连续。实际上如果包络面是严格的圆柱面，这种情况很少会出现，因为被投影直线要正好穿过圆柱的中心线，这个在浮点数的世界是很难精确表达的。</p>
+<!-- more -->
+
+<p><a class="glightbox" href="../../../attachments/project-to-cylinder-issue.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../attachments/project-to-cylinder-issue.jpg" /></a></p>
+<p>那么使用圆柱作为包络面就几乎不会有什么问题，于是进行了以下测试，结果如下:</p>
+<p><a class="glightbox" href="../../../attachments/Pasted%20image%2020250605111630.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../attachments/Pasted%20image%2020250605111630.png" /></a></p>
+<p>可以看到，效果基本上还可以，但是美中不足的是，连接路径似乎不是最短的路径，总觉得它在靠近两端的地方多了一些弯曲，导致整体的路径似乎不是最优的。</p>
+<p>之前我已经实现 了在mesh上计算两点之间 的最短路径，如果把圆柱面转换为mesh，然后计算mesh上两点之间的最短路径，因该会得到更好的结果；这是可行的，但是没有必要，对于圆柱面来说，有更加简单高效的方法。</p>
+<p>圆柱面的展开是一个矩形，计算圆柱面上两点之间的最短路径，可以转换到这个矩形上，很显然在矩形区域内任意两点间的最短路径就是连接两点的直线段；把这条直线段重新投影到圆柱面上就是三维圆柱面上两点的最短路径了。</p>
+<p><a class="glightbox" href="../../../attachments/Pasted%20image%2020250605112259.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../attachments/Pasted%20image%2020250605112259.png" /></a>
+图中稍微粗一点的是使用圆柱面上的最短路径算法，细一点的是使用圆柱面上的投影路径算法；显然，最短路径算法的曲率更小、距离更短，能够减少运行时间。</p>
+<h2 id="拓展到任意mesh曲面">拓展到任意mesh曲面</h2>
+<p>上面是仅仅限于用圆柱面作为包络面，如果铺放的曲面和圆柱比较接近，那么没有问题 ；如果相差太大，使用圆柱面作为包络面，会导致连接路径太冗余了，还可能超过机器人的运动范围。因此，应该允许用户自己定义使用怎样的包络曲面，他可能会提前在CAD软件里面已经设计好包络面（安全退刀面）了。</p>
+<p>在FiberArt里面，我们将用户自定义的包络面先转化为mesh，而mesh已经是实现了点的投影算法和计算两点之间最短路径的算法，所以用mesh还是用圆柱面来计算连接路径的过程是相同的。</p>
+<h2 id="自动计算最佳的包络面">自动计算最佳的包络面</h2>
+<p>上文提到，用户可以自己在CAD中设计包络面，那么有没有方法可以自动计算出一个还不错的包络面呢？</p>
+<p>这里我想到的大概有以下几种：</p>
+<h3 id="自动计算包络圆柱面">自动计算包络圆柱面</h3>
+<p>包络圆柱面可以用铺放曲面的包围盒（bounding box）计算，把最长的轴 作为圆柱的中心线，然后计算外接圆柱；这种算法会比较高效，实现也简单，缺点就是冗余太多了，只有在铺放曲面是类圆柱的回转体时，才能算得上接近最优。</p>
+<h3 id="偏移凸包">偏移凸包</h3>
+<p>可以先计算铺放曲面的凸包，然后沿着法向量偏移凸包的每个顶点，可以大致算出来一个比较紧凑的包络面。这个算法实现应该也不难，有很多开源库可以计算凸包，而且对凸包进行法向量偏移应该不会导致偏移后的mesh自相交。</p>
+<h3 id="拟合凸包为一些常见的形状">拟合凸包为一些常见的形状</h3>
+<p>单纯使用凸包，可能导致包络面过于复杂，最终计算的路径不够平滑；如果事先定义一些常见的形状的，比如圆柱、圆锥、椭圆锥等，将凸包拟合成最相似的标准形状，这样不光会简化后续的路径计算，也会获得更加光滑的路径结果。</p>
+<h2 id="总结">总结</h2>
+<p>以上是最近对FiberArt里面连接路径计算方法的一些改进，当然了，提到的某些想法还没有实现，自动计算凸包这个可能会是一个比较便捷的功能。</p>
 
 
 
@@ -1114,6 +1288,8 @@
 
 
 
+
+  
 
 
 
@@ -1173,10 +1349,10 @@
     })
 </script>
 
-                
-              </article>
-            </div>
-          
+      
+    </article>
+  </div>
+
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
@@ -1193,6 +1369,30 @@
       
         <footer class="md-footer">
   
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+        
+          
+          <a href="../26/fiberart-%E5%AF%BC%E5%85%A5%E5%A4%96%E9%83%A8%E8%AE%A1%E7%AE%97%E7%9A%84%E9%93%BA%E5%B1%82.html" class="md-footer__link md-footer__link--next" aria-label="下一页: FiberArt 导入外部计算的铺层">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                FiberArt 导入外部计算的铺层
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1239,16 +1439,16 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "navigation.sections", "navigation.indexes", "navigation.tabs", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "header.autohide", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["announce.dismiss", "navigation.sections", "navigation.indexes", "navigation.tabs", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "header.autohide", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="../../javascripts/katex.js"></script>
+        <script src="../../../../javascripts/katex.js"></script>
       
-        <script src="../../javascripts/katex.min.js"></script>
+        <script src="../../../../javascripts/katex.min.js"></script>
       
-        <script src="../../javascripts/auto-render.min.js"></script>
+        <script src="../../../../javascripts/auto-render.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});

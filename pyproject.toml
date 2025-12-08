@@ -8,6 +8,6 @@ dependencies = [
     "markdown-callouts>=0.4.0",
     "markdown-captions>=2.1.2",
     "mdx-wikilink-plus>=1.4.1",
-    "mkdocs-glightbox>=0.4.0",
-    "mkdocs-material>=9.6.9",
+    "mkdocs-glightbox>=0.5.2",
+    "mkdocs-material>=9.7.0",
 ]

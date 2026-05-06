@@ -1,6 +1,6 @@
 {
   "version": "0.15.11",
-  "minimum_supported_version": "0.15.1",
+  "minimum_supported_version": "0.14.0",
   "changelog": [
     "支持SolidWorks交互操作模式",
     "场景图架构重构",

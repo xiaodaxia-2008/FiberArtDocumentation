@@ -151,6 +151,11 @@ plugins:
         - locale: en
           name: English
           build: true
+          site_name: FiberArt AFP Software
+          site_description: >
+            FiberArt is an independently developed Automated Fiber Placement (AFP) trajectory planning and simulation software. 
+            It can output NC programs in G-code and other formats, suitable for planning and simulation on various complex surfaces, 
+            and compatible with various equipment. Trial is available.
           nav_translations:
             主页: Home
             试用申请: Trial Application

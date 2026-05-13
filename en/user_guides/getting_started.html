@@ -1,38 +1,44 @@
-<!DOCTYPE html><html lang="zh" class="no-js"><head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="FiberArt 是国产自主开发的自动铺丝轨迹规划及仿真软件，可以输出G代码等格式的数控程序，可用于各种复杂曲面的铺丝规划和仿真， 同时可以适配各种设备。FiberArt软件可以提供试用。
+        <meta name="description" content="FiberArt is an independently developed Automated Fiber Placement (AFP) trajectory planning and simulation software.  It can output NC programs in G-code and other formats, suitable for planning and simulation on various complex surfaces,  and compatible with various equipment. Trial is available.
 ">
       
       
         <meta name="author" content="Zen Shawn">
       
       
-        <link rel="canonical" href="https://fiberart.myshawn.com/blog/2025/06/05/fiberart-%E4%B8%AD%E7%9A%84%E8%BF%9E%E6%8E%A5%E8%B7%AF%E5%BE%84%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95.html">
+        <link rel="canonical" href="https://fiberart.myshawn.com/en/user_guides/getting_started.html">
       
       
+        <link rel="prev" href="index.html">
       
-        <link rel="next" href="../26/fiberart-%E5%AF%BC%E5%85%A5%E5%A4%96%E9%83%A8%E8%AE%A1%E7%AE%97%E7%9A%84%E9%93%BA%E5%B1%82.html">
+      
+        <link rel="next" href="plan_parameters.html">
       
       
         
+          <link rel="alternate" href="../../user_guides/getting_started.html" hreflang="zh">
+        
+          <link rel="alternate" href="getting_started.html" hreflang="en">
+        
       
       
-      <link rel="icon" href="../../../../assets/logo.png">
+      <link rel="icon" href="../../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>FiberArt 中的连接路径计算方法 - FiberArt 自动铺丝软件</title>
+        <title>Quick Start Tutorial - FiberArt AFP Software</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,13 +61,13 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -90,8 +96,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#使用圆柱包络面" class="md-skip">
-          跳转至
+        <a href="#quick-start-tutorial" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -103,10 +109,10 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../../../index.html" title="FiberArt 自动铺丝软件" class="md-header__button md-logo" aria-label="FiberArt 自动铺丝软件" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="FiberArt AFP Software" class="md-header__button md-logo" aria-label="FiberArt AFP Software" data-md-component="logo">
       
-  <img src="../../../../assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -117,13 +123,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            FiberArt 自动铺丝软件
+            FiberArt AFP Software
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              FiberArt 中的连接路径计算方法
+              Quick Start Tutorial
             
           </span>
         </div>
@@ -170,6 +176,32 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../user_guides/getting_started.html" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="getting_started.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
     
       
       
@@ -181,16 +213,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
@@ -201,7 +233,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -222,7 +254,7 @@
         
           
             
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -232,13 +264,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../index.html" class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
   
     
   
-  主页
+  Home
 
       </a>
     </li>
@@ -251,38 +283,16 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../trial/index.html" class="md-tabs__link">
+      <a href="../trial/index.html" class="md-tabs__link">
         
   
   
     
   
-  试用申请
+  Trial Application
 
       </a>
     </li>
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../../user_guides/index.html" class="md-tabs__link">
-          
-  
-  
-    
-  
-  用户手册
-
-        </a>
-      </li>
-    
   
 
       
@@ -296,13 +306,35 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../index.html" class="md-tabs__link">
+        <a href="index.html" class="md-tabs__link">
           
   
   
     
   
-  技术分享
+  User Manual
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../blog/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tech Blog
 
         </a>
       </li>
@@ -316,13 +348,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../contact.html" class="md-tabs__link">
+      <a href="../contact.html" class="md-tabs__link">
         
   
   
     
   
-  联系我们
+  Contact Us
 
       </a>
     </li>
@@ -340,9 +372,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -351,14 +381,14 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../index.html" title="FiberArt 自动铺丝软件" class="md-nav__button md-logo" aria-label="FiberArt 自动铺丝软件" data-md-component="logo">
+    <a href="../index.html" title="FiberArt AFP Software" class="md-nav__button md-logo" aria-label="FiberArt AFP Software" data-md-component="logo">
       
-  <img src="../../../../assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
-    FiberArt 自动铺丝软件
+    FiberArt AFP Software
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix="">
@@ -370,14 +400,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    主页
+    Home
   
 
     
@@ -397,14 +427,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../trial/index.html" class="md-nav__link">
+      <a href="../trial/index.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    试用申请
+    Trial Application
   
 
     
@@ -420,6 +450,8 @@
       
       
   
+  
+    
   
   
   
@@ -438,513 +470,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../../user_guides/index.html" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    用户手册
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    用户手册
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../user_guides/getting_started.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    快速上手
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../user_guides/plan_parameters.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    规划参数
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../user_guides/ply_planner.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    规划器
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../user_guides/simulation.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    仿真及后置
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../user_guides/global_parameters.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    全局参数
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7">
-        
-          
-          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    节点属性
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    节点属性
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../user_guides/node_properties/ply.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    铺层(Ply)属性
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../user_guides/node_properties/tow.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    丝束(Tow)属性
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8">
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../../advanced/index.html" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    进阶使用
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_8">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    进阶使用
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../advanced/kinematics.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    运动学求解设置
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../advanced/post_process.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    后处理定制
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../advanced/plugin.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    自定义插件
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
         
       
         
@@ -967,18 +492,18 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../index.html" class="md-nav__link ">
+            <a href="index.html" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    技术分享
+    User Manual
   
 
     
@@ -989,217 +514,672 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Manual
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start Tutorial
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="getting_started.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#software-interface-basic-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software Interface Basic Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software Interface Basic Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#menu-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Menu Bar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toolbar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floating-window-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Floating Window Layout
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planning-and-simulation-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planning and Simulation Modules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planning and Simulation Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operational-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trajectory-planning-and-simulation-case-for-wing-part" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trajectory Planning and Simulation Case for Wing Part
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="plan_parameters.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ply Planning Parameters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ply_planner.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ply Planner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="simulation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="global_parameters.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Global Parameters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7">
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Node Properties
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Node Properties
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="node_properties/ply.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ply Properties
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="node_properties/tow.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tow Properties
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../advanced/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Usage
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced Usage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/kinematics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi-axis Linkage System Kinematics Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/post_process.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post-processing Customization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/plugin.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FiberArt Plugin Development Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../blog/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech Blog
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    技术分享
+    Tech Blog
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
             
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
-        
-          
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    归档
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    归档
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../archive/2025.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2025
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
-        
-          
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    分类
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    分类
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../category/fiberart.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FiberArt
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
               
             
           </ul>
@@ -1216,14 +1196,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contact.html" class="md-nav__link">
+      <a href="../contact.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    联系我们
+    Contact Us
   
 
     
@@ -1244,63 +1224,41 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#使用圆柱包络面" class="md-nav__link">
+  <a href="#software-interface-basic-operations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        使用圆柱包络面
+        Software Interface Basic Operations
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#拓展到任意mesh曲面" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        拓展到任意mesh曲面
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#自动计算最佳的包络面" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        自动计算最佳的包络面
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="自动计算最佳的包络面">
+    <nav class="md-nav" aria-label="Software Interface Basic Operations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#自动计算包络圆柱面" class="md-nav__link">
+  <a href="#menu-bar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        自动计算包络圆柱面
+        Menu Bar
       
     </span>
   </a>
@@ -1308,10 +1266,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#偏移凸包" class="md-nav__link">
+  <a href="#toolbar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        偏移凸包
+        Toolbar
       
     </span>
   </a>
@@ -1319,10 +1277,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#拟合凸包为一些常见的形状" class="md-nav__link">
+  <a href="#floating-window-layout" class="md-nav__link">
     <span class="md-ellipsis">
       
-        拟合凸包为一些常见的形状
+        Floating Window Layout
       
     </span>
   </a>
@@ -1335,10 +1293,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#总结" class="md-nav__link">
+  <a href="#planning-and-simulation-modules" class="md-nav__link">
     <span class="md-ellipsis">
       
-        总结
+        Planning and Simulation Modules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planning and Simulation Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operational-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trajectory-planning-and-simulation-case-for-wing-part" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trajectory Planning and Simulation Case for Wing Part
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
       
     </span>
   </a>
@@ -1354,127 +1351,71 @@
             
           
           
-  <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../index.html" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
-                  <span class="md-ellipsis">
-                    回到主页
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-              <div class="md-post__authors md-typeset">
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
                 
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="../../../../assets/avatar.png" alt="Shawn">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          <a href="/contact.html">Shawn</a>
-                        
-                      </strong>
-                      <br>
-                      出门搔白首，若负平生志🐎🗡
-                    </span>
-                  </div>
-                
-              </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    元数据
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"></path></svg>
-                        <time datetime="2025-06-05 10:11:29+00:00" class="md-ellipsis">2025年6月5日</time>
-                      </div>
-                    </li>
-                    
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"></path></svg>
-                          <span class="md-ellipsis">
-                            分类于
-                            
-                              <a href="../../../category/fiberart.html">FiberArt</a></span>
-                        </div>
-                      </li>
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"></path></svg>
-                          <span class="md-ellipsis">
-                            
-                              需要 1 分钟阅读时间
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-            
-          </nav>
-          
-        </div>
-      </div>
-    </div>
-    <article class="md-content__inner md-typeset">
-      
-        
-  
+                  
 
 
 
+<h1 id="quick-start-tutorial">Quick Start Tutorial</h1>
+<h2 id="software-interface-basic-operations">Software Interface Basic Operations</h2>
+<p>When you first open the software, the interface shown below will appear:</p>
+<p>
+</p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../user_guides/images/fiberart_window.png" data-desc-position="bottom"><img src="../../user_guides/images/fiberart_window.png"></a><figcaption>FiberArt Initial Window</figcaption>
+</figure>
+<p></p>
+<h3 id="menu-bar">Menu Bar</h3>
+<p>The menu bar is the entry point for all software functions. Clicking each menu item opens a dropdown submenu. For example, functions such as planning and simulation can be displayed or hidden by clicking the <em>Function</em> option and checking the relevant checkboxes.</p>
+<p>
+</p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../user_guides/images/fiberart_function.png" data-desc-position="bottom"><img src="../../user_guides/images/fiberart_function.png"></a><figcaption>Menu Bar</figcaption>
+</figure>
+<p></p>
+<h3 id="toolbar">Toolbar</h3>
+<p>The toolbar gathers commonly used functions, such as opening/saving files, 3D display view control, 3D gizmos, etc. Text tooltips appear when hovering the mouse over the corresponding icons.</p>
+<p>
+</p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../user_guides/images/fiberart_toolbar.png" data-desc-position="bottom"><img src="../../user_guides/images/fiberart_toolbar.png"></a><figcaption>Toolbar</figcaption>
+</figure>
+<p></p>
+<h3 id="floating-window-layout">Floating Window Layout</h3>
+<p>FiberArt places interactions with similar functions into sub-windows. All sub-windows support dragging and resizing, allowing users to freely arrange the entire software layout.</p>
+<p>Hovering the mouse over the boundary between different windows allows you to drag and resize them. Clicking and holding the title bar of a window allows you to drag it to different docking areas. Users only need to set the layout once according to their preference, and the software will automatically restore it the next time it opens.</p>
+<p>
+</p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../user_guides/images/fiberart_dockwindow_drag_demo.gif" data-desc-position="bottom"><img src="../../user_guides/images/fiberart_dockwindow_drag_demo.gif"></a><figcaption>Window Layout</figcaption>
+</figure>
+<p></p>
+<h2 id="planning-and-simulation-modules">Planning and Simulation Modules</h2>
+<h3 id="operational-logic">Operational Logic</h3>
+<p>The operational logic for trajectory planning and simulation in FiberArt is shown in the following diagram:</p>
+<pre class="mermaid"><code>flowchart LR
+    subgraph Trajectory Planning
+        direction TB
+        A[Import CAD Model] --&gt; B0[Select Planning Algorithm] --&gt; B1[Set Placement Surface, Boundaries, Guide Curves, etc.] --&gt; B[Set Equipment &amp; Ply Parameters] --&gt; D[Execute Planning]
+    end
 
-  <h1>FiberArt 中的连接路径计算方法</h1>
+    subgraph Simulation &amp; Post-processing
+        direction TB
+        E[Import Robot, Tracks, Placement Head, Workpiece, etc.] --&gt; F[Adjust Part Positions, Build Simulation Environment]
+        F --&gt; G[Execute Simulation]
+        G--&gt;H[Select Post-processor] --&gt; I[Output NC Programs like G-code]
+    end
 
-<h2 id="使用圆柱包络面">使用圆柱包络面</h2>
-<p>在计算相邻的铺层的连接路径的时候，增加一种投影到包络面的算法。其实这个想法很久之间便有了，当时只是实现了投影到原本的铺放表面，然后再沿着法向量进行偏移，但是法向对于一些稍微复杂一点的曲面，效果不好，投影的路径经常有一半在上面，一半突然到下面。这个原因是当要投影的直线穿过中心点附近时，到上下两面的距离几乎相等，所以投影后的点会跳跃，造成投影曲线不连续。实际上如果包络面是严格的圆柱面，这种情况很少会出现，因为被投影直线要正好穿过圆柱的中心线，这个在浮点数的世界是很难精确表达的。</p>
-<!-- more -->
+    n1([Start]) ==&gt; Trajectory Planning ==&gt; Simulation &amp; Post-processing ==&gt; n4([End])</code></pre>
+<h3 id="trajectory-planning-and-simulation-case-for-wing-part">Trajectory Planning and Simulation Case for Wing Part</h3>
+<p>The following example demonstrates the software's relevant functions through a real curved surface path planning and simulation post-processing example.</p>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&amp;aid=114215931157250&amp;bvid=BV1JzokYiEyo&amp;cid=29041493012&amp;p=1&amp;autoplay=0&amp;muted=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="400">
+</iframe>
 
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../attachments/project-to-cylinder-issue.jpg" data-desc-position="bottom"><img alt="" src="../../../attachments/project-to-cylinder-issue.jpg"></a></p>
-<p>那么使用圆柱作为包络面就几乎不会有什么问题，于是进行了以下测试，结果如下:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../attachments/Pasted%20image%2020250605111630.png" data-desc-position="bottom"><img alt="" src="../../../attachments/Pasted%20image%2020250605111630.png"></a></p>
-<p>可以看到，效果基本上还可以，但是美中不足的是，连接路径似乎不是最短的路径，总觉得它在靠近两端的地方多了一些弯曲，导致整体的路径似乎不是最优的。</p>
-<p>之前我已经实现 了在mesh上计算两点之间 的最短路径，如果把圆柱面转换为mesh，然后计算mesh上两点之间的最短路径，因该会得到更好的结果；这是可行的，但是没有必要，对于圆柱面来说，有更加简单高效的方法。</p>
-<p>圆柱面的展开是一个矩形，计算圆柱面上两点之间的最短路径，可以转换到这个矩形上，很显然在矩形区域内任意两点间的最短路径就是连接两点的直线段；把这条直线段重新投影到圆柱面上就是三维圆柱面上两点的最短路径了。</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../attachments/Pasted%20image%2020250605112259.png" data-desc-position="bottom"><img alt="" src="../../../attachments/Pasted%20image%2020250605112259.png"></a>
-图中稍微粗一点的是使用圆柱面上的最短路径算法，细一点的是使用圆柱面上的投影路径算法；显然，最短路径算法的曲率更小、距离更短，能够减少运行时间。</p>
-<h2 id="拓展到任意mesh曲面">拓展到任意mesh曲面</h2>
-<p>上面是仅仅限于用圆柱面作为包络面，如果铺放的曲面和圆柱比较接近，那么没有问题 ；如果相差太大，使用圆柱面作为包络面，会导致连接路径太冗余了，还可能超过机器人的运动范围。因此，应该允许用户自己定义使用怎样的包络曲面，他可能会提前在CAD软件里面已经设计好包络面（安全退刀面）了。</p>
-<p>在FiberArt里面，我们将用户自定义的包络面先转化为mesh，而mesh已经是实现了点的投影算法和计算两点之间最短路径的算法，所以用mesh还是用圆柱面来计算连接路径的过程是相同的。</p>
-<h2 id="自动计算最佳的包络面">自动计算最佳的包络面</h2>
-<p>上文提到，用户可以自己在CAD中设计包络面，那么有没有方法可以自动计算出一个还不错的包络面呢？</p>
-<p>这里我想到的大概有以下几种：</p>
-<h3 id="自动计算包络圆柱面">自动计算包络圆柱面</h3>
-<p>包络圆柱面可以用铺放曲面的包围盒（bounding box）计算，把最长的轴 作为圆柱的中心线，然后计算外接圆柱；这种算法会比较高效，实现也简单，缺点就是冗余太多了，只有在铺放曲面是类圆柱的回转体时，才能算得上接近最优。</p>
-<h3 id="偏移凸包">偏移凸包</h3>
-<p>可以先计算铺放曲面的凸包，然后沿着法向量偏移凸包的每个顶点，可以大致算出来一个比较紧凑的包络面。这个算法实现应该也不难，有很多开源库可以计算凸包，而且对凸包进行法向量偏移应该不会导致偏移后的mesh自相交。</p>
-<h3 id="拟合凸包为一些常见的形状">拟合凸包为一些常见的形状</h3>
-<p>单纯使用凸包，可能导致包络面过于复杂，最终计算的路径不够平滑；如果事先定义一些常见的形状的，比如圆柱、圆锥、椭圆锥等，将凸包拟合成最相似的标准形状，这样不光会简化后续的路径计算，也会获得更加光滑的路径结果。</p>
-<h2 id="总结">总结</h2>
-<p>以上是最近对FiberArt里面连接路径计算方法的一些改进，当然了，提到的某些想法还没有实现，自动计算凸包这个可能会是一个比较便捷的功能。</p>
+<details class="note" open="open">
+<summary>Planning Parameter Settings</summary>
+<p>In the above process, we only involved the necessary setup steps, while others took default settings. In actual planning, we may need to modify many parameters, such as the number of tows, cutting distance, etc.
+These parameters can be set in the <strong>Ply</strong> attribute editor. For details, refer to <a href="plan_parameters.html">Planning Parameter Settings</a>.</p>
+</details>
+<h2 id="next-steps">Next Steps</h2>
+<p>Congratulations on completing a multi-layer fiber placement planning and simulation for a curved part using FiberArt.
+If you still have questions about this case tutorial, please continue reading the rest of this documentation.
+We suggest you proceed from <a href="plan_parameters.html">Ply Planning Parameters</a> to learn how to modify ply parameters to achieve the trajectories you expect.</p>
 
 
 
@@ -1488,11 +1429,9 @@
 
 
 
-  
 
 
-
-<h2 id="__comments">评论</h2>
+<h2 id="__comments">Comments</h2>
 
 <!-- Insert generated snippet here -->
 <script src="https://giscus.app/client.js" data-repo="xiaodaxia-2008/FiberArtDocumentation" data-repo-id="R_kgDOLlkOUg" data-category="Announcements" data-category-id="DIC_kwDOLlkOUs4Cod7i" data-mapping="title" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async="">
@@ -1534,10 +1473,10 @@
     })
 </script>
 
-      
-    </article>
-  </div>
-
+                
+              </article>
+            </div>
+          
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
@@ -1547,7 +1486,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
-  回到页面顶部
+  Back to top
 </button>
         
       </main>
@@ -1556,19 +1495,33 @@
   
     
       
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
-      
-      <nav class="md-footer__inner md-grid" aria-label="页脚">
+          
+          <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: FiberArt Automated Fiber Placement Software User Documentation">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                FiberArt Automated Fiber Placement Software User Documentation
+              </div>
+            </div>
+          </a>
         
         
           
-          <a href="../26/fiberart-%E5%AF%BC%E5%85%A5%E5%A4%96%E9%83%A8%E8%AE%A1%E7%AE%97%E7%9A%84%E9%93%BA%E5%B1%82.html" class="md-footer__link md-footer__link--next" aria-label="下一页: FiberArt 导入外部计算的铺层">
+          <a href="plan_parameters.html" class="md-footer__link md-footer__link--next" aria-label="Next: Ply Planning Parameters">
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                下一页
+                Next
               </span>
               <div class="md-ellipsis">
-                FiberArt 导入外部计算的铺层
+                Ply Planning Parameters
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1628,16 +1581,16 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["announce.dismiss", "navigation.sections", "navigation.indexes", "navigation.tabs", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "header.autohide", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "navigation.sections", "navigation.indexes", "navigation.tabs", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "header.autohide", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../../../javascripts/katex.js"></script>
+        <script src="../../javascripts/katex.js"></script>
       
-        <script src="../../../../javascripts/katex.min.js"></script>
+        <script src="../../javascripts/katex.min.js"></script>
       
-        <script src="../../../../javascripts/auto-render.min.js"></script>
+        <script src="../../javascripts/auto-render.min.js"></script>
       
     
   

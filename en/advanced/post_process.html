@@ -1,44 +1,44 @@
-<!DOCTYPE html><html lang="zh" class="no-js"><head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="FiberArt 是国产自主开发的自动铺丝轨迹规划及仿真软件，可以输出G代码等格式的数控程序，可用于各种复杂曲面的铺丝规划和仿真， 同时可以适配各种设备。FiberArt软件可以提供试用。
+        <meta name="description" content="FiberArt is an independently developed Automated Fiber Placement (AFP) trajectory planning and simulation software.  It can output NC programs in G-code and other formats, suitable for planning and simulation on various complex surfaces,  and compatible with various equipment. Trial is available.
 ">
       
       
         <meta name="author" content="Zen Shawn">
       
       
-        <link rel="canonical" href="https://fiberart.myshawn.com/user_guides/getting_started.html">
+        <link rel="canonical" href="https://fiberart.myshawn.com/en/advanced/post_process.html">
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="kinematics.html">
       
       
-        <link rel="next" href="plan_parameters.html">
+        <link rel="next" href="plugin.html">
       
       
         
-          <link rel="alternate" href="getting_started.html" hreflang="zh">
+          <link rel="alternate" href="../../advanced/post_process.html" hreflang="zh">
         
-          <link rel="alternate" href="../en/user_guides/getting_started.html" hreflang="en">
+          <link rel="alternate" href="post_process.html" hreflang="en">
         
       
       
-      <link rel="icon" href="../assets/logo.png">
+      <link rel="icon" href="../../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>快速上手教程 - FiberArt 自动铺丝软件</title>
+        <title>Post-processing Customization - FiberArt AFP Software</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -61,13 +61,13 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -96,8 +96,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#快速上手教程" class="md-skip">
-          跳转至
+        <a href="#post-processing-customization" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -109,10 +109,10 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../index.html" title="FiberArt 自动铺丝软件" class="md-header__button md-logo" aria-label="FiberArt 自动铺丝软件" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="FiberArt AFP Software" class="md-header__button md-logo" aria-label="FiberArt AFP Software" data-md-component="logo">
       
-  <img src="../assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -123,13 +123,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            FiberArt 自动铺丝软件
+            FiberArt AFP Software
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              快速上手教程
+              Post-processing Customization
             
           </span>
         </div>
@@ -179,20 +179,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="选择当前语言">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="getting_started.html" hreflang="zh" class="md-select__link">
+            <a href="../../advanced/post_process.html" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../en/user_guides/getting_started.html" hreflang="en" class="md-select__link">
+            <a href="post_process.html" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -213,16 +213,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
@@ -233,7 +233,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -254,7 +254,7 @@
         
           
             
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -270,7 +270,7 @@
   
     
   
-  主页
+  Home
 
       </a>
     </li>
@@ -289,7 +289,7 @@
   
     
   
-  试用申请
+  Trial Application
 
       </a>
     </li>
@@ -306,13 +306,13 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="index.html" class="md-tabs__link">
+        <a href="../user_guides/index.html" class="md-tabs__link">
           
   
   
     
   
-  用户手册
+  User Manual
 
         </a>
       </li>
@@ -334,7 +334,7 @@
   
     
   
-  技术分享
+  Tech Blog
 
         </a>
       </li>
@@ -354,7 +354,7 @@
   
     
   
-  联系我们
+  Contact Us
 
       </a>
     </li>
@@ -381,14 +381,14 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="FiberArt 自动铺丝软件" class="md-nav__button md-logo" aria-label="FiberArt 自动铺丝软件" data-md-component="logo">
+    <a href="../index.html" title="FiberArt AFP Software" class="md-nav__button md-logo" aria-label="FiberArt AFP Software" data-md-component="logo">
       
-  <img src="../assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
-    FiberArt 自动铺丝软件
+    FiberArt AFP Software
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix="">
@@ -407,7 +407,7 @@
   <span class="md-ellipsis">
     
   
-    主页
+    Home
   
 
     
@@ -434,7 +434,7 @@
   <span class="md-ellipsis">
     
   
-    试用申请
+    Trial Application
   
 
     
@@ -496,14 +496,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link ">
+            <a href="../user_guides/index.html" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    用户手册
+    User Manual
   
 
     
@@ -525,7 +525,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    用户手册
+    User Manual
   
 
           </label>
@@ -537,192 +537,17 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    快速上手教程
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="getting_started.html" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    快速上手教程
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#软件界面基础操作" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        软件界面基础操作
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="软件界面基础操作">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#菜单栏" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        菜单栏
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#工具栏" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        工具栏
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#浮动窗口布局" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        浮动窗口布局
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#规划及仿真模块" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        规划及仿真模块
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="规划及仿真模块">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#操作逻辑" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        操作逻辑
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#机翼零件轨迹规划及仿真案例" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        机翼零件轨迹规划及仿真案例
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#下一步" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        下一步
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="plan_parameters.html" class="md-nav__link">
+      <a href="../user_guides/getting_started.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    铺层规划参数
+    Quick Start Tutorial
   
 
     
@@ -743,14 +568,14 @@
   
   
     <li class="md-nav__item">
-      <a href="ply_planner.html" class="md-nav__link">
+      <a href="../user_guides/plan_parameters.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    铺层规划器
+    Ply Planning Parameters
   
 
     
@@ -771,14 +596,14 @@
   
   
     <li class="md-nav__item">
-      <a href="simulation.html" class="md-nav__link">
+      <a href="../user_guides/ply_planner.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    仿真
+    Ply Planner
   
 
     
@@ -799,14 +624,42 @@
   
   
     <li class="md-nav__item">
-      <a href="global_parameters.html" class="md-nav__link">
+      <a href="../user_guides/simulation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    全局参数
+    Simulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_guides/global_parameters.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Global Parameters
   
 
     
@@ -859,7 +712,7 @@
   <span class="md-ellipsis">
     
   
-    节点属性
+    Node Properties
   
 
     
@@ -875,7 +728,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    节点属性
+    Node Properties
   
 
           </label>
@@ -888,14 +741,14 @@
   
   
     <li class="md-nav__item">
-      <a href="node_properties/ply.html" class="md-nav__link">
+      <a href="../user_guides/node_properties/ply.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    铺层(Ply)属性
+    Ply Properties
   
 
     
@@ -916,14 +769,14 @@
   
   
     <li class="md-nav__item">
-      <a href="node_properties/tow.html" class="md-nav__link">
+      <a href="../user_guides/node_properties/tow.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    丝束(Tow)属性
+    Tow Properties
   
 
     
@@ -949,8 +802,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -976,22 +831,22 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" checked="">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../advanced/index.html" class="md-nav__link ">
+            <a href="index.html" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    进阶使用
+    Advanced Usage
   
 
     
@@ -1008,12 +863,12 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
             
   
-    进阶使用
+    Advanced Usage
   
 
           </label>
@@ -1028,14 +883,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/kinematics.html" class="md-nav__link">
+      <a href="kinematics.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    多轴联动系统运动学设置
+    Multi-axis Linkage System Kinematics Settings
   
 
     
@@ -1053,17 +908,26 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../advanced/post_process.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="post_process.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    后处理定制
+    Post-processing Customization
   
 
     
@@ -1072,6 +936,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1084,14 +949,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/plugin.html" class="md-nav__link">
+      <a href="plugin.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    FiberArt插件开发教程
+    FiberArt Plugin Development Tutorial
   
 
     
@@ -1157,7 +1022,7 @@
   <span class="md-ellipsis">
     
   
-    技术分享
+    Tech Blog
   
 
     
@@ -1174,7 +1039,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    技术分享
+    Tech Blog
   
 
           </label>
@@ -1203,7 +1068,7 @@
   <span class="md-ellipsis">
     
   
-    联系我们
+    Contact Us
   
 
     
@@ -1229,120 +1094,12 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
     
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#软件界面基础操作" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        软件界面基础操作
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="软件界面基础操作">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#菜单栏" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        菜单栏
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#工具栏" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        工具栏
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#浮动窗口布局" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        浮动窗口布局
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#规划及仿真模块" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        规划及仿真模块
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="规划及仿真模块">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#操作逻辑" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        操作逻辑
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#机翼零件轨迹规划及仿真案例" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        机翼零件轨迹规划及仿真案例
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#下一步" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        下一步
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1359,63 +1116,8 @@
 
 
 
-<h1 id="快速上手教程">快速上手教程</h1>
-<h2 id="软件界面基础操作">软件界面基础操作</h2>
-<p>初次打开软件，显示的界面如下图所示：</p>
-<p>
-</p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/fiberart_window.png" data-desc-position="bottom"><img src="images/fiberart_window.png"></a><figcaption>FiberArt Initial Window</figcaption>
-</figure>
-<p></p>
-<h3 id="菜单栏">菜单栏</h3>
-<p>菜单栏是软件所有功能的入口，单机每个菜单可以下拉打开子菜单，比如软件的规划、仿真等功能通过点击<em>功能</em>选项，勾选相关的复选框，可以显示或者隐藏对应功能的界面。</p>
-<p>
-</p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/fiberart_function.png" data-desc-position="bottom"><img src="images/fiberart_function.png"></a><figcaption>菜单栏</figcaption>
-</figure>
-<p></p>
-<h3 id="工具栏">工具栏</h3>
-<p>工具栏中聚集了一些常用的功能，如打开/保存文件、三维显示视角控制、三维球等。当鼠标悬停在对应图标上时，会出现文字注解。</p>
-<p>
-</p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/fiberart_toolbar.png" data-desc-position="bottom"><img src="images/fiberart_toolbar.png"></a><figcaption>工具栏</figcaption>
-</figure>
-<p></p>
-<h3 id="浮动窗口布局">浮动窗口布局</h3>
-<p>FiberArt软件会把功能类似的交互放置在一个子窗口中，所有的子窗口支持拖动、调整大小等功能，用户可以自由的布局整个软件。</p>
-<p>鼠标悬停在不同窗口的交接处，可以拖动窗口大小；鼠标在窗口的标题处单击并按住，可以拖动窗口到不同的停靠区域，用户只需要根据自己的喜好将布局设置一次，下次软件打开会自动恢复该布局。</p>
-<p>
-</p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/fiberart_dockwindow_drag_demo.gif" data-desc-position="bottom"><img src="images/fiberart_dockwindow_drag_demo.gif"></a><figcaption>窗口布局</figcaption>
-</figure>
-<p></p>
-<h2 id="规划及仿真模块">规划及仿真模块</h2>
-<h3 id="操作逻辑">操作逻辑</h3>
-<p>FiberArt软件的轨迹规划及仿真的操作逻辑如下图所示：</p>
-<pre class="mermaid"><code>flowchart LR
-    subgraph 轨迹规划
-        direction TB
-        A[导入CAD模型] --&gt; B0[选择规划算法] --&gt; B1[设置铺放曲面、边界线、引导线等] --&gt; B[设置设备、铺层参数] --&gt; D[进行规划]
-    end
-
-    subgraph 仿真及后处理
-        direction TB
-        E[导入机器人、导轨、铺丝头、工件等] --&gt; F[调整零件位置，搭建仿真环境]
-        F --&gt; G[进行仿真]
-        G--&gt;H[选择后处理器] --&gt; I[输出G代码等格式的数控程序]
-    end
-
-    n1([开始]) ==&gt; 轨迹规划 ==&gt; 仿真及后处理 ==&gt; n4([结束])</code></pre>
-<h3 id="机翼零件轨迹规划及仿真案例">机翼零件轨迹规划及仿真案例</h3>
-<p>下面通过一个实际的曲面路径规划及仿真后处理示例来演示软件的相关功能。</p>
-<iframe src="//player.bilibili.com/player.html?isOutside=true&amp;aid=114215931157250&amp;bvid=BV1JzokYiEyo&amp;cid=29041493012&amp;p=1&amp;autoplay=0&amp;muted=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="400">
-</iframe>
-
-<details class="note" open="open">
-<summary>规划参数设置</summary>
-<p>在上述过程中，我们仅涉及到必要的设置步骤，其他都采取了默认的参数设置，实际规划中，我们可能需要修改很多参数，比如铺放根数、剪切距离等等，
-这些参数可以在 <strong>铺层</strong> 的属性编辑中进行设置，详细的参考<a href="plan_parameters.html">规划参数设置</a>。</p>
-</details>
-<h2 id="下一步">下一步</h2>
-<p>恭喜您已经使用 FiberArt 软件完成了一个曲面零件的多层铺丝规划和仿真。
-如果您对本案例教程中还有很多疑问，请继续阅读本文档的其余内容。
-建议您从<a href="plan_parameters.html">铺层规划参数</a>继续，以了解如何修改铺层参数以达到您期待的轨迹。</p>
+<h1 id="post-processing-customization">Post-processing Customization</h1>
+<p>This document is not yet completed. Stay tuned.</p>
 
 
 
@@ -1423,55 +1125,10 @@
 
 
 
-  
-  
 
 
 
 
-
-
-<h2 id="__comments">评论</h2>
-
-<!-- Insert generated snippet here -->
-<script src="https://giscus.app/client.js" data-repo="xiaodaxia-2008/FiberArtDocumentation" data-repo-id="R_kgDOLlkOUg" data-category="Announcements" data-category-id="DIC_kwDOLlkOUs4Cod7i" data-mapping="title" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async="">
-</script>
-
-<!-- Synchronize Giscus theme with palette -->
-<script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    // Set palette on initial load
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-        var theme = palette.color.scheme === "slate"
-            ? "transparent_dark"
-            : "light"
-
-        // Instruct Giscus to set theme
-        giscus.setAttribute("data-theme", theme)
-    }
-
-    // Register event handlers after documented loaded
-    document.addEventListener("DOMContentLoaded", function () {
-        var ref = document.querySelector("[data-md-component=palette]")
-        ref.addEventListener("change", function () {
-            var palette = __md_get("__palette")
-            if (palette && typeof palette.color === "object") {
-                var theme = palette.color.scheme === "slate"
-                    ? "transparent_dark"
-                    : "light"
-
-                // Instruct Giscus to change theme
-                var frame = document.querySelector(".giscus-frame")
-                frame.contentWindow.postMessage(
-                    { giscus: { setConfig: { theme } } },
-                    "https://giscus.app"
-                )
-            }
-        })
-    })
-</script>
 
                 
               </article>
@@ -1486,7 +1143,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
-  回到页面顶部
+  Back to top
 </button>
         
       </main>
@@ -1495,33 +1152,33 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="页脚">
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: FiberArt 自动铺丝软件用户使用文档">
+          <a href="kinematics.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Multi-axis Linkage System Kinematics Settings">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                上一页
+                Previous
               </span>
               <div class="md-ellipsis">
-                FiberArt 自动铺丝软件用户使用文档
+                Multi-axis Linkage System Kinematics Settings
               </div>
             </div>
           </a>
         
         
           
-          <a href="plan_parameters.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 铺层规划参数">
+          <a href="plugin.html" class="md-footer__link md-footer__link--next" aria-label="Next: FiberArt Plugin Development Tutorial">
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                下一页
+                Next
               </span>
               <div class="md-ellipsis">
-                铺层规划参数
+                FiberArt Plugin Development Tutorial
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1581,16 +1238,16 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["announce.dismiss", "navigation.sections", "navigation.indexes", "navigation.tabs", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "header.autohide", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "navigation.sections", "navigation.indexes", "navigation.tabs", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "header.autohide", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../javascripts/katex.js"></script>
+        <script src="../../javascripts/katex.js"></script>
       
-        <script src="../javascripts/katex.min.js"></script>
+        <script src="../../javascripts/katex.min.js"></script>
       
-        <script src="../javascripts/auto-render.min.js"></script>
+        <script src="../../javascripts/auto-render.min.js"></script>
       
     
   

@@ -56,19 +56,19 @@ nav:
   - 试用申请: trial/index.md
   - 用户手册:
       - user_guides/index.md
-      - 快速上手: user_guides/getting_started.md
-      - 规划参数: user_guides/plan_parameters.md
-      - 规划器: user_guides/ply_planner.md
-      - 仿真及后置: user_guides/simulation.md
-      - 全局参数: user_guides/global_parameters.md
+      - user_guides/getting_started.md
+      - user_guides/plan_parameters.md
+      - user_guides/ply_planner.md
+      - user_guides/simulation.md
+      - user_guides/global_parameters.md
       - 节点属性:
           - user_guides/node_properties/ply.md
           - user_guides/node_properties/tow.md
       - 进阶使用:
           - advanced/index.md
-          - 运动学求解设置: advanced/kinematics.md
-          - 后处理定制: advanced/post_process.md
-          - 自定义插件: advanced/plugin.md
+          - advanced/kinematics.md
+          - advanced/post_process.md
+          - advanced/plugin.md
   - 技术分享:
       - blog/index.md
   - 联系我们: contact.md
@@ -138,9 +138,32 @@ plugins:
   - offline
   - search
   - meta
-  - blog:
-      blog_dir: blog
-      blog_toc: true
+  # - blog:
+  #     blog_dir: blog
+  #     blog_toc: true
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: zh
+          default: true
+          name: 中文
+          build: true
+        - locale: en
+          name: English
+          build: true
+          site_name: FiberArt AFP Software
+          site_description: >
+            FiberArt is an independently developed Automated Fiber Placement (AFP) trajectory planning and simulation software. 
+            It can output NC programs in G-code and other formats, suitable for planning and simulation on various complex surfaces, 
+            and compatible with various equipment. Trial is available.
+          nav_translations:
+            主页: Home
+            试用申请: Trial Application
+            用户手册: User Manual
+            节点属性: Node Properties
+            进阶使用: Advanced Usage
+            技术分享: Tech Blog
+            联系我们: Contact Us
   - glightbox:
       touchNavigation: true
       loop: false

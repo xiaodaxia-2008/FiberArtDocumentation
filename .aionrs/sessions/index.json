@@ -1,0 +1,12 @@
+{
+  "sessions": [
+    {
+      "id": "06b86591",
+      "created_at": "2026-05-13T10:18:24.805147900Z",
+      "updated_at": "2026-05-13T10:18:24.805148100Z",
+      "model": "deepseek-v4-flash",
+      "summary": "",
+      "message_count": 0
+    }
+  ]
+}

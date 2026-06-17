@@ -1,6 +1,8 @@
 {
   "version": "0.18.0",
   "minimum_supported_version": "0.14.0",
+  "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.0-Windows-AMD64-zenlicense.exe",
+  "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.0-Windows-AMD64-sentinel.exe",
   "changelog": [
     "改进场景文件的保存与加载，提升兼容性与稳定性",
     "优化安装包生成与分发，安装体验更可靠、下载更方便",

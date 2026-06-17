@@ -1,15 +1,24 @@
 {
-  "version": "0.18.0",
+  "version": "0.18.1",
   "minimum_supported_version": "0.14.0",
-  "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.0-Windows-AMD64-zenlicense.exe",
-  "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.0-Windows-AMD64-sentinel.exe",
+  "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.1-Windows-AMD64-zenlicense.exe",
+  "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.1-Windows-AMD64-sentinel.exe",
   "changelog": [
-    "改进场景文件的保存与加载，提升兼容性与稳定性",
-    "优化安装包生成与分发，安装体验更可靠、下载更方便",
-    "更新用户文档与欢迎页，简化升级与文件管理指引",
-    "修复若干已知问题并进行性能优化，提升整体使用体验"
+    "增加授权版本约束检测（IsVersionSupported）",
+    "版本更新对话框增加一键下载与安装按钮",
+    "下载使用 Qt 网络库，实时显示下载进度",
+    "优化打包流程，支持自动同步安装包到 R2"
   ],
   "old": [
+    {
+      "version": "0.18.0",
+      "changelog": [
+        "改进场景文件的保存与加载，提升兼容性与稳定性",
+        "优化安装包生成与分发，安装体验更可靠、下载更方便",
+        "更新用户文档与欢迎页，简化升级与文件管理指引",
+        "修复若干已知问题并进行性能优化，提升整体使用体验"
+      ]
+    },
     {
       "changelog": [
         "支持SolidWorks交互操作模式",

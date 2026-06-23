@@ -1,15 +1,25 @@
 {
-  "version": "0.18.1",
+  "version": "0.18.2",
   "minimum_supported_version": "0.14.0",
-  "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.1-Windows-AMD64-zenlicense.exe",
-  "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.1-Windows-AMD64-sentinel.exe",
+  "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.2-Windows-AMD64-zenlicense.exe",
+  "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.2-Windows-AMD64-sentinel.exe",
   "changelog": [
-    "软件更新现在支持一键下载并安装，检测到新版本后可直接获取升级包，省去手动下载的麻烦",
-    "下载过程实时显示进度，让更新状态一目了然",
-    "修复授权检测逻辑，确保只有匹配当前版本的授权才能正常使用，避免版本不匹配导致的异常",
-    "强烈建议所有用户更新到此版本，以获得更可靠、更便捷的升级体验"
+    "新增变角度测地线路径规划模式，支持下拉菜单自由切换模式，铺放路径更灵活多样",
+    "新增龙门架运动学支持，扩展机器人类型适配范围，满足更多产线场景",
+    "修复 PlyNode 序列化问题，场景保存与加载更稳定可靠",
+    "修复 MeshTools API 兼容性，避免因接口变更导致的插件异常",
+    "建议所有用户更新到此版本，以获得更丰富的路径规划能力"
   ],
   "old": [
+    {
+      "version": "0.18.1",
+      "changelog": [
+        "软件更新现在支持一键下载并安装，检测到新版本后可直接获取升级包，省去手动下载的麻烦",
+        "下载过程实时显示进度，让更新状态一目了然",
+        "修复授权检测逻辑，确保只有匹配当前版本的授权才能正常使用，避免版本不匹配导致的异常",
+        "强烈建议所有用户更新到此版本，以获得更可靠、更便捷的升级体验"
+      ]
+    },
     {
       "version": "0.18.0",
       "changelog": [

@@ -4,11 +4,11 @@
   "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.2-Windows-AMD64-zenlicense.exe",
   "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.2-Windows-AMD64-sentinel.exe",
   "changelog": [
-    "新增变角度测地线路径规划模式，支持下拉菜单自由切换模式，铺放路径更灵活多样",
-    "新增龙门架运动学支持，扩展机器人类型适配范围，满足更多产线场景",
-    "修复 PlyNode 序列化问题，场景保存与加载更稳定可靠",
-    "修复 MeshTools API 兼容性，避免因接口变更导致的插件异常",
-    "建议所有用户更新到此版本，以获得更丰富的路径规划能力"
+    "新增可变角度路径规划模式，铺放路径可根据曲面形状自动调整角度，适应更复杂的轨迹需求",
+    "扩展机器人类型支持范围，适配更多产线设备与工作场景",
+    "修复某些场景文件保存后无法完整加载的问题，数据可靠性更高",
+    "修复插件加载兼容性问题，避免因接口变化导致的崩溃与异常",
+    "强烈建议所有用户更新到此版本，以获得更稳定可靠的使用体验"
   ],
   "old": [
     {

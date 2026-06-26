@@ -1,25 +1,16 @@
 {
-  "version": "0.18.3",
+  "version": "0.18.2",
   "minimum_supported_version": "0.14.0",
-  "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.3-Windows-AMD64-zenlicense.exe",
-  "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.3-Windows-AMD64-sentinel.exe",
+  "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.2-Windows-AMD64-zenlicense.exe",
+  "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.2-Windows-AMD64-sentinel.exe",
   "changelog": [
-    "修复铺层导入后模型不显示的问题，确保导入结果立即可见",
-    "提高法线计算精度，改善模型渲染和显示质量",
-    "修复其他已知问题，提升软件整体稳定性",
-    "强烈建议所有用户更新到此版本"
+    "新增可变角度路径规划模式，铺放路径可根据曲面形状自动调整角度，适应更复杂的轨迹需求",
+    "扩展机器人类型支持范围，适配更多产线设备与工作场景",
+    "修复某些场景文件保存后无法完整加载的问题，数据可靠性更高",
+    "修复插件加载兼容性问题，避免因接口变化导致的崩溃与异常",
+    "强烈建议所有用户更新到此版本，以获得更稳定可靠的使用体验"
   ],
   "old": [
-    {
-      "version": "0.18.2",
-      "changelog": [
-        "新增可变角度路径规划模式，铺放路径可根据曲面形状自动调整角度，适应更复杂的轨迹需求",
-        "扩展机器人类型支持范围，适配更多产线设备与工作场景",
-        "修复某些场景文件保存后无法完整加载的问题，数据可靠性更高",
-        "修复插件加载兼容性问题，避免因接口变化导致的崩溃与异常",
-        "强烈建议所有用户更新到此版本，以获得更稳定可靠的使用体验"
-      ]
-    },
     {
       "version": "0.18.1",
       "changelog": [

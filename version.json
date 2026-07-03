@@ -1,13 +1,21 @@
 {
-  "version": "0.18.4",
+  "version": "0.18.5",
   "minimum_supported_version": "0.14.0",
-  "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.4-Windows-AMD64-zenlicense.exe",
-  "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.4-Windows-AMD64-sentinel.exe",
+  "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.5-Windows-AMD64-zenlicense.exe",
+  "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.5-Windows-AMD64-sentinel.exe",
   "changelog": [
-    "修复了导入时节点名字冲突的问题",
-    "修复了导入某些 CAD 模型显示不完整的问题"
+    "添加了轨迹生成面板",
+    "支持动态显示运动轨迹",
+    "修复了其他bug"
   ],
   "old": [
+    {
+      "version": "0.18.4",
+      "changelog": [
+        "修复了导入时节点名字冲突的问题",
+        "修复了导入某些 CAD 模型显示不完整的问题"
+      ]
+    },
     {
       "version": "0.18.3",
       "changelog": [

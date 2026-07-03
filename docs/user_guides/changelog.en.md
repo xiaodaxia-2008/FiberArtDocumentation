@@ -1,3 +1,8 @@
+## v0.18.5 (2026.7.3)
+- Added trajectory generation panel
+- Added dynamic motion trail display
+- Fixed other bugs
+
 ## v0.13.7 (2025.6.19)
 - Fixed an issue where post-processing calculation failure caused crashes.
 

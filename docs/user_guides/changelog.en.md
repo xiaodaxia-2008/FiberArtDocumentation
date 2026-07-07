@@ -1,3 +1,10 @@
+## v0.18.6 (2026.7.7)
+- The collision detection panel can now be shown or hidden from the Function menu, keeping the interface clearer and common actions easier to reach.
+- Collision checks can now be created for two selected nodes, making detection targets more explicit and reducing interference from unrelated objects.
+- Collision model display can be toggled from the context menu, and the action also works after loading older scene files.
+- Fixed status bar message colors affecting the unit widget, making the interface display more consistently.
+- All users are encouraged to update for more reliable collision detection and display behavior.
+
 ## v0.18.5 (2026.7.3)
 - Added trajectory generation panel
 - Added dynamic motion trail display

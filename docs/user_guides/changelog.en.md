@@ -1,3 +1,7 @@
+## v0.18.7 (2026.7.8)
+- Fixed robot import issues
+- Enhanced trajectory generation functionality
+
 ## v0.18.6 (2026.7.7)
 - The collision detection panel can now be shown or hidden from the Function menu, keeping the interface clearer and common actions easier to reach.
 - Collision checks can now be created for two selected nodes, making detection targets more explicit and reducing interference from unrelated objects.

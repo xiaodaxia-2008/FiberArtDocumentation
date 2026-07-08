@@ -474,6 +474,9 @@
 - Implemented parallel plane cutting and curve-on-surface offset algorithms
 - Used OpenMP for computation acceleration
 
+## v0.0.1 [8b22442d] (2022.1.22)
+- Project initialized, first creation
+
 ## Previous untracked version
 
 - Improved logger, renamed global `LOG_DEBUG` etc. to `FA_LOG_DEBUG` (2022.12.5).

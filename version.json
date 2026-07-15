@@ -1,13 +1,28 @@
 {
-  "version": "0.18.7",
+  "version": "0.18.8",
   "minimum_supported_version": "0.14.0",
-  "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.7-Windows-AMD64-zenlicense.exe",
-  "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.7-Windows-AMD64-sentinel.exe",
+  "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.8-Windows-AMD64-zenlicense.exe",
+  "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.8-Windows-AMD64-sentinel.exe",
   "changelog": [
-    "修复了机器人导入的问题",
-    "增强了轨迹生成功能"
+    "新增基准轴节点，支持在场景中创建和编辑基准轴",
+    "新增创建坐标系面板，可交互式定义参考坐标系",
+    "新增长度/数值编辑控件，输入更直观、单位切换更智能",
+    "新增建模曲线和配合关系面板，增强几何建模能力",
+    "新增节点几何导出功能，便于数据复用",
+    "新增批量属性更新系统，节点编辑响应更快",
+    "碰撞检测面板 UI 更新优化，操作更清晰",
+    "性能优化：MeshTools、缠绕路径规划、测量等模块从 Python 迁移至 C++，启动和运行效率显著提升",
+    "大量内部重构与代码清理，软件稳定性进一步提升",
+    "建议所有用户更新"
   ],
   "old": [
+    {
+      "version": "0.18.7",
+      "changelog": [
+        "修复了机器人导入的问题",
+        "增强了轨迹生成功能"
+      ]
+    },
     {
       "version": "0.18.6",
       "changelog": [

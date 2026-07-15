@@ -1,4 +1,4 @@
-## v0.18.8 (2026.7.14)
+## v0.18.8 [cd63ee3b] (2026.7.14)
 - Added Datum Axis node, support for creating and editing datum axes in the scene
 - Added a new interactive frame creation panel for defining coordinate references
 - Added Length/Number edit controls with intuitive input and smart unit switching

@@ -1,0 +1,12 @@
+{
+  "stable": {
+    "version": "0.18.7",
+    "is_beta": false,
+    "minimum_supported_version": "0.14.0",
+    "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.7-Windows-AMD64-zenlicense.exe",
+    "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.18.7-Windows-AMD64-sentinel.exe",
+    "changelog_zh": ["修复了机器人导入的问题", "增强了轨迹生成功能"],
+    "changelog_en": ["fix robot import issue", "enhance trajectory generator"]
+  },
+  "beta": {}
+}

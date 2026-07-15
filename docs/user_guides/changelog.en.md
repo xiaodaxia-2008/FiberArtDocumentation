@@ -1,3 +1,15 @@
+## v0.18.8 (2026.7.14)
+- Added Datum Axis node, support for creating and editing datum axes in the scene
+- Added a new interactive frame creation panel for defining coordinate references
+- Added Length/Number edit controls with intuitive input and smart unit switching
+- Added modeling curve and mate relationship panels for enhanced geometry editing
+- Added node geometry export functionality for easy data reuse
+- Added batch property update system for faster node editing response
+- Collision detection panel UI updated and improved for clearer operation
+- Performance optimization: MeshTools, Filament Winding, Measurements modules migrated from Python to C++, significantly improving startup and runtime efficiency
+- Extensive internal refactoring and code cleanup for improved software stability
+- All users are recommended to update
+
 ## v0.18.7 (2026.7.8)
 - Fixed robot import issues
 - Enhanced trajectory generation functionality

@@ -8,5 +8,5 @@
     "changelog_zh": ["修复了机器人导入的问题", "增强了轨迹生成功能"],
     "changelog_en": ["fix robot import issue", "enhance trajectory generator"]
   },
-  "beta": {}
+  "beta": null
 }

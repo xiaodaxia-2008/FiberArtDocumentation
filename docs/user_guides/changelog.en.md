@@ -1,3 +1,6 @@
+## v0.19.0 [74e88a25] (2026.7.16)
+- Internal structure and dependency optimizations for improved overall stability
+
 ## v0.18.8 [cd63ee3b] (2026.7.14)
 - Added Datum Axis node, support for creating and editing datum axes in the scene
 - Added a new interactive frame creation panel for defining coordinate references

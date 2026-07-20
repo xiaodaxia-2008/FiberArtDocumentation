@@ -1,3 +1,6 @@
+## v0.20.1 [71300d33] (2026.7.19)
+- Improved update dialog wording and added missing Chinese translations
+
 ## v0.20.0 [aeb586be] (2026.7.19)
 - New Filament Winding module: supports winding pattern search, multi-tow winding, winding angle calculation, and mandrel geometry visualization
 - Enhanced mesh export with more universal format support for better interoperability with other software

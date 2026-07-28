@@ -1,9 +1,9 @@
 {
-  "version": "0.20.1",
+  "version": "0.21.0",
   "is_beta": false,
   "minimum_supported_version": "0.18.8",
-  "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.20.1-Windows-AMD64-zenlicense.exe",
-  "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.20.1-Windows-AMD64-sentinel.exe",
+  "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.21.0-Windows-AMD64-zenlicense.exe",
+  "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.21.0-Windows-AMD64-sentinel.exe",
   "changelog": [
     "优化更新对话框文案，补充缺失的中文翻译"
   ],

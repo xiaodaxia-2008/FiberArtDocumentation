@@ -1,3 +1,13 @@
+## v0.21.0 [b12b346] (2026.7.28)
+- Enhanced scene file compatibility so robots, tools, and visual models from legacy projects open and migrate more reliably.
+- Added and improved CAD assembly, URDF robot import, and positioner support to reduce manual model adjustments after import.
+- Improved fiber placement and winding visualization for clearer inspection of tows, boundaries, and trajectories.
+- Refined fiber tow editing, angle tolerance, and pole-hole clearance to make complex placement tasks more efficient.
+- Improved workpiece pose calibration and copy-paste workflows for more reliable coordinate editing and reuse.
+- Improved saving and editing of colors, display states, and property panels so visual settings are more consistent when projects reopen.
+- Completed Chinese and English translation improvements and runtime language switching to reduce cases where a restart is needed.
+- Improved Windows installer dependency completeness and application stability.
+
 ## v0.20.1 [71300d33] (2026.7.19)
 - Improved update dialog wording and added missing Chinese translations
 

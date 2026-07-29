@@ -1,3 +1,9 @@
+## v0.21.2 [478544e] (2026.7.29)
+- Improved URDF export for robots, positioners, tracks, and tools, with more reliable visual and collision geometry output.
+- Added direct export of general triangle-mesh formats, avoiding unnecessary conversion work for large models.
+- Refined node export workflows: Inventor geometry is available from the scene action, while saved nodes consistently use the `.afnode` format.
+- Improved collision-model display state handling for more consistent project reopen behavior.
+
 ## v0.21.1 [a5e1fb4] (2026.7.29)
 - Improved tool TCP and child-scene loading and transform handling to reduce incorrect tool poses when opening legacy projects.
 - Added URDF generation for jointless tools, making it easier to create and configure tool models.

@@ -1,3 +1,10 @@
+## v0.21.1 [a5e1fb4] (2026.7.29)
+- Improved tool TCP and child-scene loading and transform handling to reduce incorrect tool poses when opening legacy projects.
+- Added URDF generation for jointless tools, making it easier to create and configure tool models.
+- Added track URDF generation to simplify creating and exporting track equipment models.
+- Improved the JSON property tree and multi-node operation interface for clearer, more efficient scene editing.
+- Completed Chinese and English translation updates and installation guidance improvements for a smoother deployment experience.
+
 ## v0.21.0 [b12b346] (2026.7.28)
 - Enhanced scene file compatibility so robots, tools, and visual models from legacy projects open and migrate more reliably.
 - Added and improved CAD assembly, URDF robot import, and positioner support to reduce manual model adjustments after import.

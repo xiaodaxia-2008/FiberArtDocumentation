@@ -1,3 +1,7 @@
+## v0.21.3 [6229f32] (2026.7.31)
+- Added general model export for robots, positioners, tracks, and tools
+- Improved scene-tree and fiber visualization performance for large projects
+
 ## v0.21.2 [478544e] (2026.7.29)
 - Improved URDF export for robots, positioners, tracks, and tools, with more reliable visual and collision geometry output.
 - Added direct export of general triangle-mesh formats, avoiding unnecessary conversion work for large models.

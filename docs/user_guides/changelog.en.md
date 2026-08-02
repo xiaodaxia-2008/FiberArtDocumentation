@@ -1,3 +1,9 @@
+## v0.21.4 [0721fe3] (2026.8.2)
+- Exported waypoints now mark trajectory boundaries, making it easier to distinguish different trajectory segments
+- Improved robot post-processing for more stable and reliable output
+- Optimized tool-to-robot attachment pose calculation for more accurate tool positioning
+- Fixed version compatibility issues when saving and loading project files; older projects open more reliably
+
 ## v0.21.3 [6229f32] (2026.7.31)
 - Added general model export for robots, positioners, tracks, and tools
 - Improved scene-tree and fiber visualization performance for large projects

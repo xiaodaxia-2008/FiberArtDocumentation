@@ -67,6 +67,7 @@ nav:
       - 进阶使用:
           - advanced/index.md
           - advanced/kinematics.md
+          - advanced/pose_calibration.md
           - advanced/post_process.md
           - advanced/plugin.md
   - 技术分享:

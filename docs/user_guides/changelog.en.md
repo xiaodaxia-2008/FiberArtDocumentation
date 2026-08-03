@@ -1,3 +1,9 @@
+## v0.21.5 [ddcff626] (2026.8.3)
+- Added common Euler pose formats with a configurable default format; pose rotation representation is now more flexible
+- Calibration results now follow the configured pose format for better rotation data compatibility
+- Added a Layway KUKA KRL post-processor for more stable and standardized path output
+- Improved Layway path tracking with real-time reporting of layer, line numbers, and generation progress
+
 ## v0.21.4 [0721fe3] (2026.8.2)
 - Exported waypoints now mark trajectory boundaries, making it easier to distinguish different trajectory segments
 - Improved robot post-processing for more stable and reliable output

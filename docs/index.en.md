@@ -38,6 +38,10 @@ FiberArt simulation for C-spar parts
 - Support various equipment types, such as robots (including linear tracks and positioners) and machine tool types
 - Visualization of simulation results
 - Export NC programs in G-code, KRL, and other formats
+- Generate URDF and general models for positioners, tracks, and tools
+- Calibrate workpiece poses and TCPs, with multiple robot pose formats and quaternion support
+- Analyze coverage, steering radius, and placement angle, and edit and query individual tows
+- Extend the application with Python plugins, Jinja2 post-processors, collision detection, and convex decomposition
 
 ## Software Highlights
 

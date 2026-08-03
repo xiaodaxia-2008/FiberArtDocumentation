@@ -22,3 +22,7 @@ After the prepreg tow planning is complete, individual prepreg tows can be exten
 - Modify Start Point: Modifies the start point of the tow segment. This value is the arc length distance from the start point to the start point of the reference centerline. To extend by 0.1m, decrease this value by 0.1; otherwise, increase it.
 - Modify End Point: Modifies the end point of the tow segment. This value is the arc length distance from the end point to the start point of the reference centerline. To extend by 0.1m, increase this value by 0.1; otherwise, decrease it.
 - Optimize: In some cases, extending a segment of tow may cause adjacent segments to overlap. Clicking Optimize will merge adjacent overlapping tow segments.
+
+## Display
+
+Use **Show Tow Mesh** in the Tow property editor to control the mesh display for an individual tow. A ply node can also control the mesh display of its child tows; when the child follows the ply setting, change visibility at the ply level first.

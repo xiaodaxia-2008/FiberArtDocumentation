@@ -99,6 +99,10 @@ Using bidirectional placement can improve efficiency, but the placement equipmen
 ### Planner
 - Planned Number of Tows: The number of prepreg tows planned for each course;
 
+- Planning Method: The current methods are `FixedAngle`, `Natural`, `Parallel`, `Slicing`, `FixedAngle_Parallel`, and `Natural_Parallel`. Combination methods combine two strategies for initial-reference-curve or subsequent-course calculations.
+
+- Variable Angle: When enabled, the layup angle is calculated along the path from a variable-angle function instead of a single constant value. Confirm the function inputs, return units, and valid range before editing it.
+
 !!! attention "Attention"
     **Planned Number of Tows** must be less than or equal to **Maximum Number of Tows** of the placement head.
 
@@ -187,3 +191,7 @@ Each individual ply saves its own independent set of parameters. To modify a ply
 The title bar of the ply parameter editing interface will display which ply the current parameters belong to. If there is no ply, it shows that the **Default Ply Parameters** are being edited.
 
 When creating a new ply, it copies a set of parameters from the current ply parameter editor.
+
+## 0.21.x Notes
+
+The planner supports step-by-step computation to the left or right and stopping after the current course. This is useful for checking boundaries, gaps, and overlaps one course at a time. Recreate the planner and recompute after changing ply parameters or a variable-angle function; do not treat old courses as results for the new settings.

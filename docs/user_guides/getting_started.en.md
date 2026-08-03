@@ -2,13 +2,13 @@
 
 ## Software Interface Basic Operations
 
-When you first open the software, the interface shown below will appear:
+When you first open the software, the interface shown below will appear. Read the [Current Workflow](current_workflow.en.md) first for the complete current-version process; the screenshots on this page mainly explain the basic layout.
 
 ![FiberArt Initial Window](./images/fiberart_window.png)
 
 ### Menu Bar
 
-The menu bar is the entry point for all software functions. Clicking each menu item opens a dropdown submenu. For example, functions such as planning and simulation can be displayed or hidden by clicking the *Function* option and checking the relevant checkboxes.
+The menu bar is the entry point for all software functions. Clicking each menu item opens a submenu. The planner, simulation/post-process, calibration, collision detection, and URDF generator panels can be shown or hidden from *Functions*.
 
 ![Menu Bar](./images/fiberart_function.png)
 
@@ -68,3 +68,4 @@ scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="tru
 Congratulations on completing a multi-layer fiber placement planning and simulation for a curved part using FiberArt.
 If you still have questions about this case tutorial, please continue reading the rest of this documentation.
 We suggest you proceed from [Ply Planning Parameters](./plan_parameters.md) to learn how to modify ply parameters to achieve the trajectories you expect.
+You can also read the [Current Workflow](current_workflow.en.md) for the updated equipment, kinematics, calibration, and export process.

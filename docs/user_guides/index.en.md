@@ -15,10 +15,15 @@ Please [download sample model data](https://gitee.com/zen_shawn/FiberArtData/rep
 
 Please refer to the [Quick Start Tutorial](getting_started.md).
 
+## Complete Current Workflow
+
+Read the [Current Workflow](current_workflow.en.md) for the complete process from project setup and ply planning through equipment configuration, simulation, and export.
+
 ## Further Exploration
 - [Planning Parameters](./plan_parameters.md)
 - [Ply Planner](./ply_planner.md)
 - [Global Parameters](./global_parameters.md)
+- [Current Workflow](./current_workflow.en.md)
 - [Poses and Calibration](../advanced/pose_calibration.en.md)
 
 ## View Version Updates

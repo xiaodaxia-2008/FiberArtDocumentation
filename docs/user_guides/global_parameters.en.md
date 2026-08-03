@@ -48,6 +48,8 @@ Used to enable or disable direct object selection by clicking the mouse in the 3
 ## Interface
 
 - Language: Interface language settings. In most cases, this should not be set here, but rather in the `Preference/Language` menu, followed by a restart to fully apply the language change.
+- Interaction Mode: The 3D view supports `SolidWorks` and `Touchpad` interaction modes. Switch between them from the 3D view context menu.
+- Default Pose Format: `GUI/DefaultPoseFormat` controls the default rotation format in pose editors and workpiece pose calibration. See [Poses and Calibration](../advanced/pose_calibration.en.md) for supported names and units.
   
 ## Path Parameters
 

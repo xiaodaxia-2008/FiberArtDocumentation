@@ -1,3 +1,9 @@
+## v0.21.6 [f39f2274] (2026.8.4)
+- Fixed an issue where fiber ply link path policies could be lost after reopening a project; project state now saves more reliably
+- Improved Kuka KRL XR post-processing output, with more accurate tool and base settings for the robot
+- Improved the default trajectory export file name, making exported files easier to identify and organize
+- Improved post-processing export efficiency, with faster responses on repeated exports
+
 ## v0.21.5 [ddcff626] (2026.8.3)
 - Added common Euler pose formats with a configurable default format; pose rotation representation is now more flexible
 - Calibration results now follow the configured pose format for better rotation data compatibility

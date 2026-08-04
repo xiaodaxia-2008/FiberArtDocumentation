@@ -4,8 +4,8 @@ This page describes the FiberArt 0.21.5 interface and workflow. The main process
 
 ## 1. Create a Project and Import Models
 
-1. Use **File > Open** to open a project, then use **Save** or **Save As** to save it. You can also start from the blank scene shown at startup and add nodes.
-2. Import STEP/IGES, mesh, scene-node, or plugin-supported data from the **Import** menu.
+1. Use **File > Open** to open a project or file. In the open-file dialog, choose a file-type filter such as **CADPart**, **CADAssembly**, **CADOneShape**, **SurfaceMesh**, **Model**, **Scene**, or **Node**; you can also choose **All** and let FiberArt select the factory from the file extension. Use **Save** or **Save As** to save the project. You can also start from the blank scene shown at startup and add nodes.
+2. STEP/IGES, mesh, scene-node, and other plugin-supported data are opened through **File > Open**, not the **Import** menu. The **Import** menu currently provides access to the component library for loading equipment components.
 3. Select a node in the scene tree and double-click it to open the property editor. Right-click a node to see its available actions.
 4. For CAD surfaces used in placement calculations, verify units, orientation, and tessellation settings. Convert a surface to a mesh when required by the operation.
 

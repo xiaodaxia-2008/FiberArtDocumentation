@@ -476,6 +476,8 @@
       
         
       
+        
+      
     
     
     
@@ -531,6 +533,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_guides/current_workflow.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    当前版本工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -702,10 +732,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8">
         
           
-          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="">
             
   
   
@@ -723,8 +753,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -819,6 +849,8 @@
       
         
       
+        
+      
     
     
     
@@ -835,7 +867,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" checked="">
         
           
           <div class="md-nav__link md-nav__container">
@@ -857,14 +889,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_9" id="__nav_3_9_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -891,6 +923,34 @@
     
   
     多轴联动系统运动学设置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pose_calibration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    位姿与标定
   
 
     
@@ -1025,6 +1085,17 @@
     <span class="md-ellipsis">
       
         自定义插件示例
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#当前版本注意事项" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        当前版本注意事项
       
     </span>
   </a>
@@ -1210,6 +1281,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#当前版本注意事项" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        当前版本注意事项
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1231,10 +1313,10 @@
 <h2 id="插件安装">插件安装</h2>
 <ol>
 <li>打开FiberArt</li>
-<li>在菜单栏选择<strong>插件</strong>,然后点击<strong>插件管理</strong></li>
+<li>在菜单栏选择<strong>插件</strong>，然后点击<strong>插件管理器</strong></li>
 <li>在弹出的界面中点击<strong>安装插件</strong></li>
 <li>在文件选择框中导航到插件所在的文件夹，点击选择</li>
-<li>安装完成后，重启软件，在菜单栏<strong>插件</strong>的子菜单中可以找到安装的插件（和具体插件的功能有关系，一般都在这里）</li>
+<li>安装完成后，重启软件，在菜单栏<strong>插件</strong>的子菜单中可以找到安装的插件（和具体插件的功能有关系，一般都在这里）。如果插件没有出现，先检查插件目录、<strong>日志</strong>面板和依赖是否正确。</li>
 </ol>
 <h2 id="插件开发">插件开发</h2>
 <p>开发具有GUI界面的插件，原理是用户自己使用PySide开发一个Widget，然后将这个Widget放入一个QDockWidget，再将QDockWidget嵌入到FiberArt的QMainWindow中。</p>
@@ -1302,6 +1384,13 @@
 </span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="n">create_demo</span><span class="p">()</span>
 </span></code></pre></div></td></tr></tbody></table></div>
 <p><code>Demo</code>相当于一个普通的Python模块，在FiberArt软件启动过程中，会执行 <code>import Demo</code> 语句。</p>
+<h2 id="当前版本注意事项">当前版本注意事项</h2>
+<ul>
+<li>插件可以通过 Python SDK 读写场景节点、属性和选择集，也可以注册 Qt 面板；</li>
+<li>轨迹后处理脚本从 JSON 轨迹点和模板生成设备程序，适合使用独立模板验证输出；</li>
+<li>旧版 Python 位姿标定脚本已迁移到内置 C++ 面板，不应再通过旧插件入口自动注册；</li>
+<li>插件加载失败时，查看 <strong>日志</strong>面板中的模块名称和异常信息，不要重复安装同名插件。</li>
+</ul>
 
 
 
@@ -1379,7 +1468,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright © 2022 - 2025 Zen Shawn
+      Copyright © 2022 - 2026 Zen Shawn
     </div>
   
   

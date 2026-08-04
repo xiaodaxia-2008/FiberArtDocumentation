@@ -476,6 +476,8 @@
       
         
       
+        
+      
     
     
     
@@ -531,6 +533,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="current_workflow.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    当前版本工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -810,6 +840,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#021x-注意事项" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.21.x 注意事项
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -932,10 +973,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8">
         
           
-          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="">
             
   
   
@@ -953,8 +994,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1047,6 +1088,8 @@
       
         
       
+        
+      
     
     
     
@@ -1063,7 +1106,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9">
         
           
           <div class="md-nav__link md-nav__container">
@@ -1085,14 +1128,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_9" id="__nav_3_9_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1119,6 +1162,34 @@
     
   
     多轴联动系统运动学设置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/pose_calibration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    位姿与标定
   
 
     
@@ -1508,6 +1579,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#021x-注意事项" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.21.x 注意事项
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1585,14 +1667,14 @@
 <p>
 </p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/fiberart_cstringer_straight_link.png" data-desc-position="bottom"><img src="images/fiberart_cstringer_straight_link.png"></a><figcaption>CStringerStraightLink</figcaption>
 </figure>
-上图中，使用<code>Straight</code>策略，路径是<code>A-B-C-D</code>，会导致过度路径从梁的下侧直线穿过（<strong>B-C</strong>段），不可避免地导致碰撞。<p></p>
+上图中，使用<strong>直线</strong>（<code>Straight</code>）策略，路径是<code>A-B-C-D</code>，会导致过度路径从梁的下侧直线穿过（<strong>B-C</strong>段），不可避免地导致碰撞。<p></p>
 <p>
 </p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/fiberart_cstringer_reverse_current_link.png" data-desc-position="bottom"><img src="images/fiberart_cstringer_reverse_current_link.png"></a><figcaption>CStringerReverseCurrentLink</figcaption>
 </figure>
-上图中，使用<code>ReverseCurrentHeadPath</code>，路径是<code>A-B-A'-C-D</code>，过度路径会绕着梁的铺放路径先回退回来(<strong>B-A'</strong>段)，再运动到下一组路径起点（<strong>A'-C</strong>段）。<p></p>
+上图中，使用<strong>回退铺放路径</strong>（<code>ReverseCurrentHeadPath</code>），路径是<code>A-B-A'-C-D</code>，过度路径会绕着梁的铺放路径先回退回来(<strong>B-A'</strong>段)，再运动到下一组路径起点（<strong>A'-C</strong>段）。<p></p>
 <p>该策略适用于回转类零件的90度、±45度铺放路径。</p>
 <h4 id="双向铺放">双向铺放</h4>
-<p>上述的<code>Straight</code>和<code>ReverseCurrentHadPath</code>都受限于铺放头只能<em>单向铺放</em>的约束。如果铺放头可以<strong>双向铺放</strong>，应该使用<code>ReverseNextHeadPath</code>的连接策略，该策略会将下一组铺放路径反向，一般情况下，这会使得上一组路径的终点和下一组路径的起点空间位置足够接近，可以直线运动过去。</p>
+<p>上述的<strong>直线</strong>（<code>Straight</code>）和<strong>回退铺放路径</strong>（<code>ReverseCurrentHeadPath</code>）都受限于铺放头只能<em>单向铺放</em>的约束。如果铺放头可以<strong>双向铺放</strong>，应该使用<strong>双向铺放</strong>（<code>ReverseNextHeadPath</code>）的连接策略，该策略会将下一组铺放路径反向，一般情况下，这会使得上一组路径的终点和下一组路径的起点空间位置足够接近，可以直线运动过去。</p>
 <p>
 </p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/fiberart_cstringer_reverse_next_link.png" data-desc-position="bottom"><img src="images/fiberart_cstringer_reverse_next_link.png"></a><figcaption>CStringReverseNextLink</figcaption>
 </figure>
@@ -1621,7 +1703,15 @@
 </ul>
 <h3 id="规划器">规划器</h3>
 <ul>
-<li>规划根数：每一组（Course）规划的预浸带数量；</li>
+<li>
+<p>规划根数：每一组（Course）规划的预浸带数量；</p>
+</li>
+<li>
+<p>规划方法：当前支持<strong>固定角度</strong>（<code>FixedAngle</code>）、<strong>自然曲线</strong>（<code>Natural</code>）、<strong>平行偏移</strong>（<code>CurveOffset</code>）、<strong>切片</strong>（<code>Slicing</code>）、<strong>固定角度-平行偏移</strong>（<code>FixedAngle_Parallel</code>）和<strong>自然曲线-平行偏移</strong>（<code>Natural_Parallel</code>）；组合方法会在初始参考线或后续课程计算中组合两类策略。</p>
+</li>
+<li>
+<p>可变角度：启用后，铺放角度不再固定为单个数值，而是由变量角度函数沿路径计算；编辑函数前应确认函数的输入变量、返回单位和取值范围。</p>
+</li>
 </ul>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
@@ -1738,6 +1828,8 @@
 </ul>
 <p>铺层参数编辑界面的标题栏会显示当前正在编辑的参数属于哪一个铺层，如果没有铺层，则显示编辑的是<strong>默认铺层参数</strong>。</p>
 <p>创建新的铺层时，会从当前的铺层参数编辑器中复制一份参数集。</p>
+<h2 id="021x-注意事项">0.21.x 注意事项</h2>
+<p>规划器支持单步向左/向右计算和停止当前课程，适合逐组检查边界、空隙和搭接。修改铺层参数或可变角度函数后，应重新创建规划器并重新计算，不要把旧课程结果当作新参数的结果。</p>
 
 
 
@@ -1860,7 +1952,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright © 2022 - 2025 Zen Shawn
+      Copyright © 2022 - 2026 Zen Shawn
     </div>
   
   

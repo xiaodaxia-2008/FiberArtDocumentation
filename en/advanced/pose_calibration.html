@@ -10,31 +10,35 @@
         <meta name="author" content="Zen Shawn">
       
       
-        <link rel="canonical" href="https://fiberart.myshawn.com/en/user_guides/third_parties/LISTS.html">
+        <link rel="canonical" href="https://fiberart.myshawn.com/en/advanced/pose_calibration.html">
       
       
+        <link rel="prev" href="kinematics.html">
+      
+      
+        <link rel="next" href="post_process.html">
       
       
         
-          <link rel="alternate" href="../../../user_guides/third_parties/LISTS.html" hreflang="zh">
+          <link rel="alternate" href="../../advanced/pose_calibration.html" hreflang="zh">
         
-          <link rel="alternate" href="LISTS.html" hreflang="en">
+          <link rel="alternate" href="pose_calibration.html" hreflang="en">
         
       
       
-      <link rel="icon" href="../../../assets/logo.png">
+      <link rel="icon" href="../../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>LISTS - FiberArt AFP Software</title>
+        <title>Poses and Calibration - FiberArt AFP Software</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -57,13 +61,13 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -91,6 +95,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#poses-and-calibration" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -101,9 +110,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../index.html" title="FiberArt AFP Software" class="md-header__button md-logo" aria-label="FiberArt AFP Software" data-md-component="logo">
+    <a href="../index.html" title="FiberArt AFP Software" class="md-header__button md-logo" aria-label="FiberArt AFP Software" data-md-component="logo">
       
-  <img src="../../../assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -120,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              LISTS
+              Poses and Calibration
             
           </span>
         </div>
@@ -177,13 +186,13 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../../user_guides/third_parties/LISTS.html" hreflang="zh" class="md-select__link">
+            <a href="../../advanced/pose_calibration.html" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="LISTS.html" hreflang="en" class="md-select__link">
+            <a href="pose_calibration.html" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -255,7 +264,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../index.html" class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
   
@@ -274,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../trial/index.html" class="md-tabs__link">
+      <a href="../trial/index.html" class="md-tabs__link">
         
   
   
@@ -291,11 +300,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../index.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../user_guides/index.html" class="md-tabs__link">
           
   
   
@@ -317,7 +328,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../blog/index.html" class="md-tabs__link">
+        <a href="../blog/index.html" class="md-tabs__link">
           
   
   
@@ -337,7 +348,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../contact.html" class="md-tabs__link">
+      <a href="../contact.html" class="md-tabs__link">
         
   
   
@@ -372,9 +383,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../index.html" title="FiberArt AFP Software" class="md-nav__button md-logo" aria-label="FiberArt AFP Software" data-md-component="logo">
+    <a href="../index.html" title="FiberArt AFP Software" class="md-nav__button md-logo" aria-label="FiberArt AFP Software" data-md-component="logo">
       
-  <img src="../../../assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     FiberArt AFP Software
@@ -389,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -416,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../trial/index.html" class="md-nav__link">
+      <a href="../trial/index.html" class="md-nav__link">
         
   
   
@@ -440,6 +451,8 @@
       
   
   
+    
+  
   
   
     
@@ -469,20 +482,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../index.html" class="md-nav__link ">
+            <a href="../user_guides/index.html" class="md-nav__link ">
               
   
   
@@ -500,13 +516,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -526,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../current_workflow.html" class="md-nav__link">
+      <a href="../user_guides/current_workflow.html" class="md-nav__link">
         
   
   
@@ -554,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started.html" class="md-nav__link">
+      <a href="../user_guides/getting_started.html" class="md-nav__link">
         
   
   
@@ -582,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../plan_parameters.html" class="md-nav__link">
+      <a href="../user_guides/plan_parameters.html" class="md-nav__link">
         
   
   
@@ -610,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ply_planner.html" class="md-nav__link">
+      <a href="../user_guides/ply_planner.html" class="md-nav__link">
         
   
   
@@ -638,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation.html" class="md-nav__link">
+      <a href="../user_guides/simulation.html" class="md-nav__link">
         
   
   
@@ -666,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../global_parameters.html" class="md-nav__link">
+      <a href="../user_guides/global_parameters.html" class="md-nav__link">
         
   
   
@@ -706,17 +722,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8">
         
           
-          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="">
             
   
   
@@ -752,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../node_properties/ply.html" class="md-nav__link">
+      <a href="../user_guides/node_properties/ply.html" class="md-nav__link">
         
   
   
@@ -780,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../node_properties/tow.html" class="md-nav__link">
+      <a href="../user_guides/node_properties/tow.html" class="md-nav__link">
         
   
   
@@ -813,6 +832,8 @@
                 
   
   
+    
+  
   
   
     
@@ -836,18 +857,21 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" checked="">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../advanced/index.html" class="md-nav__link ">
+            <a href="index.html" class="md-nav__link ">
               
   
   
@@ -865,13 +889,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_9" id="__nav_3_9_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -891,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/kinematics.html" class="md-nav__link">
+      <a href="kinematics.html" class="md-nav__link">
         
   
   
@@ -916,10 +940,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../advanced/pose_calibration.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Poses and Calibration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="pose_calibration.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -935,6 +986,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#editing-poses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing Poses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-pose-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Pose Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workpiece-pose-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workpiece Pose Calibration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP Calibration
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -947,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/post_process.html" class="md-nav__link">
+      <a href="post_process.html" class="md-nav__link">
         
   
   
@@ -975,7 +1090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/plugin.html" class="md-nav__link">
+      <a href="plugin.html" class="md-nav__link">
         
   
   
@@ -1041,7 +1156,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../blog/index.html" class="md-nav__link ">
+            <a href="../blog/index.html" class="md-nav__link ">
               
   
   
@@ -1087,7 +1202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contact.html" class="md-nav__link">
+      <a href="../contact.html" class="md-nav__link">
         
   
   
@@ -1124,6 +1239,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#editing-poses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing Poses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-pose-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Pose Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workpiece-pose-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workpiece Pose Calibration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP Calibration
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1140,28 +1309,34 @@
 
 
 
-  <h1>LISTS</h1>
-
+<h1 id="poses-and-calibration">Poses and Calibration</h1>
+<h2 id="editing-poses">Editing Poses</h2>
+<p>When editing a pose, robot properties, or TCP calibration data, choose the rotation representation from the <strong>Format</strong> list. The available formats are:</p>
 <ul>
-<li><a href="https://github.com/ChaiScript/ChaiScript">chaiscript</a>, <a href="../../../user_guides/third_parties/ChaiScript-LICENSE.txt">BSD</a></li>
-<li><a href="https://www.boost.org/">boost</a>, <a href="https://www.boost.org/users/license.html">Boost software license</a></li>
-<li><a href="https://www.python.org/">python</a>, <a href="https://docs.python.org/3/license.html">PSF</a></li>
-<li><a href="https://eigen.tuxfamily.org">eigen</a>, <a href="https://www.mozilla.org/en-US/MPL/2.0/">MPL2.0</a></li>
-<li><a href="https://www.coin3d.org/">coin3d</a>, BSD</li>
-<li><a href="https://github.com/nlohmann/json">nlohmann_json</a>, MIT</li>
-<li><a href="https://assimp.org/">assimp</a>, <a href="../../../user_guides/third_parties/Assimp.txt">Open Asset Import Library</a></li>
-<li><a href="http://ceres-solver.org/">ceres-solver</a>, <a href="https://github.com/ceres-solver/ceres-solver?tab=License-1-ov-file">BSD</a></li>
-<li><a href="https://github.com/USCiLab/cereal">cereal</a>, <a href="https://github.com/USCiLab/cereal?tab=BSD-3-Clause-1-ov-file">BSD</a></li>
-<li><a href="https://github.com/gabime/spdlog">spdlog</a>, <a href="../../../user_guides/third_parties/SPDLOG-MIT-LICENSE.txt">MIT</a></li>
-<li><a href="https://github.com/Neargye/magic_enum">magic_enum</a>, <a href="../../../user_guides/third_parties/Magic-enum-MIT-LICENSE.txt">MIT</a></li>
-<li><a href="https://github.com/palacaze/sigslot">sigslot</a>, <a href="../../../user_guides/third_parties/Sigslot-MIT-LICENSE.txt">MIT</a></li>
-<li><a href="https://github.com/leethomason/tinyxml2">tinyxml2</a>, <a href="../../../user_guides/third_parties/Tinyxml2-LICENSE.txt">zlib</a></li>
-<li><a href="https://www.freetype.org">freetype</a>, <a href="https://gitlab.freedesktop.org/freetype/freetype/-/blob/master/docs/FTL.TXT">Free Type Project License</a></li>
-<li><a href="https://dev.opencascade.org">opencascade</a>, <a href="https://dev.opencascade.org/resources/licensing">LGPL</a></li>
-<li><a href="https://ngsolve.org/">netgen</a>, <a href="https://ngsolve.org/">LGPL</a></li>
-<li><a href="https://github.com/microsoft/GSL">microsoft.gsl</a>, <a href="../../../user_guides/third_parties/GSL-MIT-LICENSE.txt">MIT</a></li>
-<li><a href="https://www.qt.io/">qt</a>, LGPL</li>
+<li>Euler angles: intrinsic or extrinsic XYZ, XZY, YXZ, YZX, ZXY, and ZYX sequences;</li>
+<li>Robot-specific formats: <code>KukaABC</code>, <code>KawasakiOAT</code>, <code>MitsubishiABC</code>, and <code>FanucWPR</code>;</li>
+<li><code>URAngleAxis</code> axis-angle representation;</li>
+<li><code>Quaternion</code>, with components ordered as <code>I, J, K, W</code>.</li>
 </ul>
+<p>Euler angles, robot-specific formats, and axis-angle values use degrees. Quaternions have no angle unit. Switching formats preserves the current pose and redisplays its rotation components.</p>
+<p><strong>Copy</strong> places the pose JSON on the clipboard. <strong>Paste</strong> restores a seven-element pose from the clipboard, which must contain valid pose JSON with position and rotation data.</p>
+<h2 id="default-pose-format">Default Pose Format</h2>
+<p>The default pose format is <code>EulerIntrinsicXYZ</code>. To use one representation consistently, set <code>GUI/DefaultPoseFormat</code> in the global parameters to one of the format names listed above. Workpiece pose calibration uses this setting when displaying its rotation result. An unset or invalid value falls back to <code>EulerIntrinsicXYZ</code>.</p>
+<h2 id="workpiece-pose-calibration">Workpiece Pose Calibration</h2>
+<p>Open the <strong>Workpiece Pose Calibration</strong> panel and enter the same feature points in two tables: one in the workpiece frame and one in the base frame.</p>
+<ol>
+<li>The two tables must contain the same number of points.</li>
+<li>At least three point pairs are required.</li>
+<li>Use <strong>Add</strong> to add rows, <strong>Remove</strong> to delete selected rows, <strong>Clear</strong> to reset a table, or paste point coordinates from the clipboard.</li>
+<li>Click <strong>Compute</strong> to calculate the workpiece pose relative to the base frame.</li>
+</ol>
+<p>The result contains X, Y, Z translation and rotation components in the configured default pose format. It is also copied to the clipboard as JSON. Quaternion output uses <code>I, J, K, W</code>; other formats output three rotation components.</p>
+<div class="admonition warning">
+<p class="admonition-title">Note</p>
+<p>Make sure corresponding points in the two tables are entered in the same order, and use meters for point coordinates.</p>
+</div>
+<h2 id="tcp-calibration">TCP Calibration</h2>
+<p>Open the <strong>TCP Calibration</strong> panel and enter at least three different flange poses. Each pose can use any of the formats described above. Click <strong>Compute TCP</strong> to calculate the TCP position in the flange frame. The panel displays X, Y, Z and copies the result JSON to the clipboard.</p>
 
 
 
@@ -1169,55 +1344,10 @@
 
 
 
-  
-  
 
 
 
 
-
-
-<h2 id="__comments">Comments</h2>
-
-<!-- Insert generated snippet here -->
-<script src="https://giscus.app/client.js" data-repo="xiaodaxia-2008/FiberArtDocumentation" data-repo-id="R_kgDOLlkOUg" data-category="Announcements" data-category-id="DIC_kwDOLlkOUs4Cod7i" data-mapping="title" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async="">
-</script>
-
-<!-- Synchronize Giscus theme with palette -->
-<script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    // Set palette on initial load
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-        var theme = palette.color.scheme === "slate"
-            ? "transparent_dark"
-            : "light"
-
-        // Instruct Giscus to set theme
-        giscus.setAttribute("data-theme", theme)
-    }
-
-    // Register event handlers after documented loaded
-    document.addEventListener("DOMContentLoaded", function () {
-        var ref = document.querySelector("[data-md-component=palette]")
-        ref.addEventListener("change", function () {
-            var palette = __md_get("__palette")
-            if (palette && typeof palette.color === "object") {
-                var theme = palette.color.scheme === "slate"
-                    ? "transparent_dark"
-                    : "light"
-
-                // Instruct Giscus to change theme
-                var frame = document.querySelector(".giscus-frame")
-                frame.contentWindow.postMessage(
-                    { giscus: { setConfig: { theme } } },
-                    "https://giscus.app"
-                )
-            }
-        })
-    })
-</script>
 
                 
               </article>
@@ -1239,6 +1369,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="kinematics.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Multi-axis Linkage System Kinematics Settings">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Multi-axis Linkage System Kinematics Settings
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="post_process.html" class="md-footer__link md-footer__link--next" aria-label="Next: Post-processing Customization">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Post-processing Customization
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1289,16 +1457,16 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "navigation.sections", "navigation.indexes", "navigation.tabs", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "header.autohide", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "navigation.sections", "navigation.indexes", "navigation.tabs", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "header.autohide", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../../javascripts/katex.js"></script>
+        <script src="../../javascripts/katex.js"></script>
       
-        <script src="../../../javascripts/katex.min.js"></script>
+        <script src="../../javascripts/katex.min.js"></script>
       
-        <script src="../../../javascripts/auto-render.min.js"></script>
+        <script src="../../javascripts/auto-render.min.js"></script>
       
     
   

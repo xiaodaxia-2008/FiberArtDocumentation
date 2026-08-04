@@ -1,40 +1,44 @@
-<!DOCTYPE html><html lang="en" class="no-js"><head>
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="FiberArt is an independently developed Automated Fiber Placement (AFP) trajectory planning and simulation software.  It can output NC programs in G-code and other formats, suitable for planning and simulation on various complex surfaces,  and compatible with various equipment. Trial is available.
+        <meta name="description" content="FiberArt 是国产自主开发的自动铺丝轨迹规划及仿真软件，可以输出G代码等格式的数控程序，可用于各种复杂曲面的铺丝规划和仿真， 同时可以适配各种设备。FiberArt软件可以提供试用。
 ">
       
       
         <meta name="author" content="Zen Shawn">
       
       
-        <link rel="canonical" href="https://fiberart.myshawn.com/en/user_guides/third_parties/LISTS.html">
+        <link rel="canonical" href="https://fiberart.myshawn.com/advanced/pose_calibration.html">
       
       
+        <link rel="prev" href="kinematics.html">
+      
+      
+        <link rel="next" href="post_process.html">
       
       
         
-          <link rel="alternate" href="../../../user_guides/third_parties/LISTS.html" hreflang="zh">
+          <link rel="alternate" href="pose_calibration.html" hreflang="zh">
         
-          <link rel="alternate" href="LISTS.html" hreflang="en">
+          <link rel="alternate" href="../en/advanced/pose_calibration.html" hreflang="en">
         
       
       
-      <link rel="icon" href="../../../assets/logo.png">
+      <link rel="icon" href="../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>LISTS - FiberArt AFP Software</title>
+        <title>位姿与标定 - FiberArt 自动铺丝软件</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -57,13 +61,13 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -91,6 +95,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#位姿与标定" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -100,10 +109,10 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../index.html" title="FiberArt AFP Software" class="md-header__button md-logo" aria-label="FiberArt AFP Software" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../index.html" title="FiberArt 自动铺丝软件" class="md-header__button md-logo" aria-label="FiberArt 自动铺丝软件" data-md-component="logo">
       
-  <img src="../../../assets/logo.svg" alt="logo">
+  <img src="../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -114,13 +123,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            FiberArt AFP Software
+            FiberArt 自动铺丝软件
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              LISTS
+              位姿与标定
             
           </span>
         </div>
@@ -170,20 +179,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Select language">
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../../user_guides/third_parties/LISTS.html" hreflang="zh" class="md-select__link">
+            <a href="pose_calibration.html" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="LISTS.html" hreflang="en" class="md-select__link">
+            <a href="../en/advanced/pose_calibration.html" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -204,16 +213,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="查找">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
@@ -224,7 +233,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            正在初始化搜索引擎
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -245,7 +254,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -255,13 +264,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../index.html" class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
   
     
   
-  Home
+  主页
 
       </a>
     </li>
@@ -274,13 +283,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../trial/index.html" class="md-tabs__link">
+      <a href="../trial/index.html" class="md-tabs__link">
         
   
   
     
   
-  Trial Application
+  试用申请
 
       </a>
     </li>
@@ -291,17 +300,19 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../index.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../user_guides/index.html" class="md-tabs__link">
           
   
   
     
   
-  User Manual
+  用户手册
 
         </a>
       </li>
@@ -317,13 +328,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../blog/index.html" class="md-tabs__link">
+        <a href="../blog/index.html" class="md-tabs__link">
           
   
   
     
   
-  Tech Blog
+  技术分享
 
         </a>
       </li>
@@ -337,13 +348,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../contact.html" class="md-tabs__link">
+      <a href="../contact.html" class="md-tabs__link">
         
   
   
     
   
-  Contact Us
+  联系我们
 
       </a>
     </li>
@@ -370,14 +381,14 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../index.html" title="FiberArt AFP Software" class="md-nav__button md-logo" aria-label="FiberArt AFP Software" data-md-component="logo">
+    <a href="../index.html" title="FiberArt 自动铺丝软件" class="md-nav__button md-logo" aria-label="FiberArt 自动铺丝软件" data-md-component="logo">
       
-  <img src="../../../assets/logo.svg" alt="logo">
+  <img src="../assets/logo.svg" alt="logo">
 
     </a>
-    FiberArt AFP Software
+    FiberArt 自动铺丝软件
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix="">
@@ -389,14 +400,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Home
+    主页
   
 
     
@@ -416,14 +427,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../trial/index.html" class="md-nav__link">
+      <a href="../trial/index.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Trial Application
+    试用申请
   
 
     
@@ -440,6 +451,8 @@
       
   
   
+    
+  
   
   
     
@@ -469,27 +482,30 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../index.html" class="md-nav__link ">
+            <a href="../user_guides/index.html" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    User Manual
+    用户手册
   
 
     
@@ -500,18 +516,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    User Manual
+    用户手册
   
 
           </label>
@@ -526,14 +542,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../current_workflow.html" class="md-nav__link">
+      <a href="../user_guides/current_workflow.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Current Workflow
+    当前版本工作流
   
 
     
@@ -554,14 +570,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started.html" class="md-nav__link">
+      <a href="../user_guides/getting_started.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Quick Start Tutorial
+    快速上手教程
   
 
     
@@ -582,14 +598,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../plan_parameters.html" class="md-nav__link">
+      <a href="../user_guides/plan_parameters.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Ply Planning Parameters
+    铺层规划参数
   
 
     
@@ -610,14 +626,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../ply_planner.html" class="md-nav__link">
+      <a href="../user_guides/ply_planner.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Ply Planner
+    铺层规划器
   
 
     
@@ -638,14 +654,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulation.html" class="md-nav__link">
+      <a href="../user_guides/simulation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Simulation
+    仿真
   
 
     
@@ -666,14 +682,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../global_parameters.html" class="md-nav__link">
+      <a href="../user_guides/global_parameters.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Global Parameters
+    全局参数
   
 
     
@@ -706,24 +722,27 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8">
         
           
-          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    Node Properties
+    节点属性
   
 
     
@@ -739,7 +758,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Node Properties
+    节点属性
   
 
           </label>
@@ -752,14 +771,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../node_properties/ply.html" class="md-nav__link">
+      <a href="../user_guides/node_properties/ply.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Ply Properties
+    铺层(Ply)属性
   
 
     
@@ -780,14 +799,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../node_properties/tow.html" class="md-nav__link">
+      <a href="../user_guides/node_properties/tow.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Tow Properties
+    丝束(Tow)属性
   
 
     
@@ -813,6 +832,8 @@
                 
   
   
+    
+  
   
   
     
@@ -836,25 +857,28 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" checked="">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../advanced/index.html" class="md-nav__link ">
+            <a href="index.html" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Advanced Usage
+    进阶使用
   
 
     
@@ -865,18 +889,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_9" id="__nav_3_9_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_9">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Advanced Usage
+    进阶使用
   
 
           </label>
@@ -891,14 +915,161 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/kinematics.html" class="md-nav__link">
+      <a href="kinematics.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Multi-axis Linkage System Kinematics Settings
+    多轴联动系统运动学设置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    位姿与标定
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="pose_calibration.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    位姿与标定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#位姿编辑" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        位姿编辑
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#默认姿态格式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        默认姿态格式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#工件位姿标定" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工件位姿标定
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-标定" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP 标定
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="post_process.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    后处理定制
   
 
     
@@ -919,70 +1090,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/pose_calibration.html" class="md-nav__link">
+      <a href="plugin.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Poses and Calibration
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../advanced/post_process.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Post-processing Customization
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../advanced/plugin.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FiberArt Plugin Development Tutorial
+    FiberArt插件开发教程
   
 
     
@@ -1041,14 +1156,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../blog/index.html" class="md-nav__link ">
+            <a href="../blog/index.html" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Tech Blog
+    技术分享
   
 
     
@@ -1065,7 +1180,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Tech Blog
+    技术分享
   
 
           </label>
@@ -1087,14 +1202,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contact.html" class="md-nav__link">
+      <a href="../contact.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Contact Us
+    联系我们
   
 
     
@@ -1120,10 +1235,64 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#位姿编辑" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        位姿编辑
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#默认姿态格式" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        默认姿态格式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#工件位姿标定" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工件位姿标定
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-标定" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP 标定
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1140,28 +1309,34 @@
 
 
 
-  <h1>LISTS</h1>
-
+<h1 id="位姿与标定">位姿与标定</h1>
+<h2 id="位姿编辑">位姿编辑</h2>
+<p>在编辑位姿、机器人属性或 TCP 标定时，可以在 <strong>格式</strong> 下拉框中选择旋转表示方式。当前支持：</p>
 <ul>
-<li><a href="https://github.com/ChaiScript/ChaiScript">chaiscript</a>, <a href="../../../user_guides/third_parties/ChaiScript-LICENSE.txt">BSD</a></li>
-<li><a href="https://www.boost.org/">boost</a>, <a href="https://www.boost.org/users/license.html">Boost software license</a></li>
-<li><a href="https://www.python.org/">python</a>, <a href="https://docs.python.org/3/license.html">PSF</a></li>
-<li><a href="https://eigen.tuxfamily.org">eigen</a>, <a href="https://www.mozilla.org/en-US/MPL/2.0/">MPL2.0</a></li>
-<li><a href="https://www.coin3d.org/">coin3d</a>, BSD</li>
-<li><a href="https://github.com/nlohmann/json">nlohmann_json</a>, MIT</li>
-<li><a href="https://assimp.org/">assimp</a>, <a href="../../../user_guides/third_parties/Assimp.txt">Open Asset Import Library</a></li>
-<li><a href="http://ceres-solver.org/">ceres-solver</a>, <a href="https://github.com/ceres-solver/ceres-solver?tab=License-1-ov-file">BSD</a></li>
-<li><a href="https://github.com/USCiLab/cereal">cereal</a>, <a href="https://github.com/USCiLab/cereal?tab=BSD-3-Clause-1-ov-file">BSD</a></li>
-<li><a href="https://github.com/gabime/spdlog">spdlog</a>, <a href="../../../user_guides/third_parties/SPDLOG-MIT-LICENSE.txt">MIT</a></li>
-<li><a href="https://github.com/Neargye/magic_enum">magic_enum</a>, <a href="../../../user_guides/third_parties/Magic-enum-MIT-LICENSE.txt">MIT</a></li>
-<li><a href="https://github.com/palacaze/sigslot">sigslot</a>, <a href="../../../user_guides/third_parties/Sigslot-MIT-LICENSE.txt">MIT</a></li>
-<li><a href="https://github.com/leethomason/tinyxml2">tinyxml2</a>, <a href="../../../user_guides/third_parties/Tinyxml2-LICENSE.txt">zlib</a></li>
-<li><a href="https://www.freetype.org">freetype</a>, <a href="https://gitlab.freedesktop.org/freetype/freetype/-/blob/master/docs/FTL.TXT">Free Type Project License</a></li>
-<li><a href="https://dev.opencascade.org">opencascade</a>, <a href="https://dev.opencascade.org/resources/licensing">LGPL</a></li>
-<li><a href="https://ngsolve.org/">netgen</a>, <a href="https://ngsolve.org/">LGPL</a></li>
-<li><a href="https://github.com/microsoft/GSL">microsoft.gsl</a>, <a href="../../../user_guides/third_parties/GSL-MIT-LICENSE.txt">MIT</a></li>
-<li><a href="https://www.qt.io/">qt</a>, LGPL</li>
+<li>欧拉角：内旋或外旋的 XYZ、XZY、YXZ、YZX、ZXY、ZYX 六轴序列；</li>
+<li>机器人专用格式：<strong>库卡 ABC</strong>、<strong>川崎 OAT</strong>、<strong>三菱 ABC</strong>、<strong>发那科 WPR</strong>；</li>
+<li><strong>UR 轴角</strong>表示；</li>
+<li><strong>四元数</strong>表示，分量顺序为 <code>I, J, K, W</code>。</li>
 </ul>
+<p>欧拉角、机器人专用格式和轴角的输入单位为度；四元数没有角度单位。切换格式时，软件会保持当前位姿并重新显示对应分量。</p>
+<p><strong>复制</strong> 会将位姿复制为 JSON，<strong>粘贴</strong> 可从剪贴板恢复一个七元素位姿。剪贴板内容必须是有效的位姿 JSON，包含位置和旋转数据。</p>
+<h2 id="默认姿态格式">默认姿态格式</h2>
+<p>位姿控件的默认格式为 <code>EulerIntrinsicXYZ</code>。如需统一团队使用的姿态表示，可在全局参数中设置 <code>GUI/DefaultPoseFormat</code>，填写上面列出的格式名称。工件位姿标定会使用该设置输出旋转结果；未设置或名称无效时使用 <code>EulerIntrinsicXYZ</code>。</p>
+<h2 id="工件位姿标定">工件位姿标定</h2>
+<p>打开 <strong>工件位姿标定</strong> 面板，在两张表中分别填写同一组特征点在工件坐标系和基坐标系中的坐标。</p>
+<ol>
+<li>两张表的点数必须相同。</li>
+<li>至少需要三组点对。</li>
+<li>可以使用 <strong>添加行</strong> 增加行，使用 <strong>删除行</strong> 删除选中行，使用 <strong>清空</strong> 清空表格，也可以直接从剪贴板粘贴点坐标。</li>
+<li>点击 <strong>计算</strong> 计算工件相对于基坐标系的位姿。</li>
+</ol>
+<p>结果包含 X、Y、Z 平移和按默认姿态格式计算的旋转分量，并自动复制为 JSON 到剪贴板。四元数格式输出 <code>I, J, K, W</code>；其他旋转格式输出三个角度分量。</p>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>进行标定前，请确认两张表中的点按相同顺序一一对应，并确认长度单位为米。</p>
+</div>
+<h2 id="tcp-标定">TCP 标定</h2>
+<p>打开 <strong>TCP 标定</strong> 面板，录入至少三组不同的法兰位姿。每组位姿都可以使用上述格式编辑。点击 <strong>计算 TCP</strong> 后，软件显示 TCP 在法兰坐标系中的 X、Y、Z 坐标，并将结果 JSON 复制到剪贴板。</p>
 
 
 
@@ -1169,55 +1344,10 @@
 
 
 
-  
-  
 
 
 
 
-
-
-<h2 id="__comments">Comments</h2>
-
-<!-- Insert generated snippet here -->
-<script src="https://giscus.app/client.js" data-repo="xiaodaxia-2008/FiberArtDocumentation" data-repo-id="R_kgDOLlkOUg" data-category="Announcements" data-category-id="DIC_kwDOLlkOUs4Cod7i" data-mapping="title" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async="">
-</script>
-
-<!-- Synchronize Giscus theme with palette -->
-<script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    // Set palette on initial load
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-        var theme = palette.color.scheme === "slate"
-            ? "transparent_dark"
-            : "light"
-
-        // Instruct Giscus to set theme
-        giscus.setAttribute("data-theme", theme)
-    }
-
-    // Register event handlers after documented loaded
-    document.addEventListener("DOMContentLoaded", function () {
-        var ref = document.querySelector("[data-md-component=palette]")
-        ref.addEventListener("change", function () {
-            var palette = __md_get("__palette")
-            if (palette && typeof palette.color === "object") {
-                var theme = palette.color.scheme === "slate"
-                    ? "transparent_dark"
-                    : "light"
-
-                // Instruct Giscus to change theme
-                var frame = document.querySelector(".giscus-frame")
-                frame.contentWindow.postMessage(
-                    { giscus: { setConfig: { theme } } },
-                    "https://giscus.app"
-                )
-            }
-        })
-    })
-</script>
 
                 
               </article>
@@ -1232,13 +1362,51 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
-  Back to top
+  回到页面顶部
 </button>
         
       </main>
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
+        
+          
+          <a href="kinematics.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 多轴联动系统运动学设置">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                多轴联动系统运动学设置
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="post_process.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 后处理定制">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                后处理定制
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1289,16 +1457,16 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "navigation.sections", "navigation.indexes", "navigation.tabs", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "header.autohide", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["announce.dismiss", "navigation.sections", "navigation.indexes", "navigation.tabs", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "header.autohide", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../../javascripts/katex.js"></script>
+        <script src="../javascripts/katex.js"></script>
       
-        <script src="../../../javascripts/katex.min.js"></script>
+        <script src="../javascripts/katex.min.js"></script>
       
-        <script src="../../../javascripts/auto-render.min.js"></script>
+        <script src="../javascripts/auto-render.min.js"></script>
       
     
   

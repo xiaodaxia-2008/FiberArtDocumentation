@@ -476,6 +476,8 @@
       
         
       
+        
+      
     
     
     
@@ -531,6 +533,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="current_workflow.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Current Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -810,6 +840,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#021x-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.21.x Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -932,10 +973,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8">
         
           
-          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="">
             
   
   
@@ -953,8 +994,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1047,6 +1088,8 @@
       
         
       
+        
+      
     
     
     
@@ -1063,7 +1106,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9">
         
           
           <div class="md-nav__link md-nav__container">
@@ -1085,14 +1128,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_9" id="__nav_3_9_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1119,6 +1162,34 @@
     
   
     Multi-axis Linkage System Kinematics Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/pose_calibration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Poses and Calibration
   
 
     
@@ -1508,6 +1579,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#021x-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.21.x Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1621,7 +1703,15 @@ In the above image, using <code>ReverseCurrentHeadPath</code>, the path is <code
 </ul>
 <h3 id="planner">Planner</h3>
 <ul>
-<li>Planned Number of Tows: The number of prepreg tows planned for each course;</li>
+<li>
+<p>Planned Number of Tows: The number of prepreg tows planned for each course;</p>
+</li>
+<li>
+<p>Planning Method: The current methods are <code>FixedAngle</code>, <code>Natural</code>, <code>Parallel</code>, <code>Slicing</code>, <code>FixedAngle_Parallel</code>, and <code>Natural_Parallel</code>. Combination methods combine two strategies for initial-reference-curve or subsequent-course calculations.</p>
+</li>
+<li>
+<p>Variable Angle: When enabled, the layup angle is calculated along the path from a variable-angle function instead of a single constant value. Confirm the function inputs, return units, and valid range before editing it.</p>
+</li>
 </ul>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -1738,6 +1828,8 @@ In the above image, using <code>ReverseCurrentHeadPath</code>, the path is <code
 </ul>
 <p>The title bar of the ply parameter editing interface will display which ply the current parameters belong to. If there is no ply, it shows that the <strong>Default Ply Parameters</strong> are being edited.</p>
 <p>When creating a new ply, it copies a set of parameters from the current ply parameter editor.</p>
+<h2 id="021x-notes">0.21.x Notes</h2>
+<p>The planner supports step-by-step computation to the left or right and stopping after the current course. This is useful for checking boundaries, gaps, and overlaps one course at a time. Recreate the planner and recompute after changing ply parameters or a variable-angle function; do not treat old courses as results for the new settings.</p>
 
 
 
@@ -1860,7 +1952,7 @@ In the above image, using <code>ReverseCurrentHeadPath</code>, the path is <code
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright © 2022 - 2025 Zen Shawn
+      Copyright © 2022 - 2026 Zen Shawn
     </div>
   
   

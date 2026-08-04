@@ -1,3 +1,10 @@
+## v0.21.8 [724bebb6] (2026.8.4)
+- Fixed an incorrect path when packaging the path planning plugin (FAFiberPathPlanner) with Sentinel protection, making plugin protection more reliable in encrypted installers
+- Fixed the plugin build order issue when Sentinel protection is enabled, making the packaging process more stable
+
+## v0.21.7 [706d8b32] (2026.8.4)
+- Fixed the Chinese localization display of the installer license agreement, so Chinese users can view the license content correctly
+
 ## v0.21.6 [f39f2274] (2026.8.4)
 - Fixed an issue where fiber ply link path policies could be lost after reopening a project; project state now saves more reliably
 - Improved Kuka KRL XR post-processing output, with more accurate tool and base settings for the robot

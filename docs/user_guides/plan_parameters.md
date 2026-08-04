@@ -61,16 +61,16 @@
 以下例子假设 `A-B`、`C-D`分别是相邻的两组铺放头路径。
 
 ![CStringerStraightLink](./images/fiberart_cstringer_straight_link.png)
-上图中，使用`Straight`策略，路径是`A-B-C-D`，会导致过度路径从梁的下侧直线穿过（**B-C**段），不可避免地导致碰撞。
+上图中，使用**直线**（`Straight`）策略，路径是`A-B-C-D`，会导致过度路径从梁的下侧直线穿过（**B-C**段），不可避免地导致碰撞。
 
 ![CStringerReverseCurrentLink](./images/fiberart_cstringer_reverse_current_link.png)
-上图中，使用`ReverseCurrentHeadPath`，路径是`A-B-A'-C-D`，过度路径会绕着梁的铺放路径先回退回来(**B-A'**段)，再运动到下一组路径起点（**A'-C**段）。
+上图中，使用**回退铺放路径**（`ReverseCurrentHeadPath`），路径是`A-B-A'-C-D`，过度路径会绕着梁的铺放路径先回退回来(**B-A'**段)，再运动到下一组路径起点（**A'-C**段）。
 
 该策略适用于回转类零件的90度、±45度铺放路径。
 
 #### 双向铺放
 
-上述的`Straight`和`ReverseCurrentHadPath`都受限于铺放头只能*单向铺放*的约束。如果铺放头可以**双向铺放**，应该使用`ReverseNextHeadPath`的连接策略，该策略会将下一组铺放路径反向，一般情况下，这会使得上一组路径的终点和下一组路径的起点空间位置足够接近，可以直线运动过去。
+上述的**直线**（`Straight`）和**回退铺放路径**（`ReverseCurrentHeadPath`）都受限于铺放头只能*单向铺放*的约束。如果铺放头可以**双向铺放**，应该使用**双向铺放**（`ReverseNextHeadPath`）的连接策略，该策略会将下一组铺放路径反向，一般情况下，这会使得上一组路径的终点和下一组路径的起点空间位置足够接近，可以直线运动过去。
 
 ![CStringReverseNextLink](./images/fiberart_cstringer_reverse_next_link.png)
 
@@ -99,7 +99,7 @@
 ### 规划器
 - 规划根数：每一组（Course）规划的预浸带数量；
 
-- 规划方法：当前支持 `FixedAngle`、`Natural`、`Parallel`、`Slicing`、`FixedAngle_Parallel` 和 `Natural_Parallel`；组合方法会在初始参考线或后续课程计算中组合两类策略。
+- 规划方法：当前支持**固定角度**（`FixedAngle`）、**自然曲线**（`Natural`）、**平行偏移**（`CurveOffset`）、**切片**（`Slicing`）、**固定角度-平行偏移**（`FixedAngle_Parallel`）和**自然曲线-平行偏移**（`Natural_Parallel`）；组合方法会在初始参考线或后续课程计算中组合两类策略。
 
 - 可变角度：启用后，铺放角度不再固定为单个数值，而是由变量角度函数沿路径计算；编辑函数前应确认函数的输入变量、返回单位和取值范围。
 

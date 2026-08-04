@@ -16,26 +16,26 @@
 
 ## 轨道策略
 
-- `BaseShift`：根据轨迹起点和终点的基座偏移计算轨道位置；可设置 **Start Base Shift**、**End Base Shift**。
-- `Fixed`：使用固定关节位置。
-- `AutoFixed`：为当前轨迹自动计算一个固定位置。
-- `ConstantDistance`：使轨道相对于目标保持给定距离。
-- `ConstantDistanceLinearInterpolation`：在起点和终点满足目标距离，中间线性插值。
-- `CustomFunction`：使用自定义函数计算轨道关节位置。函数必须在当前设备坐标系和单位约定下返回有效结果。
+- **底座偏移**（`BaseShift`）：根据轨迹起点和终点的基座偏移计算轨道位置；可设置 **起点底座偏移**、**终点底座偏移**。
+- **固定**（`Fixed`）：使用固定关节位置。
+- **自动固定**（`AutoFixed`）：为当前轨迹自动计算一个固定位置。
+- **底座固定距离**（`ConstantDistance`）：使轨道相对于目标保持给定距离。
+- **底座固定距离-线性插值**（`ConstantDistanceLinearInterpolation`）：在起点和终点满足目标距离，中间线性插值。
+- **自定义函数**（`CustomFunction`）：使用自定义函数计算轨道关节位置。函数必须在当前设备坐标系和单位约定下返回有效结果。
 
 ## 位置机策略
 
-- `Align`：使轨迹方向与参考方向对齐；
-- `AlignLinearInterpolation`：只计算课程起点和终点，中间线性插值；
-- `AlignCubicInterpolation`：只计算课程起点和终点，中间使用三次插值；
-- `Fixed`：使用固定关节位置；
-- `AutoFixed`：自动选择适合当前课程的固定位置。
+- `Align`（对齐）：使轨迹方向与参考方向对齐；
+- `AlignLinearInterpolation`（对齐-线性插值）：只计算课程起点和终点，中间线性插值；
+- `AlignCubicInterpolation`（对齐-三次插值）：只计算课程起点和终点，中间使用三次插值；
+- **固定**（`Fixed`）：使用固定关节位置；
+- **自动固定**（`AutoFixed`）：自动选择适合当前课程的固定位置。
 
-位置机的 **Start Direction**、**End Direction** 以角度定义起止参考方向，**Normal Weight** 控制曲面法向和径向方向在对齐计算中的权重。
+位置机的 **起始方向**、**结束方向** 以角度定义起止参考方向，**法线权重** 控制曲面法向和径向方向在对齐计算中的权重。
 
 ## 应用与检查
 
-在 **LayupSimulation & PostProcess > Kinematics Setting** 中选择算法和策略，点击 **Apply**；要对所有选中的轨迹统一设置时使用 **Apply to All**。设置改变后重新运行仿真和后处理，不要复用旧的运动学结果。
+在 **仿真及后处理 > 运动学设置** 中选择算法和策略，点击 **应用**；要对所有选中的轨迹统一设置时使用 **应用到所有轨迹**。设置改变后重新运行仿真和后处理，不要复用旧的运动学结果。
 
 检查重点：
 

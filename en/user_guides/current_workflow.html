@@ -1374,14 +1374,16 @@
 
 
 <h1 id="current-workflow">Current Workflow</h1>
-<p>This page describes the FiberArt 0.21.5 interface and workflow. The main process is to prepare geometry and equipment, create or plan plies, inspect the result, configure the motion system, simulate, and export a machine program.</p>
+<p>This page describes the FiberArt 0.22.0 interface and workflow. The main process is to prepare geometry and equipment, create or plan plies, inspect the result, configure the motion system, simulate, and export a machine program.</p>
 <h2 id="1-create-a-project-and-import-models">1. Create a Project and Import Models</h2>
 <ol>
 <li>Use <strong>File &gt; Open</strong> to open a project or file. In the open-file dialog, choose a file-type filter such as <strong>CADPart</strong>, <strong>CADAssembly</strong>, <strong>CADOneShape</strong>, <strong>SurfaceMesh</strong>, <strong>Model</strong>, <strong>Scene</strong>, or <strong>Node</strong>; you can also choose <strong>All</strong> and let FiberArt select the factory from the file extension. Use <strong>Save</strong> or <strong>Save As</strong> to save the project. You can also start from the blank scene shown at startup and add nodes.</li>
-<li>Open STEP/IGES, mesh, scene-node, and other plugin-supported data through <strong>File &gt; Open</strong>. Use the <strong>Import</strong> menu to open the component library and load equipment components.</li>
+<li>Open STEP/IGES, mesh, scene-node, and other plugin-supported data through <strong>File &gt; Open</strong>. Open <strong>File &gt; Import &gt; Component Library</strong> to load equipment components: filter by <strong>Type</strong> (robot, track, positioner, etc.) and <strong>Brand</strong>, search by <strong>Name</strong>, or click <strong>Update</strong> to fetch the latest component catalog from the cloud; the table shows the component model, brand, payload, reach, and installation status. Double-click a row or click <strong>Open</strong> to load the selected component.</li>
+<li>When opening equipment models (robot, tool, track, positioner), FiberArt preserves the model's original pose and tries to attach it automatically: robots are attached under an existing track and tools under an existing robot. The attachment order does not affect the final assembly result.</li>
 <li>Select a node in the scene tree and double-click it to open the property editor. Right-click a node to see its available actions.</li>
 <li>For CAD surfaces used in placement calculations, verify units, orientation, and tessellation settings. Convert a surface to a mesh when required by the operation.</li>
 </ol>
+<p>To create a coordinate frame, choose <strong>Model &gt; Frame</strong> to add a default frame node directly, without an extra confirmation dialog.</p>
 <p>Projects save the complete scene. Individual nodes can be exported for reuse in another project.</p>
 <h2 id="2-plan-a-ply">2. Plan a Ply</h2>
 <p>Open <strong>PlyPlanner</strong> from <strong>Functions</strong>. Its main inputs are the layup surface, placement-area boundaries, optional guide curves, a reference point, a seam, and the ply/laminate nodes.</p>

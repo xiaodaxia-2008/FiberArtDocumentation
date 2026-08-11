@@ -786,10 +786,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#click-to-select" class="md-nav__link">
+  <a href="#interface" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Click-to-Select
+        Interface
       
     </span>
   </a>
@@ -797,10 +797,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interface" class="md-nav__link">
+  <a href="#curve" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interface
+        Curve
       
     </span>
   </a>
@@ -823,6 +823,17 @@
     <span class="md-ellipsis">
       
         Planning Parameters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update
       
     </span>
   </a>
@@ -1335,10 +1346,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#click-to-select" class="md-nav__link">
+  <a href="#interface" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Click-to-Select
+        Interface
       
     </span>
   </a>
@@ -1346,10 +1357,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interface" class="md-nav__link">
+  <a href="#curve" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interface
+        Curve
       
     </span>
   </a>
@@ -1378,6 +1389,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1396,6 +1418,7 @@
 
 
 <h1 id="global-parameters">Global Parameters</h1>
+<p>Global parameters are opened via the <code>Preferences &gt; Global Parameters</code> menu. Click <strong>Save</strong> to apply changes, or <strong>Reset</strong> to restore defaults. The context menu also provides <strong>Export / Import</strong> for the whole parameter set.</p>
 <h2 id="cad-model-import-settings">CAD Model Import Settings</h2>
 <ul>
 <li>Import Units: The import units for STEP/IGES models, default is meters (M).</li>
@@ -1409,6 +1432,7 @@
 <ul>
 <li>Show Centerline of Each Tow: Displays the centerline of each prepreg tow.</li>
 <li>Show Boundary of Each Tow: Displays the boundary lines of each prepreg tow.</li>
+<li>Show Direction of Each Tow: Shows placement direction arrows on the centerline of each tow.</li>
 <li>
 <p>Show Mesh of Each Tow: Displays the mesh of the prepreg tow.</p>
 <p>The following images show the display effects of different settings:
@@ -1437,13 +1461,17 @@
 <li>Bold Line Width: If a curve type is selected, how much to increase the line width for highlighting.</li>
 <li>Increase Point Size: If a point type is selected, how much to increase its display size.</li>
 </ul>
-<h2 id="click-to-select">Click-to-Select</h2>
-<p>Used to enable or disable direct object selection by clicking the mouse in the 3D display area. Enabling 3D click-to-select provides convenience but can affect performance and sometimes introduce interference or accidental operations.</p>
 <h2 id="interface">Interface</h2>
 <ul>
-<li>Language: Interface language settings. In most cases, this should not be set here, but rather in the <code>Preference/Language</code> menu, followed by a restart to fully apply the language change.</li>
-<li>Interaction Mode: The 3D view supports <code>SolidWorks</code> and <code>Touchpad</code> interaction modes. Switch between them from the 3D view context menu.</li>
 <li>Default Pose Format: <code>GUI/DefaultPoseFormat</code> controls the default rotation format in pose editors and workpiece pose calibration. See <a href="../advanced/pose_calibration.html">Poses and Calibration</a> for supported names and units.</li>
+<li>Independent Node Property Panel: When enabled, each node gets its own docked property panel, making it easy to compare parameters of multiple nodes at the same time; when disabled, all nodes share a single property panel.</li>
+<li>3D Background Color 1: The first color of the gradient background in the 3D view.</li>
+<li>3D Background Color 2: The second color of the gradient background in the 3D view.</li>
+<li>Gizmo Implementation: The implementation of the 3D gizmo. <code>FreeCAD</code> is the default implementation, <code>Legacy</code> is used to keep behavior compatible with older versions.</li>
+</ul>
+<h2 id="curve">Curve</h2>
+<ul>
+<li>Intersection Distance Threshold: When computing whether two curves intersect, curves whose closest distance is below this threshold are treated as intersecting. Used by the <code>Compute Intersection</code> operation.</li>
 </ul>
 <h2 id="path-parameters">Path Parameters</h2>
 <ul>
@@ -1452,12 +1480,13 @@
 </ul>
 <h2 id="planning-parameters">Planning Parameters</h2>
 <ul>
-<li>Sampling Points for Coverage Calculation: The number of points sampled on the model when calculating the percentage of the placement area covered by the ply. Higher sampling numbers yield more accurate calculations but increase computation time.</li>
+<li>Implicit Temp Node: Temporary nodes generated during planning (such as guide lines, reference lines, and temporary tows) are placed in the overlay layer of the 3D view by default, so they do not appear in the scene tree and are automatically removed when planning finishes; when disabled, temp nodes are added to the document as ordinary nodes.</li>
+<li>Show Reference Curve Direction: Shows direction arrows on the reference curve in the planning preview, making the placement direction easier to identify.</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Calculating coverage is theoretically equal to the area of the prepreg tows within the placement area boundary divided by the area of the placement area. However, the boundary of the placement area may be an irregular free-form curve, making it difficult to calculate its area directly. To solve this, a probabilistic method is used for estimation. Sample N points on the surface. If M points are within the placement area and L points are both within the placement area and the prepreg area, then the coverage rate is <span class="arithmatex">\(\frac{L}{M}\)</span>. This method can also simultaneously estimate the area of the placement area, etc.</p>
-</div>
+<h2 id="update">Update</h2>
+<ul>
+<li>Update Channel: Selects the version channel used for update checks. <code>Stable</code> is the official release channel, <code>Beta</code> is the pre-release channel.</li>
+</ul>
 
 
 

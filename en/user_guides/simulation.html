@@ -1475,7 +1475,9 @@
 <p>The export area on the same tab contains:</p>
 <ul>
 <li><strong>Post Script</strong>: select an installed <code>.py</code> post-processing script or <code>.jinja</code> template;</li>
-<li><strong>Install</strong>: choose a <code>.py</code> or <code>.jinja</code> post-processing script, copy it into the software post-processor directory, and add it to the combo box; an existing file with the same name is overwritten;</li>
+<li><strong>Install</strong>: choose a <code>.py</code> or <code>.jinja</code> post-processing script, copy it into the software post-processor directory, and add it to the combo box; if a script with the same name already exists, you are asked to confirm before it is overwritten;</li>
+<li><strong>Edit</strong>: open the selected post-processing script in an editing dialog and modify it directly; <code>.jinja</code> templates support Jinja syntax highlighting for easier authoring and review;</li>
+<li><strong>Delete</strong>: delete the selected post-processing script; after confirmation the file is removed from disk and from the combo box;</li>
 <li><strong>Export Path</strong>: enter the program output path, or click <strong>Select</strong> to open a save-file dialog; changing the post script or trajectory list updates the default filename from the trajectory names and script suffix;</li>
 <li><strong>Reference</strong>: set the coordinate frame used by the exported program. It defaults to the scene root and therefore the world frame;</li>
 <li><strong>Reset</strong>: restore the world reference frame;</li>

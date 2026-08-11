@@ -786,10 +786,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#点选" class="md-nav__link">
+  <a href="#界面" class="md-nav__link">
     <span class="md-ellipsis">
       
-        点选
+        界面
       
     </span>
   </a>
@@ -797,10 +797,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#界面" class="md-nav__link">
+  <a href="#曲线" class="md-nav__link">
     <span class="md-ellipsis">
       
-        界面
+        曲线
       
     </span>
   </a>
@@ -823,6 +823,17 @@
     <span class="md-ellipsis">
       
         规划参数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#更新" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        更新
       
     </span>
   </a>
@@ -1335,10 +1346,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#点选" class="md-nav__link">
+  <a href="#界面" class="md-nav__link">
     <span class="md-ellipsis">
       
-        点选
+        界面
       
     </span>
   </a>
@@ -1346,10 +1357,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#界面" class="md-nav__link">
+  <a href="#曲线" class="md-nav__link">
     <span class="md-ellipsis">
       
-        界面
+        曲线
       
     </span>
   </a>
@@ -1378,6 +1389,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#更新" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        更新
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1396,6 +1418,7 @@
 
 
 <h1 id="全局参数">全局参数</h1>
+<p>全局参数通过 <code>偏好 &gt; 全局参数</code> 菜单打开，修改后点击 <strong>保存</strong> 生效，点击 <strong>重置</strong> 可恢复默认值。也可以通过右键菜单对全部参数进行 <strong>导出 / 导入</strong>。</p>
 <h2 id="cad-模型导入设置">CAD 模型导入设置</h2>
 <ul>
 <li>导入单位：step/iges模型的导入单位，默认为米（M）;</li>
@@ -1409,6 +1432,7 @@
 <ul>
 <li>显示单根带中心线：显示单根预浸带中心线；</li>
 <li>显示单根带边界：显示单根预浸带的边界线；</li>
+<li>显示单根带方向：在单根预浸带中心线上显示铺放方向箭头；</li>
 <li>
 <p>显示单根带Mesh：显示预浸带的Mesh；</p>
 <p>以下是不同设置的显示效果图：
@@ -1434,16 +1458,21 @@
 <ul>
 <li>选中颜色：节点被选中时的颜色；</li>
 <li>悬停颜色：鼠标在节点上悬停时的颜色；</li>
+<li>碰撞颜色：节点发生碰撞时用于提示的颜色；</li>
 <li>加粗线宽：如果选中的是曲线类型，将曲线线宽加粗多少进行突出显示；</li>
 <li>增大点尺寸：如果选中的是点类型，将点的显示尺寸增加多少；</li>
 </ul>
-<h2 id="点选">点选</h2>
-<p>用来设置是否开启鼠标直接在3D显示区域进行物体选择；开启3D点选可以提供一定的便捷性，但是影响性能，有时也带来一定的干扰和误操作。</p>
 <h2 id="界面">界面</h2>
 <ul>
-<li>语言：界面语言设置，一般情况下无需在此进行设置，而应该在 <code>偏好/语言</code>菜单中进行设置，然后重启可以进行完整的语言改变。</li>
-<li>交互模式：3D 视图支持 <code>SolidWorks</code> 和 <code>Touchpad</code> 两种交互模式，可从视图右键菜单切换。</li>
 <li>默认姿态格式：<code>GUI/DefaultPoseFormat</code> 控制位姿编辑器和工件位姿标定的默认旋转格式，支持的名称和单位见<a href="../advanced/pose_calibration.html">位姿与标定</a>。</li>
+<li>独立的节点属性面板：开启后每个节点使用独立停靠的属性面板，方便同时对比多个节点的参数；关闭则所有节点共用同一个属性面板。</li>
+<li>3D 背景色1：3D 视图渐变背景的第一种颜色；</li>
+<li>3D 背景色2：3D 视图渐变背景的第二种颜色；</li>
+<li>三维球实现：三维球的实现方式，<code>FreeCAD</code> 为默认实现，<code>兼容</code> 模式用于兼容旧版本行为。</li>
+</ul>
+<h2 id="曲线">曲线</h2>
+<ul>
+<li>相交距离阈值：判断两条曲线是否相交时，最近距离小于该阈值的两曲线即视为相交，用于 <code>计算交点</code> 操作。</li>
 </ul>
 <h2 id="路径参数">路径参数</h2>
 <ul>
@@ -1452,12 +1481,13 @@
 </ul>
 <h2 id="规划参数">规划参数</h2>
 <ul>
-<li>计算覆盖率的采样点数：计算铺层覆盖铺放区域的百分比时，在模型上采样的点的数量，采样数越高计算越准确，同时计算时间越长。</li>
+<li>隐式临时节点：规划过程中生成的临时节点（如引导线、参考线、临时铺带等）默认放在三维视图的覆盖层中，不会出现在文档树里，规划结束自动清除；关闭后临时节点会作为普通节点加入到文档中；</li>
+<li>显示参考线方向：在规划预览的参考线上显示方向箭头，便于判断铺放方向。</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">提示</p>
-<p>计算覆盖率，理论上等于铺放区域边界内的预浸带面积除以铺放区域的面积，但是铺放区域的边界可能是不规则的自由曲线，难以直接计算该铺放区域的面积。为了解决这个问题，采用概率的方法进行估算。在曲面上采样N个点，其中在铺放区域内的数量是M个，同时在铺放区域内和预浸带区域内的数量是L个，那么覆盖率便是 <span class="arithmatex">\(\frac {L}{M}\)</span>，该方法还可以同时估算铺放区域的面积等。</p>
-</div>
+<h2 id="更新">更新</h2>
+<ul>
+<li>更新通道：选择检查更新所使用的版本通道，<code>稳定版</code> 为正式发布版本，<code>测试版</code> 为预发布版本。</li>
+</ul>
 
 
 

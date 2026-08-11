@@ -1,3 +1,12 @@
+## v0.22.0 [21047b5c] (2026.8.11)
+- Improved the component library UI; model information such as robots, positioners, and tracks is now clearer and filtering is more convenient
+- Post-processor script editing now supports Jinja syntax highlighting, making scripts easier to write and review
+- Improved the Kuka KRL XR post-processor, with more accurate robot base and tool configuration and more reasonable motion parameters
+- Optimized PQPly and scan post-processing output; ply sequence and laser control markers are now clearer and more accurate
+- Improved scene display performance and picking stability for smoother operation on large projects
+- Imported models or tools keep their original pose during auto-attachment, with more accurate positioning, and mounting order no longer affects assembly results
+- Creating a new coordinate frame is now faster without an extra confirmation dialog
+
 ## v0.21.8 [724bebb6] (2026.8.4)
 - Fixed an incorrect path when packaging the path planning plugin (FAFiberPathPlanner) with Sentinel protection, making plugin protection more reliable in encrypted installers
 - Fixed the plugin build order issue when Sentinel protection is enabled, making the packaging process more stable

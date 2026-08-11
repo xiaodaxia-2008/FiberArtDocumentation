@@ -44,7 +44,9 @@ The positions of the above key points are calculated from the parameters given i
 
 ## Path Linking Strategy {#link-path-policy}
 
-The centerline of each set of prepreg tows is its placement path (also known as the Head Path). How to calculate the transition path between the endpoint of the previous set of placement paths and the start point of the next set is the problem that the path linking strategy aims to solve. Three strategies are built into the software.
+The centerline of each set of prepreg tows is its placement path (also known as the Head Path). How to calculate the transition path between the endpoint of the previous set of placement paths and the start point of the next set is the problem that the path linking strategy aims to solve. The software provides nine strategies, which can be roughly divided into four categories:
+
+### Straight-Line Linking
 
 #### Straight
 
@@ -54,9 +56,39 @@ Under this strategy, the endpoint of the previous path and the start point of th
 
 This strategy is simple to calculate and maximizes robot movement performance, but it is only suitable for flat surfaces; otherwise, the transition path may collide with the model.
 
-#### Reverse Head Path
+#### StraightJointSpace
 
-Under this strategy, after the placement head reaches the endpoint of the path, the placement path just completed is reversed and offset a certain distance in the surface normal direction (this distance is defined by `Post-processing Parameters/Idle Lift Distance`) to generate a transition connection path parallel to the original placement path. Sampling is performed on this path at given intervals (defined by `Post-processing Parameters/Idle Path Point Distance`) until the position near the start point of the next set of placement paths is reached, and then movement occurs via linear interpolation.
+Similar to `Straight`, the endpoint of the previous path and the start point of the next path are connected directly, but the transition path is generated in joint space, suitable for equipment that cannot move in straight lines in Cartesian space.
+
+### Linking Paths on the Layup Surface
+
+These two strategies calculate the linking path on the layup surface and lift it along the surface normal by a certain distance (defined by `Planner/Lift Distance`). They suit parts with strongly curved surfaces.
+
+#### OffsetShortestPathOnLayupSurface
+
+Computes the shortest path (geodesic) between the two endpoints on the layup surface, then offsets it along the surface normal.
+
+#### OffsetProjectedPathOnLayupSurface
+
+Projects the endpoints onto the layup surface, connects them with a line, projects the line back onto the surface, and offsets it along the normal.
+
+### Linking Paths on the Envelope
+
+The envelope is a simplified surface surrounding the placement area. Linking paths generated on the envelope do not touch the part surface, which suits parts whose placement surface is so curved that a transition path cannot be placed directly on it.
+
+#### ShortestPathOnEnvelope
+
+Computes the shortest path between the two endpoints on the envelope.
+
+#### ProjectedPathOnEnvelope
+
+Projects the endpoints onto the envelope and connects them with a line projected back onto the envelope.
+
+Before using an envelope strategy, you must click `Set Envelope` in the ply property panel and pick an envelope node from the scene tree; if the envelope node is modified, you need to set it again.
+
+### ReverseCurrentHeadPath
+
+Under this strategy, after the placement head reaches the endpoint of the path, the placement path just completed is reversed and offset a certain distance in the surface normal direction (this distance is defined by `Planner/Lift Distance`) to generate a transition connection path parallel to the original placement path. Sampling is performed on this path at given intervals (defined by `Post-processing Parameters/Adjacent Points Distance`) until the position near the start point of the next set of placement paths is reached, and then movement occurs via linear interpolation.
 
 The following example assumes `A-B` and `C-D` are adjacent sets of placement head paths.
 
@@ -68,13 +100,21 @@ In the above image, using `ReverseCurrentHeadPath`, the path is `A-B-A'-C-D`. Th
 
 This strategy is suitable for 90-degree and ±45-degree placement paths on rotary parts.
 
-#### Bidirectional Placement
+### Bidirectional Placement
 
-Both `Straight` and `ReverseCurrentHeadPath` are restricted by the constraint that the placement head can only perform *unidirectional placement*. If the placement head can perform **bidirectional placement**, the `ReverseNextHeadPath` link strategy should be used. This strategy reverses the next set of placement paths. Generally, this makes the endpoint of the previous set and the start point of the next set close enough in spatial position to connect with a straight line.
+All the strategies above are restricted by the constraint that the placement head can only perform *unidirectional placement*. If the placement head can perform **bidirectional placement**, you should use a bidirectional linking strategy, which reverses the next set of placement paths. Generally, this makes the endpoint of the previous set and the start point of the next set close enough in spatial position to connect with a straight line.
 
 ![CStringReverseNextLink](./images/fiberart_cstringer_reverse_next_link.png)
 
 In bidirectional placement, the path is `A-B-D-C`, the transition path is `B-D`. The original direction of the next path would have been `C-D`, but it is reversed to `D-C`, thereby achieving bidirectional placement.
+
+#### ReverseNextHeadPath
+
+Reverses the next path and connects the two endpoints with a straight line.
+
+#### ReverseNextHeadPathJointSpaceLink
+
+Similar to `ReverseNextHeadPath`, but the transition path is generated in joint space.
 
 Using bidirectional placement can improve efficiency, but the placement equipment must have corresponding functions and requires high motion precision.
 
@@ -143,13 +183,18 @@ Using bidirectional placement can improve efficiency, but the placement equipmen
 - Path Linking Strategy: Refer to [Path Linking Strategy](#link-path-policy). This parameter is set in the ply's attribute interface.
 - Transverse Layup Direction: Whether to place from left to right or right to left when generating a transition path.
 - Longitudinal Layup Direction: Whether to reverse the planned placement path direction.
-- Restart Speed: The linear speed of the placement head in the restart segment, mm/min;
-- Placement Speed: The linear speed of the placement head during normal placement, mm/min;
-- Idle Speed: The linear speed of the placement head during transition trajectories, mm/min;
-- Adjacent Point Distance: The sampling interval on the placement path;
-- Transition Path Lift Distance: The distance of points on the transition path relative to the placement surface; this is not used when using the envelope surface link strategy.
-- Include Original Path Key Points: Whether to include the intersection points between the path and the mesh edges.
+- Restart Speed: The linear speed of the placement head in the restart segment, m/s;
+- Placement Speed: The linear speed of the placement head during normal placement, m/s;
+- Idle Speed: The linear speed of the placement head during transition trajectories, m/s;
+- Heat On Offset Distance: The offset of the heat-on command relative to the first start boundary; positive values delay heat-on, negative values advance it.
+- Heat Off Offset Distance: The offset of the heat-off command relative to the last end boundary; positive values delay heat-off, negative values advance it.
+- Adjacent Points Distance: The sampling interval on the placement path;
+- Ramp End to Boundary Distance: The distance from the ramp end to the boundary;
+- Ramp Restart Path Angle: The ramp restart path angle;
 - Invert Normal: Invert the normal direction of the points.
+- Normal Algorithm: The algorithm used to calculate the normal of path points, supporting `Approximate` and `Exact`;
+- Compute Intersection Angle: Whether to calculate the intersection angle between the path and the boundary;
+- Smooth Normal: Whether to smooth the normal of path points;
 - Smoothness Iterations for Transition Path: The number of second-order Bézier smoothing operations performed on the transition path. Higher values result in smoother transition paths, thereby improving robot motion performance.
 
 ### Advanced Parameters
@@ -185,7 +230,7 @@ Using bidirectional placement can improve efficiency, but the placement equipmen
 Each individual ply saves its own independent set of parameters. To modify a ply's parameters:
 
 - Right-click the ply in the scene tree and select "Node Operation/Modify Parameters" from the popup menu.
-- Double-click the ply to open its attribute panel. Under the **Ply Parameters** panel, click **Modify More Parameters** to edit in the popup interface.
+- Double-click the ply to open its attribute panel. On the **Parameters and Path** page, click **Modify More Parameters** to edit in the popup interface.
 - If planning is in progress, you can also click the **Modify Ply Parameters** button in the planner.
 
 The title bar of the ply parameter editing interface will display which ply the current parameters belong to. If there is no ply, it shows that the **Default Ply Parameters** are being edited.

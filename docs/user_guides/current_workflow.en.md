@@ -32,11 +32,11 @@ Typical steps:
 
 For axisymmetric bodies of revolution such as pressure vessels, the **Functions > Filament Winding** panel provides an alternative winding workflow. See [Filament Winding](winding.en.md).
 
-Boundaries must be closed curves or closed topological boundaries. Guide curves can override the initial reference curve. After planning, use the ply property editor for coverage, steering-radius, placement-angle, and point queries.
+Boundaries must be closed curves or closed topological boundaries. Guide curves can override the initial reference curve. After planning, use the ply property editor for coverage, steering-radius, placement-angle, roller-deformation, and point queries.
 
 ## 3. Inspect and Edit Plies
 
-Ply nodes control display for the complete set of tows, including centerlines, boundaries, and Tow meshes. Tow nodes can be edited individually and can partition an area using the centerline, left boundary, or right boundary.
+Ply nodes control display for the complete set of tows, including centerlines, boundaries, and Tow meshes. Tow nodes can be edited individually, including display and start/end points.
 
 After manual edits, check for short, broken, or overlapping tows, valid steering radii, placement-angle errors, course boundaries, and the gap between adjacent courses.
 

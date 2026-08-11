@@ -1,28 +1,44 @@
 # Tow Properties
 
-Find the prepreg tow node you want to modify in the scene tree and double-click to open its attribute editor.
+Find the prepreg tow node you want to modify in the scene tree and double-click to open its property editor.
 
-## Placement Area Partitioning
+## Length
 
-Partition the placement area using the centerline, left boundary line, and right boundary line of the prepreg tow.
+Displays the total length of the tow (in meters).
 
-1. Select the boundary line of the placement area to be partitioned; it must be a closed curve.
-2. Select which feature line of the prepreg tow to use: centerline, left boundary line, or right boundary line.
-3. Click the `Partition` button.
+## Segment
 
-The calculation results can be viewed in the scene tree.
+On a placement surface with defined hole boundaries, a single prepreg tow may contain multiple segments of tows. This specifies which tow segment to modify.
 
-## Modify Start and End Points
+## Modify Head
 
-After the prepreg tow planning is complete, individual prepreg tows can be extended or shortened. The operation is shown in the figure below:
+Modifies the start point of the current segment. This value is the arc length distance from the start point to the start point of the reference centerline (in meters). To extend by 0.1m, decrease this value by 0.1; otherwise, increase it.
+
+## Modify Tail
+
+Modifies the end point of the current segment. This value is the arc length distance from the end point to the start point of the reference centerline (in meters). To extend by 0.1m, increase this value by 0.1; otherwise, decrease it.
+
+The operations of modifying the start and end points are shown in the figure below:
 
 ![modify_tow_tail](../images/modify_tow_tail.png)
 
-- Segment Index: On a placement surface with defined hole boundaries, a single prepreg tow may contain multiple segments of tows. This specifies which tow segment to modify.
-- Modify Start Point: Modifies the start point of the tow segment. This value is the arc length distance from the start point to the start point of the reference centerline. To extend by 0.1m, decrease this value by 0.1; otherwise, increase it.
-- Modify End Point: Modifies the end point of the tow segment. This value is the arc length distance from the end point to the start point of the reference centerline. To extend by 0.1m, increase this value by 0.1; otherwise, decrease it.
-- Optimize: In some cases, extending a segment of tow may cause adjacent segments to overlap. Clicking Optimize will merge adjacent overlapping tow segments.
+## Refine
+
+In some cases, extending a segment of tow may cause adjacent segments to overlap. Clicking **Refine** will merge adjacent overlapping tow segments.
+
+## Delete Segment
+
+Deletes the current segment. A confirmation dialog is shown before deletion, and the deletion cannot be undone; each tow must keep at least one segment.
 
 ## Display
 
-Use **Show Tow Mesh** in the Tow property editor to control the mesh display for an individual tow. A ply node can also control the mesh display of its child tows; when the child follows the ply setting, change visibility at the ply level first.
+The display properties of a tow node can be edited in the scene-tree property editor:
+
+- Show Tow Mesh: Controls the mesh display of an individual tow. A ply node can also control the mesh display of its child tows; when the child follows the ply setting, change visibility at the ply level first.
+- Show Center Line: Controls the display of the tow's centerline.
+- Show Boundary Line: Controls the display of the tow's left and right boundary lines.
+- Show Direction: Controls the display of the direction arrows on the tow path.
+
+A tow node also supports the following actions:
+
+- Extract Left Boundary Curve / Extract Center Curve / Extract Right Boundary Curve: Extracts the tow's left boundary line, centerline, or right boundary line as an independent curve node.

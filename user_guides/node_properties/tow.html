@@ -891,10 +891,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#铺放区域分割" class="md-nav__link">
+  <a href="#长度" class="md-nav__link">
     <span class="md-ellipsis">
       
-        铺放区域分割
+        长度
       
     </span>
   </a>
@@ -902,10 +902,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#修改起点与终点" class="md-nav__link">
+  <a href="#分段" class="md-nav__link">
     <span class="md-ellipsis">
       
-        修改起点与终点
+        分段
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#修改起点" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        修改起点
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#修改终点" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        修改终点
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#优化" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        优化
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#删除分段" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        删除分段
       
     </span>
   </a>
@@ -1268,10 +1312,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#铺放区域分割" class="md-nav__link">
+  <a href="#长度" class="md-nav__link">
     <span class="md-ellipsis">
       
-        铺放区域分割
+        长度
       
     </span>
   </a>
@@ -1279,10 +1323,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#修改起点与终点" class="md-nav__link">
+  <a href="#分段" class="md-nav__link">
     <span class="md-ellipsis">
       
-        修改起点与终点
+        分段
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#修改起点" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        修改起点
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#修改终点" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        修改终点
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#优化" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        优化
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#删除分段" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        删除分段
       
     </span>
   </a>
@@ -1319,28 +1407,35 @@
 
 <h1 id="丝束tow属性">丝束(Tow)属性</h1>
 <p>在场景树中找到要修改属性的预浸带节点，双击打开其属性编辑面板。</p>
-<h2 id="铺放区域分割">铺放区域分割</h2>
-<p>使用预浸带的中心线、左边界线、右边界线将铺放区域进行分割。</p>
-<ol>
-<li>选择要分割的铺放区域的边界线，必须是封闭的曲线；</li>
-<li>选择使用预浸带的哪种特征线：中心线、左边界线、右边界线;</li>
-<li>点击<code>分割</code>按钮；</li>
-</ol>
-<p>计算结果在场景树中可以查看。</p>
-<h2 id="修改起点与终点">修改起点与终点</h2>
-<p>在预浸带已经规划完成后，可以对单根预浸带进行延长或者缩短，操作如下图所示：</p>
+<h2 id="长度">长度</h2>
+<p>显示该丝束的总长度（单位：米）。</p>
+<h2 id="分段">分段</h2>
+<p>在定义了孔洞边界的铺放曲面上，一条预浸带会包含多段丝束，这里用来指定修改哪一段丝束。</p>
+<h2 id="修改起点">修改起点</h2>
+<p>修改当前分段的起点，该值是起点距离参考中心线起点的弧长距离（单位：米）。如要延长0.1m，将该值减少0.1，否则，反之。</p>
+<h2 id="修改终点">修改终点</h2>
+<p>修改当前分段的终点，该值是终点距离参考中心线起点的弧长距离（单位：米）。如要延长0.1m，将该值增加0.1，否则，反之。</p>
+<p>修改起点和终点的操作如下图所示：</p>
 <p>
 </p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/modify_tow_tail.png" data-desc-position="bottom"><img src="../images/modify_tow_tail.png"></a><figcaption>modify_tow_tail</figcaption>
 </figure>
 <p></p>
-<ul>
-<li>片段索引：在定义了孔洞边界的铺放曲面上，一条预浸带会包含多段丝束，这里用来指定修改哪一段丝束</li>
-<li>修改起点：修改丝束起点，该值是起点距离参考中心线起点的弧长距离，如要延长0.1m，将该值减少0.1，否则，反之</li>
-<li>修改终点：修改丝束终点，该值是终点距离参考中心线起点的弧长距离，如要延长0.1m，将该值增加0.1，否则，反之</li>
-<li>优化：在某些情况下，延长了一段丝束后，可能导致相邻的丝束互相重叠，点击优化后，可以将相邻的重叠丝束进行合并。</li>
-</ul>
+<h2 id="优化">优化</h2>
+<p>在某些情况下，延长了一段丝束后，可能导致相邻的丝束互相重叠，点击<strong>优化</strong>后，可以将相邻的重叠丝束进行合并。</p>
+<h2 id="删除分段">删除分段</h2>
+<p>删除当前分段。删除前会弹出确认对话框，删除操作不可撤销；每条丝束至少需要保留一个分段。</p>
 <h2 id="显示">显示</h2>
-<p>使用 Tow 属性中的 <strong>显示纱线网格</strong> 单独控制该丝束的网格显示。铺层节点也可以统一控制其子 Tow 的网格显示；当子节点继承铺层显示设置时，应优先从铺层节点调整。</p>
+<p>丝束节点的显示属性可以在场景树属性编辑器中修改：</p>
+<ul>
+<li>显示纱线网格：控制该丝束的网格显示，铺层节点也可以统一控制其子 Tow 的网格显示；当子节点继承铺层显示设置时，应优先从铺层节点调整；</li>
+<li>显示中心线：控制该丝束中心线的显示；</li>
+<li>显示边界线：控制该丝束左、右边界线的显示；</li>
+<li>显示方向：控制该丝束路径方向箭头的显示。</li>
+</ul>
+<p>丝束节点还支持以下操作：</p>
+<ul>
+<li>提取左边界线 / 提取中心线 / 提取右边界线：将丝束的左边界线、中心线或右边界线提取为一条独立的曲线节点。</li>
+</ul>
 
 
 

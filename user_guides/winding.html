@@ -10,19 +10,19 @@
         <meta name="author" content="Zen Shawn">
       
       
-        <link rel="canonical" href="https://fiberart.myshawn.com/advanced/post_process.html">
+        <link rel="canonical" href="https://fiberart.myshawn.com/user_guides/winding.html">
       
       
-        <link rel="prev" href="pose_calibration.html">
+        <link rel="prev" href="ply_planner.html">
       
       
-        <link rel="next" href="plugin.html">
+        <link rel="next" href="simulation.html">
       
       
         
-          <link rel="alternate" href="post_process.html" hreflang="zh">
+          <link rel="alternate" href="winding.html" hreflang="zh">
         
-          <link rel="alternate" href="../en/advanced/post_process.html" hreflang="en">
+          <link rel="alternate" href="../en/user_guides/winding.html" hreflang="en">
         
       
       
@@ -31,7 +31,7 @@
     
     
       
-        <title>后处理定制 - FiberArt 自动铺丝软件</title>
+        <title>纤维缠绕 - FiberArt 自动铺丝软件</title>
       
     
     
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#后处理定制" class="md-skip">
+        <a href="#纤维缠绕" class="md-skip">
           跳转至
         </a>
       
@@ -129,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              后处理定制
+              纤维缠绕
             
           </span>
         </div>
@@ -186,13 +186,13 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="post_process.html" hreflang="zh" class="md-select__link">
+            <a href="winding.html" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../en/advanced/post_process.html" hreflang="en" class="md-select__link">
+            <a href="../en/user_guides/winding.html" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -306,7 +306,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../user_guides/index.html" class="md-tabs__link">
+        <a href="index.html" class="md-tabs__link">
           
   
   
@@ -500,7 +500,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../user_guides/index.html" class="md-nav__link ">
+            <a href="index.html" class="md-nav__link ">
               
   
   
@@ -544,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_guides/current_workflow.html" class="md-nav__link">
+      <a href="current_workflow.html" class="md-nav__link">
         
   
   
@@ -572,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_guides/getting_started.html" class="md-nav__link">
+      <a href="getting_started.html" class="md-nav__link">
         
   
   
@@ -600,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_guides/plan_parameters.html" class="md-nav__link">
+      <a href="plan_parameters.html" class="md-nav__link">
         
   
   
@@ -628,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_guides/ply_planner.html" class="md-nav__link">
+      <a href="ply_planner.html" class="md-nav__link">
         
   
   
@@ -653,10 +653,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../user_guides/winding.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    纤维缠绕
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="winding.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -672,6 +699,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-创建缠绕芯模" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 创建缠绕芯模
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-设置芯模与缠绕参数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 设置芯模与缠绕参数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-计算缠绕路径" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 计算缠绕路径
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-缠绕层节点" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 缠绕层节点
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -684,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_guides/simulation.html" class="md-nav__link">
+      <a href="simulation.html" class="md-nav__link">
         
   
   
@@ -712,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_guides/global_parameters.html" class="md-nav__link">
+      <a href="global_parameters.html" class="md-nav__link">
         
   
   
@@ -801,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_guides/node_properties/ply.html" class="md-nav__link">
+      <a href="node_properties/ply.html" class="md-nav__link">
         
   
   
@@ -829,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_guides/node_properties/tow.html" class="md-nav__link">
+      <a href="node_properties/tow.html" class="md-nav__link">
         
   
   
@@ -862,8 +953,6 @@
                 
   
   
-    
-  
   
   
     
@@ -893,15 +982,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link ">
+            <a href="../advanced/index.html" class="md-nav__link ">
               
   
   
@@ -925,7 +1014,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_10">
             <span class="md-nav__icon md-icon"></span>
             
@@ -945,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kinematics.html" class="md-nav__link">
+      <a href="../advanced/kinematics.html" class="md-nav__link">
         
   
   
@@ -973,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pose_calibration.html" class="md-nav__link">
+      <a href="../advanced/pose_calibration.html" class="md-nav__link">
         
   
   
@@ -998,37 +1087,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    后处理定制
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="post_process.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../advanced/post_process.html" class="md-nav__link">
         
   
   
@@ -1044,48 +1106,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#已提供的模板" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        已提供的模板
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#自定义模板" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        自定义模板
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1098,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="plugin.html" class="md-nav__link">
+      <a href="../advanced/plugin.html" class="md-nav__link">
         
   
   
@@ -1257,10 +1277,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#已提供的模板" class="md-nav__link">
+  <a href="#1-创建缠绕芯模" class="md-nav__link">
     <span class="md-ellipsis">
       
-        已提供的模板
+        1. 创建缠绕芯模
       
     </span>
   </a>
@@ -1268,10 +1288,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#自定义模板" class="md-nav__link">
+  <a href="#2-设置芯模与缠绕参数" class="md-nav__link">
     <span class="md-ellipsis">
       
-        自定义模板
+        2. 设置芯模与缠绕参数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-计算缠绕路径" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 计算缠绕路径
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-缠绕层节点" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 缠绕层节点
       
     </span>
   </a>
@@ -1295,34 +1337,51 @@
 
 
 
-<h1 id="后处理定制">后处理定制</h1>
-<p>FiberArt 使用 Jinja2 模板将轨迹点转换为设备程序。后处理器通常从仿真/后处理面板中选择，生成结果后应在目标控制器或仿真环境中再次检查坐标系、姿态、速度和 I/O 指令。</p>
-<h2 id="已提供的模板">已提供的模板</h2>
-<p>当前版本包含以下常用模板：</p>
+<h1 id="纤维缠绕">纤维缠绕</h1>
+<p>纤维缠绕（Filament Winding）模块用于对轴对称回转体（如压力容器、储气罐等）进行缠绕路径规划。目前仅支持轴对称回转面。</p>
+<p>在 <strong>功能 &gt; 纤维缠绕</strong> 菜单中显示或隐藏缠绕面板，在 <strong>模型 &gt; 缠绕芯模</strong> 菜单中创建缠绕芯模节点。</p>
+<h2 id="1-创建缠绕芯模">1. 创建缠绕芯模</h2>
+<p>点击 <strong>模型 &gt; 缠绕芯模</strong> 创建一个缠绕芯模节点。芯模是一个回转体，由中间的圆柱筒体段和两端的椭圆封头段组成，回转轴与 Z 轴对齐，示意图如下：</p>
+<p>
+</p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/winding_mandrel.png" data-desc-position="bottom"><img src="images/winding_mandrel.png"></a><figcaption>winding_mandrel</figcaption>
+</figure>
+<p></p>
+<p>芯模节点的属性（在节点属性面板中修改）：</p>
 <ul>
-<li><code>KukaKRLLW</code>：Layway KUKA KRL 后处理器，支持按层号、线号和生成进度组织输出；</li>
-<li><code>KukaKRLXR</code>、<code>KukaKRLSubProg</code>、<code>KRLFS</code>：KUKA KRL 输出模板；</li>
-<li><code>KukaCNC</code>：KUKA CNC 输出模板；</li>
-<li><code>InovanceScan</code>：汇川扫描轨迹输出模板；</li>
-<li><code>ToJson</code>、<code>ToPoses</code>：将轨迹导出为 JSON 或位姿数据，便于调试和与其他程序交换。</li>
+<li>筒体长度：中间圆柱段的长度；</li>
+<li>封头高度：两端椭圆封头的高度；</li>
+<li>长半轴：封头椭圆的长半轴，即筒体段半径；</li>
+<li>短半轴：封头椭圆的短半轴。</li>
 </ul>
-<h2 id="自定义模板">自定义模板</h2>
-<p>高级用户可以复制现有模板并按设备控制器语法修改。模板接收轨迹、机器人/变位机自由度、工具和程序信息，并可使用内置的位姿转换过滤器生成 KUKA 姿态、轴角或其他格式。</p>
-<p>在 <strong>仿真及后处理</strong> 面板的导出区域可以直接管理后处理脚本：</p>
+<p>参数修改后芯模几何会实时更新。注意短半轴不能大于长半轴，封头高度不能大于短半轴。</p>
+<h2 id="2-设置芯模与缠绕参数">2. 设置芯模与缠绕参数</h2>
+<p>在缠绕面板中设置以下参数：</p>
 <ul>
-<li><strong>安装</strong>：选择一个 <code>.py</code> 或 <code>.jinja</code> 脚本，复制到软件的后处理器目录并加入下拉列表；存在同名脚本时会先确认再覆盖；</li>
-<li><strong>编辑</strong>：在内置编辑器中修改所选脚本，<code>.jinja</code> 模板带有 Jinja 语法高亮；</li>
-<li><strong>删除</strong>：确认后从磁盘移除所选脚本并从下拉列表中删除。</li>
+<li>芯模：选中场景中的芯模节点，点击 <strong>设置</strong> 填入芯模节点路径；也可以在文本框中直接填写路径；</li>
+<li>摩擦系数：纱线在芯模表面不打滑所需的最大摩擦系数，默认 0.3；</li>
+<li>缠绕角度：目标缠绕角度（与回转轴的夹角），默认 10°；</li>
+<li>角度容差：搜索可行缠绕线型时允许的角度偏差，默认 1°；</li>
+<li>丝束宽度：单根纱束的宽度，默认 6.4 mm；</li>
+<li>缠绕层数：需要缠绕的层数，默认 1。</li>
 </ul>
-<p>自定义模板至少应确认：</p>
-<ol>
-<li>位置和姿态使用的坐标系与设备配置一致；</li>
-<li>姿态格式和角度单位符合控制器要求；</li>
-<li>起刀、铺放、切刀、加热等 I/O 指令与现场信号一致；</li>
-<li>轨迹边界、层号和线号不会被模板合并或丢失；</li>
-<li>输出文件已在离线仿真或控制器测试环境中验证。</li>
-</ol>
-<p>KRL 输出默认会清理空行和多余空白，并在需要时拆分文件；模板可配置每个文件的最大行数。不要直接把未验证的程序发送到设备执行。</p>
+<h2 id="3-计算缠绕路径">3. 计算缠绕路径</h2>
+<p>设置好参数后点击 <strong>计算</strong>。软件会在目标角度附近搜索可行的整数缠绕线型，并将结果列在表格中：</p>
+<ul>
+<li>线型：以 <code>p/s/k/nd</code> 表示的缠绕线型；</li>
+<li>相位误差：实际缠绕周期相位与线型所需相位之差；</li>
+<li>角度误差：实际缠绕角度与目标角度之差；</li>
+<li>摩擦系数：该线型对应的纱线所需最大摩擦系数。</li>
+</ul>
+<p>搜索完成后，软件会自动使用表格第一行的线型生成一个缠绕层节点；双击表格中的任意一行，则使用该行对应的线型生成缠绕层。如果找不到可行线型，会弹出错误提示，可尝试调整缠绕角度、容差或摩擦系数。</p>
+<h2 id="4-缠绕层节点">4. 缠绕层节点</h2>
+<p>生成的缠绕层节点（如 <code>缠绕层 10°</code>）是轨迹类节点，可以直接参与仿真与后处理。</p>
+<p>缠绕层节点的属性（在节点属性面板中修改）：</p>
+<ul>
+<li>显示带状网格：显示预浸带带状网格；</li>
+<li>显示边界线：显示缠绕带的边界线；</li>
+<li>仿真时显示带状网格：仿真过程中显示带状网格。</li>
+</ul>
+<p>节点的路径姿态由缠绕算法在芯模表面计算得到，双击节点可查看其轨迹与姿态。</p>
 
 
 
@@ -1330,10 +1389,55 @@
 
 
 
+  
+  
 
 
 
 
+
+
+<h2 id="__comments">评论</h2>
+
+<!-- Insert generated snippet here -->
+<script src="https://giscus.app/client.js" data-repo="xiaodaxia-2008/FiberArtDocumentation" data-repo-id="R_kgDOLlkOUg" data-category="Announcements" data-category-id="DIC_kwDOLlkOUs4Cod7i" data-mapping="title" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async="">
+</script>
+
+<!-- Synchronize Giscus theme with palette -->
+<script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+        // Instruct Giscus to set theme
+        giscus.setAttribute("data-theme", theme)
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color === "object") {
+                var theme = palette.color.scheme === "slate"
+                    ? "transparent_dark"
+                    : "light"
+
+                // Instruct Giscus to change theme
+                var frame = document.querySelector(".giscus-frame")
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                )
+            }
+        })
+    })
+</script>
 
                 
               </article>
@@ -1360,7 +1464,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚">
         
           
-          <a href="pose_calibration.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 位姿与标定">
+          <a href="ply_planner.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 铺层规划器">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -1370,20 +1474,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                位姿与标定
+                铺层规划器
               </div>
             </div>
           </a>
         
         
           
-          <a href="plugin.html" class="md-footer__link md-footer__link--next" aria-label="下一页: FiberArt插件开发教程">
+          <a href="simulation.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 仿真">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                FiberArt插件开发教程
+                仿真
               </div>
             </div>
             <div class="md-footer__button md-icon">

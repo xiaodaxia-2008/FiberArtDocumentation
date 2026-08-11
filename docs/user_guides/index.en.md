@@ -22,6 +22,7 @@ Read the [Current Workflow](current_workflow.en.md) for the complete process fro
 ## Further Exploration
 - [Planning Parameters](./plan_parameters.md)
 - [Ply Planner](./ply_planner.md)
+- [Filament Winding](./winding.md)
 - [Global Parameters](./global_parameters.md)
 - [Current Workflow](./current_workflow.en.md)
 - [Poses and Calibration](../advanced/pose_calibration.en.md)

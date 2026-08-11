@@ -22,6 +22,7 @@
 ## 更近一步
 - [规划参数](./plan_parameters.md)
 - [规划器](./ply_planner.md)
+- [纤维缠绕](./winding.md)
 - [全局参数](./global_parameters.md)
 - [当前版本工作流](./current_workflow.md)
 - [位姿与标定](../advanced/pose_calibration.md)

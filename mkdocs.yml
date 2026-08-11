@@ -60,6 +60,7 @@ nav:
       - user_guides/getting_started.md
       - user_guides/plan_parameters.md
       - user_guides/ply_planner.md
+      - user_guides/winding.md
       - user_guides/simulation.md
       - user_guides/global_parameters.md
       - 节点属性:

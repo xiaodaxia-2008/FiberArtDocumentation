@@ -30,6 +30,8 @@ Typical steps:
 6. Check reference curves, courses, tows, and errors in the scene tree, 3D view, and Log panel.
 7. Use **Modify Ply Params** to change parameters and recompute.
 
+For axisymmetric bodies of revolution such as pressure vessels, the **Functions > Filament Winding** panel provides an alternative winding workflow. See [Filament Winding](winding.en.md).
+
 Boundaries must be closed curves or closed topological boundaries. Guide curves can override the initial reference curve. After planning, use the ply property editor for coverage, steering-radius, placement-angle, and point queries.
 
 ## 3. Inspect and Edit Plies
@@ -70,6 +72,7 @@ When an operation fails, inspect the **Log** panel first and verify node types, 
 
 - [Quick Start](getting_started.en.md)
 - [Ply Planner](ply_planner.en.md)
+- [Filament Winding](winding.en.md)
 - [Ply Planning Parameters](plan_parameters.en.md)
 - [Simulation](simulation.en.md)
 - [Poses and Calibration](../advanced/pose_calibration.en.md)

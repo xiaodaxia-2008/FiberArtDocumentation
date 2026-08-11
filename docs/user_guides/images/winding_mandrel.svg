@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 20 480 516" width="480" height="516" font-family="Segoe UI, Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b57d0"/>
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b8500f"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0e7a3a"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5b2c8f"/>
+    </marker>
+  </defs>
+
+  <!-- axis of revolution -->
+  <line x1="200" y1="60" x2="200" y2="480" stroke="#5f6f82" stroke-width="1.8" stroke-dasharray="7 5"/>
+
+  <!-- auxiliary lines: dome / body junction boundaries -->
+  <line x1="100" y1="150" x2="300" y2="150" stroke="#5f6f82" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <line x1="100" y1="390" x2="300" y2="390" stroke="#5f6f82" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- auxiliary lines: exposed part of the imaginary full dome ellipses (show the truncation) -->
+  <path d="M 268 106 A 100 60 0 0 0 132 106" fill="none" stroke="#5f6f82" stroke-width="1.8" stroke-dasharray="6 4"/>
+  <path d="M 132 434 A 100 60 0 0 0 268 434" fill="none" stroke="#5f6f82" stroke-width="1.8" stroke-dasharray="6 4"/>
+
+  <!-- mandrel solid profile: capsule with truncated domes (semi-transparent fill) -->
+  <path d="M 132 434 L 268 434 A 100 60 0 0 0 300 390 L 300 150 A 100 60 0 0 0 268 106 L 132 106 A 100 60 0 0 0 100 150 L 100 390 A 100 60 0 0 0 132 434 Z"
+        fill="#a9c7e8" fill-opacity="0.5" stroke="#2c3e50" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- dimension H: 封头高度 -->
+  <line x1="200" y1="106" x2="200" y2="150" stroke="#0b57d0" stroke-width="1.6" marker-start="url(#arrow-blue)" marker-end="url(#arrow-blue)"/>
+  <text x="222" y="135" font-size="17" font-weight="700" fill="#0b57d0">H</text>
+
+  <!-- dimension L: 筒体长度 -->
+  <line x1="200" y1="150" x2="200" y2="390" stroke="#b8500f" stroke-width="1.6" marker-start="url(#arrow-orange)" marker-end="url(#arrow-orange)"/>
+  <text x="222" y="277" font-size="17" font-weight="700" fill="#b8500f">L</text>
+
+  <!-- dimension R: 长半轴 -->
+  <line x1="200" y1="230" x2="300" y2="230" stroke="#0e7a3a" stroke-width="1.6" marker-start="url(#arrow-green)" marker-end="url(#arrow-green)"/>
+  <text x="250" y="219" text-anchor="middle" font-size="17" font-weight="700" fill="#0e7a3a">R</text>
+
+  <!-- dimension r: 短半轴 -->
+  <line x1="200" y1="390" x2="200" y2="450" stroke="#5b2c8f" stroke-width="1.6" marker-start="url(#arrow-purple)" marker-end="url(#arrow-purple)"/>
+  <text x="222" y="427" font-size="17" font-weight="700" fill="#5b2c8f">r</text>
+
+  <!-- axis label -->
+  <text x="200" y="496" text-anchor="middle" font-size="14" fill="#5f6f82">回转轴</text>
+
+  <!-- legend -->
+  <g font-size="15">
+    <line x1="342" y1="150" x2="369" y2="150" stroke="#0b57d0" stroke-width="3.5"/>
+    <text x="379" y="154"><tspan fill="#0b57d0" font-weight="700">H</tspan><tspan fill="#2c3e50">　封头高度</tspan></text>
+    <line x1="342" y1="186" x2="369" y2="186" stroke="#b8500f" stroke-width="3.5"/>
+    <text x="379" y="190"><tspan fill="#b8500f" font-weight="700">L</tspan><tspan fill="#2c3e50">　筒体长度</tspan></text>
+    <line x1="342" y1="222" x2="369" y2="222" stroke="#0e7a3a" stroke-width="3.5"/>
+    <text x="379" y="226"><tspan fill="#0e7a3a" font-weight="700">R</tspan><tspan fill="#2c3e50">　长半轴</tspan></text>
+    <line x1="342" y1="258" x2="369" y2="258" stroke="#5b2c8f" stroke-width="3.5"/>
+    <text x="379" y="262"><tspan fill="#5b2c8f" font-weight="700">r</tspan><tspan fill="#2c3e50">　短半轴</tspan></text>
+  </g>
+</svg>

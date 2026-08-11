@@ -8,7 +8,7 @@
 
 点击 **模型 > 缠绕芯模** 创建一个缠绕芯模节点。芯模是一个回转体，由中间的圆柱筒体段和两端的椭圆封头段组成，回转轴与 Z 轴对齐，示意图如下：
 
-![winding_mandrel](./images/winding_mandrel.png)
+![缠绕芯模几何与尺寸标注](./images/winding_mandrel.svg)
 
 芯模节点的属性（在节点属性面板中修改）：
 

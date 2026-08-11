@@ -8,7 +8,7 @@ Show or hide the winding panel from the **Functions > Filament Winding** menu, a
 
 Click **Model > Winding Mandrel** to create a winding mandrel node. The mandrel is a body of revolution composed of a cylindrical body section in the middle and elliptical dome sections at both ends. The revolution axis is aligned with the Z axis, as illustrated below:
 
-![winding_mandrel](./images/winding_mandrel.png)
+![Winding mandrel geometry and dimensions](./images/winding_mandrel.en.svg)
 
 Mandrel node properties (edited in the node property panel):
 

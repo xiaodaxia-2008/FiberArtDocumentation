@@ -164,11 +164,22 @@
     color: var(--fa-muted);
   }
   .fa-footer {
-    margin: 8px 0 48px;
+    margin-top: 24px;
+    padding: 20px 0 24px;
+    border-top: 1px solid var(--fa-border);
     color: var(--fa-muted);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
   }
   .fa-footer a { color: var(--fa-accent); }
+  .fa-footer .fa-copyright {
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
 </style>
 </head>
 <body>
@@ -189,8 +200,14 @@
     <div class="fa-grid" id="fa-cards">
       <p class="fa-loading" id="fa-loading"></p>
     </div>
-    <p class="fa-footer" id="fa-footer"></p>
   </main>
+
+  <footer class="fa-wrap">
+    <div class="fa-footer">
+      <span id="fa-footer-help"></span>
+      <span class="fa-copyright">Copyright &copy; 2022 - <span id="fa-year"></span> Zen Shawn</span>
+    </div>
+  </footer>
 
 <script>
 (function () {
@@ -252,8 +269,9 @@
     document.getElementById('fa-sub').textContent = t('sub');
     document.getElementById('fa-lang-zh').classList.toggle('fa-active', lang === 'zh');
     document.getElementById('fa-lang-en').classList.toggle('fa-active', lang === 'en');
-    document.getElementById('fa-footer').innerHTML = t('help') +
+    document.getElementById('fa-footer-help').innerHTML = t('help') +
       '<a href="' + (lang === 'zh' ? '/contact.html' : '/en/contact.html') + '">' + t('contact') + '</a>';
+    document.getElementById('fa-year').textContent = new Date().getFullYear();
 
     if (failed) {
       host.innerHTML = '<p class="fa-error">' + t('error') + '</p>';

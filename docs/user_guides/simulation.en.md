@@ -42,7 +42,9 @@ Click **start** to run the simulation using the selected trajectories, devices, 
 The export area on the same tab contains:
 
 - **Post Script**: select an installed `.py` post-processing script or `.jinja` template;
-- **Install**: choose a `.py` or `.jinja` post-processing script, copy it into the software post-processor directory, and add it to the combo box; an existing file with the same name is overwritten;
+- **Install**: choose a `.py` or `.jinja` post-processing script, copy it into the software post-processor directory, and add it to the combo box; if a script with the same name already exists, you are asked to confirm before it is overwritten;
+- **Edit**: open the selected post-processing script in an editing dialog and modify it directly; `.jinja` templates support Jinja syntax highlighting for easier authoring and review;
+- **Delete**: delete the selected post-processing script; after confirmation the file is removed from disk and from the combo box;
 - **Export Path**: enter the program output path, or click **Select** to open a save-file dialog; changing the post script or trajectory list updates the default filename from the trajectory names and script suffix;
 - **Reference**: set the coordinate frame used by the exported program. It defaults to the scene root and therefore the world frame;
 - **Reset**: restore the world reference frame;

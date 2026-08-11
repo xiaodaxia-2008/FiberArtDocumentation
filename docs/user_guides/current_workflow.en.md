@@ -1,13 +1,16 @@
 # Current Workflow
 
-This page describes the FiberArt 0.21.5 interface and workflow. The main process is to prepare geometry and equipment, create or plan plies, inspect the result, configure the motion system, simulate, and export a machine program.
+This page describes the FiberArt 0.22.0 interface and workflow. The main process is to prepare geometry and equipment, create or plan plies, inspect the result, configure the motion system, simulate, and export a machine program.
 
 ## 1. Create a Project and Import Models
 
 1. Use **File > Open** to open a project or file. In the open-file dialog, choose a file-type filter such as **CADPart**, **CADAssembly**, **CADOneShape**, **SurfaceMesh**, **Model**, **Scene**, or **Node**; you can also choose **All** and let FiberArt select the factory from the file extension. Use **Save** or **Save As** to save the project. You can also start from the blank scene shown at startup and add nodes.
-2. Open STEP/IGES, mesh, scene-node, and other plugin-supported data through **File > Open**. Use the **Import** menu to open the component library and load equipment components.
-3. Select a node in the scene tree and double-click it to open the property editor. Right-click a node to see its available actions.
-4. For CAD surfaces used in placement calculations, verify units, orientation, and tessellation settings. Convert a surface to a mesh when required by the operation.
+2. Open STEP/IGES, mesh, scene-node, and other plugin-supported data through **File > Open**. Open **File > Import > Component Library** to load equipment components: filter by **Type** (robot, track, positioner, etc.) and **Brand**, search by **Name**, or click **Update** to fetch the latest component catalog from the cloud; the table shows the component model, brand, payload, reach, and installation status. Double-click a row or click **Open** to load the selected component.
+3. When opening equipment models (robot, tool, track, positioner), FiberArt preserves the model's original pose and tries to attach it automatically: robots are attached under an existing track and tools under an existing robot. The attachment order does not affect the final assembly result.
+4. Select a node in the scene tree and double-click it to open the property editor. Right-click a node to see its available actions.
+5. For CAD surfaces used in placement calculations, verify units, orientation, and tessellation settings. Convert a surface to a mesh when required by the operation.
+
+To create a coordinate frame, choose **Model > Frame** to add a default frame node directly, without an extra confirmation dialog.
 
 Projects save the complete scene. Individual nodes can be exported for reuse in another project.
 

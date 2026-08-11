@@ -3,7 +3,7 @@
 This documentation provides guidance for using the `FiberArt` software. Users are encouraged to follow the tutorial steps while performing the software operations.
 
 !!! attention "Attention"
-    This documentation targets **FiberArt version 0.21.5**. Features in other software versions may differ from those described here.
+    This documentation targets **FiberArt version 0.22.0**. Features in other software versions may differ from those described here.
     Please contact us promptly to upgrade to the latest version. 
     If you find any discrepancies, please [contact us](mailto:fiberart@duck.com) so we can update the documentation.
 

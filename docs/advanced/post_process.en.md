@@ -16,6 +16,12 @@ The current release includes these commonly used templates:
 
 Advanced users can copy an existing template and adapt it to the target controller syntax. Templates receive trajectory, robot/positioner degrees of freedom, tool, and program data. They can also use built-in pose-conversion filters to generate KUKA poses, axis-angle values, or other representations.
 
+Post-processing scripts can be managed directly in the export area of the **Simulation/PostProcess** panel:
+
+- **Install**: choose a `.py` or `.jinja` script, copy it into the software post-processor directory, and add it to the combo box; if a script with the same name exists, you are asked to confirm before it is overwritten;
+- **Edit**: modify the selected script in the built-in editor; `.jinja` templates come with Jinja syntax highlighting;
+- **Delete**: after confirmation, remove the selected script from disk and from the combo box.
+
 At minimum, verify that:
 
 1. The position and pose frames match the machine configuration.

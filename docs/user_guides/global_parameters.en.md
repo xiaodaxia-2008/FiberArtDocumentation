@@ -1,5 +1,7 @@
 # Global Parameters
 
+Global parameters are opened via the `Preferences > Global Parameters` menu. Click **Save** to apply changes, or **Reset** to restore defaults. The context menu also provides **Export / Import** for the whole parameter set.
+
 ## CAD Model Import Settings
 
 - Import Units: The import units for STEP/IGES models, default is meters (M).
@@ -13,6 +15,7 @@
 
 - Show Centerline of Each Tow: Displays the centerline of each prepreg tow.
 - Show Boundary of Each Tow: Displays the boundary lines of each prepreg tow.
+- Show Direction of Each Tow: Shows placement direction arrows on the centerline of each tow.
 - Show Mesh of Each Tow: Displays the mesh of the prepreg tow.
 
     The following images show the display effects of different settings:
@@ -41,16 +44,18 @@ Used to set the style for highlighting a node when it is selected by the mouse o
 - Bold Line Width: If a curve type is selected, how much to increase the line width for highlighting.
 - Increase Point Size: If a point type is selected, how much to increase its display size.
 
-## Click-to-Select
-
-Used to enable or disable direct object selection by clicking the mouse in the 3D display area. Enabling 3D click-to-select provides convenience but can affect performance and sometimes introduce interference or accidental operations.
-
 ## Interface
 
-- Language: Interface language settings. In most cases, this should not be set here, but rather in the `Preference/Language` menu, followed by a restart to fully apply the language change.
-- Interaction Mode: The 3D view supports `SolidWorks` and `Touchpad` interaction modes. Switch between them from the 3D view context menu.
 - Default Pose Format: `GUI/DefaultPoseFormat` controls the default rotation format in pose editors and workpiece pose calibration. See [Poses and Calibration](../advanced/pose_calibration.en.md) for supported names and units.
-  
+- Independent Node Property Panel: When enabled, each node gets its own docked property panel, making it easy to compare parameters of multiple nodes at the same time; when disabled, all nodes share a single property panel.
+- 3D Background Color 1: The first color of the gradient background in the 3D view.
+- 3D Background Color 2: The second color of the gradient background in the 3D view.
+- Gizmo Implementation: The implementation of the 3D gizmo. `FreeCAD` is the default implementation, `Legacy` is used to keep behavior compatible with older versions.
+
+## Curve
+
+- Intersection Distance Threshold: When computing whether two curves intersect, curves whose closest distance is below this threshold are treated as intersecting. Used by the `Compute Intersection` operation.
+
 ## Path Parameters
 
 - Parametric Curve Calculation Sampling Step: The interval between sampling points on the spatial curve when calculating the parametric curve.
@@ -58,7 +63,9 @@ Used to enable or disable direct object selection by clicking the mouse in the 3
 
 ## Planning Parameters
 
-- Sampling Points for Coverage Calculation: The number of points sampled on the model when calculating the percentage of the placement area covered by the ply. Higher sampling numbers yield more accurate calculations but increase computation time.
+- Implicit Temp Node: Temporary nodes generated during planning (such as guide lines, reference lines, and temporary tows) are placed in the overlay layer of the 3D view by default, so they do not appear in the scene tree and are automatically removed when planning finishes; when disabled, temp nodes are added to the document as ordinary nodes.
+- Show Reference Curve Direction: Shows direction arrows on the reference curve in the planning preview, making the placement direction easier to identify.
 
-!!! tip "Tip"
-    Calculating coverage is theoretically equal to the area of the prepreg tows within the placement area boundary divided by the area of the placement area. However, the boundary of the placement area may be an irregular free-form curve, making it difficult to calculate its area directly. To solve this, a probabilistic method is used for estimation. Sample N points on the surface. If M points are within the placement area and L points are both within the placement area and the prepreg area, then the coverage rate is $\frac{L}{M}$. This method can also simultaneously estimate the area of the placement area, etc.
+## Update
+
+- Update Channel: Selects the version channel used for update checks. `Stable` is the official release channel, `Beta` is the pre-release channel.

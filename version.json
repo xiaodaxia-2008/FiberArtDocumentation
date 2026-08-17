@@ -1,7 +1,7 @@
 {
   "version": "0.21.5",
   "is_beta": false,
-  "minimum_supported_version": "0.18.8",
+  "minimum_supported_version": "0.15.4",
   "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.21.5-Windows-AMD64-zenlicense.exe",
   "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.21.5-Windows-AMD64-sentinel.exe",
   "changelog": [

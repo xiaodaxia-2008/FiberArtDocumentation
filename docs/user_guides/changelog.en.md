@@ -1,3 +1,12 @@
+## v0.23.1 [8ba82942] (2026.8.19)
+- Textured model materials are now supported, so imported models with textures display more realistically
+- Improved mesh self-intersection detection with shared-edge handling and parameterized intersection checks, making layup path checks more reliable
+- Trajectory names are now automatically converted to Pinyin for more consistent naming and display
+- Closed interpolation now supports pose sequences for smoother trajectory transitions
+- Optimized collision detection and robot link pose calculation for more stable interference checks
+- The log panel now captures early startup logs, making troubleshooting more convenient
+- Internal structure and dependency optimizations improve overall stability
+
 ## v0.22.0 [21047b5c] (2026.8.11)
 - Improved the component library UI; model information such as robots, positioners, and tracks is now clearer and filtering is more convenient
 - Post-processor script editing now supports Jinja syntax highlighting, making scripts easier to write and review

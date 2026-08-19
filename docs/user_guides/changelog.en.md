@@ -1,3 +1,8 @@
+## v0.23.2 [2635e972] (2026.8.19)
+- Optimized the trajectory export and post-processing workflow, with a more standardized and independently usable export structure
+- Added a Jinja post-processor usage guide, making it easier to write and configure post-processing scripts
+- Improved trajectory export data documentation and examples for clearer and more accurate data handling
+
 ## v0.23.1 [8ba82942] (2026.8.19)
 - Textured model materials are now supported, so imported models with textures display more realistically
 - Improved mesh self-intersection detection with shared-edge handling and parameterized intersection checks, making layup path checks more reliable

@@ -1,3 +1,6 @@
+## v0.23.3 [b171f5b9] (2026.8.20)
+- Fixed an issue where the automatic trajectory-name-to-Pinyin conversion could fail after installation due to missing dictionaries; Pinyin conversion is now more stable and reliable
+
 ## v0.23.2 [2635e972] (2026.8.19)
 - Optimized the trajectory export and post-processing workflow, with a more standardized and independently usable export structure
 - Added a Jinja post-processor usage guide, making it easier to write and configure post-processing scripts

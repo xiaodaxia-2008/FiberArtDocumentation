@@ -6,9 +6,9 @@
     "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.23.3-Windows-AMD64-sentinel.exe"
   },
   "stable": {
-    "version": "0.21.8",
+    "version": "0.23.3",
     "minimum_supported_version": "0.18.8",
-    "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.21.8-Windows-AMD64-zenlicense.exe",
-    "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.21.8-Windows-AMD64-sentinel.exe"
+    "download_url_zenlicense": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.23.3-Windows-AMD64-zenlicense.exe",
+    "download_url_sentinel": "https://storage.fiber-art.myshawn.com/Installers/FiberArt-0.23.3-Windows-AMD64-sentinel.exe"
   }
 }

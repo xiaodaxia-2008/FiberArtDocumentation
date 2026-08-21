@@ -1,3 +1,9 @@
+## v0.24.0 (2026.8.21)
+- Mesh parameterization now supports multiple new algorithms with self-intersection detection, making the flattening results used in curved-mesh layup preprocessing more accurate and controllable
+- The default mesh export path is more reasonable, and meshes can be exported with one click for further processing
+- The default export path of post-processors is now more aligned with common usage habits
+- The installer now bundles third-party library license texts, providing more complete and standardized license statements
+
 ## v0.23.3 [b171f5b9] (2026.8.20)
 - Fixed an issue where the automatic trajectory-name-to-Pinyin conversion could fail after installation due to missing dictionaries; Pinyin conversion is now more stable and reliable
 

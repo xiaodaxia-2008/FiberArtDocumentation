@@ -1,3 +1,8 @@
+## v0.24.1 (2026.8.24)
+- Updated the welcome page and entry icon, making it easier to find usage instructions when getting started
+- Clarified that `.afscene` is the default scene file format, making project saving and management clearer
+- Improved authorization version recognition and protection to reduce issues caused by version mismatches
+
 ## v0.24.0 (2026.8.21)
 - Mesh parameterization now supports multiple new algorithms with self-intersection detection, making the flattening results used in curved-mesh layup preprocessing more accurate and controllable
 - The default mesh export path is more reasonable, and meshes can be exported with one click for further processing

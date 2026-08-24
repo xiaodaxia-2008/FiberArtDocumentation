@@ -33,4 +33,4 @@
 
 ## 第三方库声明
 
-本软件开发过程中，使用了boost、cereal、spdlog等第三方开源软件，完整的列表请查看[这里](./third_parties/LISTS.md)。
+FiberArt 随应用程序分发的第三方开源组件及其许可证，详见[第三方开源软件声明](./third_parties/LISTS.md)。

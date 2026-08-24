@@ -33,4 +33,4 @@ Visit the [Changelog](./changelog.md).
 
 ## Third-Party Library Statement
 
-During the development of this software, third-party open-source software such as Boost, Cereal, and Spdlog were used. For a complete list, please see [here](./third_parties/LISTS.md).
+For the third-party open-source components distributed with FiberArt and their applicable licenses, see the [Third-Party Open-Source Notices](./third_parties/LISTS.en.md).

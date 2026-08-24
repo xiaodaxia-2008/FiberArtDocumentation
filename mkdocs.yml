@@ -72,6 +72,7 @@ nav:
           - advanced/pose_calibration.md
           - advanced/post_process.md
           - advanced/plugin.md
+      - 第三方开源软件声明: user_guides/third_parties/LISTS.md
   - 技术分享:
       - blog/index.md
   - 联系我们: contact.md
@@ -165,6 +166,7 @@ plugins:
             用户手册: User Manual
             节点属性: Node Properties
             进阶使用: Advanced Usage
+            第三方开源软件声明: Third-Party Open-Source Notices
             技术分享: Tech Blog
             联系我们: Contact Us
   - glightbox:

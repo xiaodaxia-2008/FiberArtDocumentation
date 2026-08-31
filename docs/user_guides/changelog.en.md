@@ -1,3 +1,16 @@
+## v0.24.3 (2026.8.31)
+- Added mesh section curve operations, making it easier to extract and process mesh cross-sections
+- Improved automatic attachment of robots, rails, and tools, along with tool-tip pose handling, for more accurate and stable simulation setup
+- Made ply-parameter reset behavior more reliable when restoring built-in defaults
+- Fixed standalone tool-tip pose simulation and improved simulated mesh-normal rendering
+
+## v0.24.2 (2026.8.28)
+- Added a unified ply-parameter editor with clearer parameter hierarchy and type presentation for more efficient layup setup
+- Improved default export settings for PLY and STL meshes, making exported files better suited for downstream processing
+- Improved layup-planning stability to reduce interruptions in specific mesh and path conditions
+- Improved curve-direction indicators and system-theme support for clearer path inspection and a more consistent interface
+- Expanded layup-planning guidance to make planning workflows easier to find and understand
+
 ## v0.24.1 (2026.8.24)
 - Updated the welcome page and entry icon, making it easier to find usage instructions when getting started
 - Clarified that `.afscene` is the default scene file format, making project saving and management clearer

@@ -472,8 +472,6 @@
       
         
       
-        
-      
     
     
     
@@ -1036,34 +1034,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="third_parties/LISTS.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Third-Party Open-Source Notices
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -2473,7 +2443,6 @@
 <li>Mesh parameterization now supports multiple new algorithms with self-intersection detection, making the flattening results used in curved-mesh layup preprocessing more accurate and controllable</li>
 <li>The default mesh export path is more reasonable, and meshes can be exported with one click for further processing</li>
 <li>The default export path of post-processors is now more aligned with common usage habits</li>
-<li>The installer now bundles third-party library license texts, providing more complete and standardized license statements</li>
 </ul>
 <h2 id="v0233-2026820">v0.23.3 (2026.8.20)</h2>
 <ul>
@@ -2482,7 +2451,6 @@
 <h2 id="v0232-2026819">v0.23.2 (2026.8.19)</h2>
 <ul>
 <li>Optimized the trajectory export and post-processing workflow, with a more standardized and independently usable export structure</li>
-<li>Added a Jinja post-processor usage guide, making it easier to write and configure post-processing scripts</li>
 <li>Improved trajectory export data documentation and examples for clearer and more accurate data handling</li>
 </ul>
 <h2 id="v0231-2026819">v0.23.1 (2026.8.19)</h2>
@@ -2493,7 +2461,6 @@
 <li>Closed interpolation now supports pose sequences for smoother trajectory transitions</li>
 <li>Optimized collision detection and robot link pose calculation for more stable interference checks</li>
 <li>The log panel now captures early startup logs, making troubleshooting more convenient</li>
-<li>Internal structure and dependency optimizations improve overall stability</li>
 </ul>
 <h2 id="v0220-2026811">v0.22.0 (2026.8.11)</h2>
 <ul>
@@ -2564,7 +2531,6 @@
 <li>Improved workpiece pose calibration and copy-paste workflows for more reliable coordinate editing and reuse.</li>
 <li>Improved saving and editing of colors, display states, and property panels so visual settings are more consistent when projects reopen.</li>
 <li>Completed Chinese and English translation improvements and runtime language switching to reduce cases where a restart is needed.</li>
-<li>Improved Windows installer dependency completeness and application stability.</li>
 </ul>
 <h2 id="v0201-2026719">v0.20.1 (2026.7.19)</h2>
 <ul>
@@ -2576,9 +2542,6 @@
 <li>Enhanced mesh export with more universal format support for better interoperability with other software</li>
 </ul>
 <h2 id="v0190-2026716">v0.19.0 (2026.7.16)</h2>
-<ul>
-<li>Internal structure and dependency optimizations for improved overall stability</li>
-</ul>
 <h2 id="v0188-2026714">v0.18.8 (2026.7.14)</h2>
 <ul>
 <li>Added Datum Axis node, support for creating and editing datum axes in the scene</li>
@@ -2667,7 +2630,6 @@
 <li>Performance optimization: unified unsigned char, removed temporary performance monitoring code</li>
 <li>Added URDF collision detection mesh and .cpp serialization support</li>
 <li>Added pose calibration functions and pytest tests</li>
-<li>Updated post-processor Jinja2 templates</li>
 <li>Refactored lead-in/lead-out distances as independent odd/even channel configuration</li>
 </ul>
 <h2 id="v0165-202665">v0.16.5 (2026.6.5)</h2>
@@ -2676,9 +2638,7 @@
 <li>Added warning suppression tool and path post-processing logic</li>
 <li>Refactored ZipManager (PIMPL, std::filesystem::path, serialization benchmarks)</li>
 <li>Added GeometryModel and SceneGraph infrastructure (mesh processing, serialization tools)</li>
-<li>Added trajectory export plugin (Jinja2 template support)</li>
 <li>Added KRL post-processor templates</li>
-<li>Added cereal CBOR archive support and serialization benchmarks</li>
 <li>Added hierarchical nested JSON serialization specification</li>
 </ul>
 <h2 id="v0164-202662">v0.16.4 (2026.6.2)</h2>
@@ -2717,9 +2677,6 @@
 <li>Deprecated some construction warnings to clean up build output</li>
 </ul>
 <h2 id="v0152-2026514">v0.15.2 (2026.5.14)</h2>
-<ul>
-<li>Refactored logging system: unified FA_LOG_DEBUG to SPDLOG_DEBUG, each module maintains modular logging by redefining SPDLOG_DEBUG</li>
-</ul>
 <h2 id="v0151-20251114">v0.15.1 (2025.11.14)</h2>
 <ul>
 <li>Improved path post-processing</li>
@@ -2924,7 +2881,6 @@
 <ul>
 <li>Added adaptive path planning method</li>
 <li>Added steering radius calculation and testing</li>
-<li>Added Netgen mesh repair and optimization</li>
 <li>Introduced color system, improved highlight display</li>
 <li>Added path interface and CRTP refactoring</li>
 <li>Added Python plugin node property editor</li>
@@ -3003,10 +2959,6 @@
 <li>Refactored cmake deployment scripts</li>
 </ul>
 <h2 id="v053-20231217">v0.5.3 (2023.12.17)</h2>
-<ul>
-<li>Added support for compiling with Qt 5.15 and Python 3.8, enabling execution on Windows 7 systems; currently only supports 64-bit operating systems.</li>
-<li>Added packaging system dependencies.</li>
-</ul>
 <h2 id="v052-20231214">v0.5.2 (2023.12.14)</h2>
 <ul>
 <li>Added variable-angle reference trajectory generation algorithm.</li>
@@ -3030,7 +2982,6 @@
 <li>Improved spatial curve intersection solving algorithm.</li>
 <li>Improved ply overlap detection and control methods.</li>
 <li>Added placement area and length statistics.</li>
-<li>Implemented post-processing via Python plugins.</li>
 <li>Integrated ZenLicense.</li>
 <li>Integrated Sentinel SDK.</li>
 <li>Implemented TowMesh remeshing to avoid lag issues due to excessive display volume.</li>
@@ -3048,14 +2999,11 @@
 <li>Mostly completed Python bindings for FiberArt core classes.</li>
 <li>Added a flexible parameter editor based on JSON-schema.</li>
 <li>Supported compilation as dynamic libraries.</li>
-<li>Integrated OCC for importing STEP and IGES models.</li>
 </ul>
 <h2 id="v024-2023722">v0.2.4 (2023.7.22)</h2>
 <ul>
-<li>Refactored dependencies, updated Qt 6.5.2 LTS</li>
 <li>Added Doxygen documentation support</li>
 <li>Removed submodules, introduced Quarter as internal module</li>
-<li>Moved pybind11 submodule to ThirdParty</li>
 <li>Added PluginManager</li>
 <li>Added open/save status report</li>
 <li>Fixed save ply parameters</li>
@@ -3089,7 +3037,6 @@
 </ul>
 <h2 id="v020-202356">v0.2.0 (2023.5.6)</h2>
 <ul>
-<li>Updated XScript to use ChaiScript as embedded script, no longer dependent on Python</li>
 <li>Improved accuracy for curve offset calculations</li>
 <li>Use native file dialogs for better UX</li>
 </ul>
@@ -3141,7 +3088,6 @@
 <li>Added Sentinel encryption support</li>
 <li>Added display and export of post-processing paths (.afply format)</li>
 <li>Added Windows 10/11 x64 platform support</li>
-<li>Added QtIFW packaging support</li>
 </ul>
 <h2 id="v006-2022826">v0.0.6 (2022.8.26)</h2>
 <ul>
@@ -3155,7 +3101,6 @@
 </ul>
 <h2 id="v002-2022413">v0.0.2 (2022.4.13)</h2>
 <ul>
-<li>Switched to Coin3D as the 3D display engine</li>
 <li>Implemented parallel plane cutting and curve-on-surface offset algorithms</li>
 <li>Used OpenMP for computation acceleration</li>
 </ul>

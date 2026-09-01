@@ -1,6 +1,6 @@
 # Post-processing Customization
 
-FiberArt uses Jinja2 templates to convert trajectories into machine programs. Post-processors are normally selected from the Simulation/PostProcess panel. After generation, verify frames, poses, speeds, and I/O commands in the target controller or an offline simulation environment.
+FiberArt uses templates to convert trajectories into machine programs. Post-processors are normally selected from the Simulation/PostProcess panel. After generation, verify frames, poses, speeds, and I/O commands in the target controller or an offline simulation environment.
 
 ## Shipped Templates
 

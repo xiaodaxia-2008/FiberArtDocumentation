@@ -7,10 +7,6 @@ This documentation provides guidance for using the `FiberArt` software. Users ar
     Please contact us promptly to upgrade to the latest version. 
     If you find any discrepancies, please [contact us](mailto:fiberart@duck.com) so we can update the documentation.
 
-## Download Sample Models
-
-Please [download sample model data](https://gitee.com/zen_shawn/FiberArtData/repository/archive/master.zip) first, or [visit here](https://gitee.com/zen_shawn/FiberArtData) to download as needed.
-
 ## Quick Start Tutorial
 
 Please refer to the [Quick Start Tutorial](getting_started.md).
@@ -30,7 +26,3 @@ Read the [Current Workflow](current_workflow.en.md) for the complete process fro
 ## View Version Updates
 
 Visit the [Changelog](./changelog.md).
-
-## Third-Party Library Statement
-
-For the third-party open-source components distributed with FiberArt and their applicable licenses, see the [Third-Party Open-Source Notices](./third_parties/LISTS.en.md).

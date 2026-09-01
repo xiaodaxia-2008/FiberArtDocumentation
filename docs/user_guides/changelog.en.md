@@ -20,14 +20,12 @@
 - Mesh parameterization now supports multiple new algorithms with self-intersection detection, making the flattening results used in curved-mesh layup preprocessing more accurate and controllable
 - The default mesh export path is more reasonable, and meshes can be exported with one click for further processing
 - The default export path of post-processors is now more aligned with common usage habits
-- The installer now bundles third-party library license texts, providing more complete and standardized license statements
 
 ## v0.23.3 (2026.8.20)
 - Fixed an issue where the automatic trajectory-name-to-Pinyin conversion could fail after installation due to missing dictionaries; Pinyin conversion is now more stable and reliable
 
 ## v0.23.2 (2026.8.19)
 - Optimized the trajectory export and post-processing workflow, with a more standardized and independently usable export structure
-- Added a Jinja post-processor usage guide, making it easier to write and configure post-processing scripts
 - Improved trajectory export data documentation and examples for clearer and more accurate data handling
 
 ## v0.23.1 (2026.8.19)
@@ -37,7 +35,6 @@
 - Closed interpolation now supports pose sequences for smoother trajectory transitions
 - Optimized collision detection and robot link pose calculation for more stable interference checks
 - The log panel now captures early startup logs, making troubleshooting more convenient
-- Internal structure and dependency optimizations improve overall stability
 
 ## v0.22.0 (2026.8.11)
 - Improved the component library UI; model information such as robots, positioners, and tracks is now clearer and filtering is more convenient
@@ -98,7 +95,6 @@
 - Improved workpiece pose calibration and copy-paste workflows for more reliable coordinate editing and reuse.
 - Improved saving and editing of colors, display states, and property panels so visual settings are more consistent when projects reopen.
 - Completed Chinese and English translation improvements and runtime language switching to reduce cases where a restart is needed.
-- Improved Windows installer dependency completeness and application stability.
 
 ## v0.20.1 (2026.7.19)
 - Improved update dialog wording and added missing Chinese translations
@@ -108,7 +104,6 @@
 - Enhanced mesh export with more universal format support for better interoperability with other software
 
 ## v0.19.0 (2026.7.16)
-- Internal structure and dependency optimizations for improved overall stability
 
 ## v0.18.8 (2026.7.14)
 - Added Datum Axis node, support for creating and editing datum axes in the scene
@@ -186,7 +181,6 @@
 - Performance optimization: unified unsigned char, removed temporary performance monitoring code
 - Added URDF collision detection mesh and .cpp serialization support
 - Added pose calibration functions and pytest tests
-- Updated post-processor Jinja2 templates
 - Refactored lead-in/lead-out distances as independent odd/even channel configuration
 
 ## v0.16.5 (2026.6.5)
@@ -194,9 +188,7 @@
 - Added warning suppression tool and path post-processing logic
 - Refactored ZipManager (PIMPL, std::filesystem::path, serialization benchmarks)
 - Added GeometryModel and SceneGraph infrastructure (mesh processing, serialization tools)
-- Added trajectory export plugin (Jinja2 template support)
 - Added KRL post-processor templates
-- Added cereal CBOR archive support and serialization benchmarks
 - Added hierarchical nested JSON serialization specification
 
 ## v0.16.4 (2026.6.2)
@@ -228,7 +220,6 @@
 - Deprecated some construction warnings to clean up build output
 
 ## v0.15.2 (2026.5.14)
-- Refactored logging system: unified FA_LOG_DEBUG to SPDLOG_DEBUG, each module maintains modular logging by redefining SPDLOG_DEBUG
 
 ## v0.15.1 (2025.11.14)
 - Improved path post-processing
@@ -395,7 +386,6 @@
 ## v0.7.0 (2024.3.23)
 - Added adaptive path planning method
 - Added steering radius calculation and testing
-- Added Netgen mesh repair and optimization
 - Introduced color system, improved highlight display
 - Added path interface and CRTP refactoring
 - Added Python plugin node property editor
@@ -464,8 +454,6 @@
 - Refactored cmake deployment scripts
 
 ## v0.5.3 (2023.12.17)
-- Added support for compiling with Qt 5.15 and Python 3.8, enabling execution on Windows 7 systems; currently only supports 64-bit operating systems.
-- Added packaging system dependencies.
   
 ## v0.5.2 (2023.12.14)
 - Added variable-angle reference trajectory generation algorithm.
@@ -487,7 +475,6 @@
 - Improved spatial curve intersection solving algorithm.
 - Improved ply overlap detection and control methods.
 - Added placement area and length statistics.
-- Implemented post-processing via Python plugins.
 - Integrated ZenLicense.
 - Integrated Sentinel SDK.
 - Implemented TowMesh remeshing to avoid lag issues due to excessive display volume.
@@ -503,13 +490,10 @@
 - Mostly completed Python bindings for FiberArt core classes.
 - Added a flexible parameter editor based on JSON-schema.
 - Supported compilation as dynamic libraries.
-- Integrated OCC for importing STEP and IGES models.
 
 ## v0.2.4 (2023.7.22)
-- Refactored dependencies, updated Qt 6.5.2 LTS
 - Added Doxygen documentation support
 - Removed submodules, introduced Quarter as internal module
-- Moved pybind11 submodule to ThirdParty
 - Added PluginManager
 - Added open/save status report
 - Fixed save ply parameters
@@ -539,7 +523,6 @@
 - Added processing operations like surface centering and scaling options.
 
 ## v0.2.0 (2023.5.6)
-- Updated XScript to use ChaiScript as embedded script, no longer dependent on Python
 - Improved accuracy for curve offset calculations
 - Use native file dialogs for better UX
 
@@ -583,7 +566,6 @@
 - Added Sentinel encryption support
 - Added display and export of post-processing paths (.afply format)
 - Added Windows 10/11 x64 platform support
-- Added QtIFW packaging support
 
 ## v0.0.6 (2022.8.26)
 - Fixed a large number of bugs
@@ -594,7 +576,6 @@
 - Fixed many bugs in SceneManager
 
 ## v0.0.2 (2022.4.13)
-- Switched to Coin3D as the 3D display engine
 - Implemented parallel plane cutting and curve-on-surface offset algorithms
 - Used OpenMP for computation acceleration
 

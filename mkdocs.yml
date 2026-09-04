@@ -54,6 +54,7 @@ theme:
 nav:
   - 主页: index.md
   - 试用申请: trial/index.md
+  - 下载软件: /download_latest.html
   - 用户手册:
       - user_guides/index.md
       - user_guides/current_workflow.md

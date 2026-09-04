@@ -221,6 +221,8 @@
       zenlicense: '非加密狗授权（ZenLicense 在线授权）',
       sentinel: '加密狗授权（Sentinel 硬件加密狗）',
       download: '下载安装包',
+      passwordPrompt: '请输入今日下载口令：',
+      passwordError: '口令不正确，请重试。',
       versionLabel: '版本',
       sub: '请选择适合您的版本：稳定版经过完整测试，适合日常使用；测试版包含最新功能，可能尚不稳定。',
       help: '需要帮助？',
@@ -235,6 +237,8 @@
       zenlicense: 'License key activation (ZenLicense)',
       sentinel: 'Hardware dongle (Sentinel)',
       download: 'Download',
+      passwordPrompt: 'Enter today\'s download password:',
+      passwordError: 'Incorrect password. Please try again.',
       versionLabel: 'Version',
       sub: 'Choose the version that suits you: the stable release is fully tested and recommended for daily use; the beta release includes the latest features but may be unstable.',
       help: 'Need help?',
@@ -261,6 +265,33 @@
   var loadingEl = document.getElementById('fa-loading');
 
   function t(key) { return T[lang][key]; }
+
+  function dailyPassword() {
+    var d = new Date();
+    var s = d.getFullYear().toString() +
+      ('0' + (d.getMonth() + 1)).slice(-2) +
+      ('0' + d.getDate()).slice(-2);
+    var n = 0x45d9f3b ^ 0x2a6f31;
+    for (var i = 0; i < s.length; i++) {
+      n = Math.imul(n ^ s.charCodeAt(i), 0x27d4eb2d);
+      n = (n ^ (n >>> 15)) >>> 0;
+    }
+    n = Math.imul(n ^ (n >>> 16), 0x85ebca6b) >>> 0;
+    n = Math.imul(n ^ (n >>> 13), 0xc2b2ae35) >>> 0;
+    return String(((n ^ (n >>> 16)) >>> 0) % 1000000).padStart(6, '0');
+  }
+
+  function guardedDownload(url) {
+    for (;;) {
+      var value = window.prompt(t('passwordPrompt'));
+      if (value === null) return;
+      if (value.trim() === dailyPassword()) {
+        window.location.href = url;
+        return;
+      }
+      window.alert(t('passwordError'));
+    }
+  }
 
   function render() {
     document.documentElement.lang = lang;
@@ -295,7 +326,7 @@
       var ver = ch.version || '-';
       var tag = c.tag ? '<span class="fa-badge">' + c.tag + '</span>' : '';
       var btn = url
-        ? '<a class="fa-btn' + (c.primary ? '' : ' fa-btn--secondary') + '" href="' + url + '">' + t('download') + '</a>'
+        ? '<a class="fa-btn' + (c.primary ? '' : ' fa-btn--secondary') + '" href="' + url + '" data-download-url="' + url + '">' + t('download') + '</a>'
         : '<span class="fa-error">' + t('error') + '</span>';
       return '<div class="fa-card">' +
         '<h2>' + c.name + tag + '</h2>' +
@@ -304,6 +335,13 @@
         btn +
         '</div>';
     }).join('');
+
+    host.querySelectorAll('[data-download-url]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        guardedDownload(link.getAttribute('data-download-url'));
+      });
+    });
   }
 
   document.getElementById('fa-lang-zh').addEventListener('click', function () {

@@ -54,7 +54,7 @@ theme:
 nav:
   - 主页: index.md
   - 试用申请: trial/index.md
-  - 下载软件: /download_latest.html
+  - 下载软件: download.md
   - 用户手册:
       - user_guides/index.md
       - user_guides/current_workflow.md
@@ -124,7 +124,7 @@ extra:
   generator: false
   social:
     - icon: fontawesome/solid/paper-plane
-      link: mailto:fiberart@duck.com
+      link: mailto:fiberart@myshawn.com
     - icon: simple/qq
       link: https://qm.qq.com/q/4qmMJzRYt2
 
@@ -163,6 +163,7 @@ plugins:
           nav_translations:
             主页: Home
             试用申请: Trial Application
+            下载软件: Download Software
             用户手册: User Manual
             节点属性: Node Properties
             进阶使用: Advanced Usage

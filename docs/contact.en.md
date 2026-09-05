@@ -14,7 +14,7 @@ You can contact us through the following ways:
 
     ![](./assets/wechat.png){width="250px"}
 
-- Email: <fiberart@duck.com>
+- Email: <fiberart@myshawn.com>
 - QQ [674936832](mqqwpa://im/chat?chat_type=wpa&uin=674936831)  
 
     ![](./assets/qq.png){width="250px"}

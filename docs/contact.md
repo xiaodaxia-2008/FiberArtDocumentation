@@ -14,7 +14,7 @@ hide:
 
     ![](./assets/wechat.png){width="250px"}
 
-- 邮件: <fiberart@duck.com>
+- 邮件: <fiberart@myshawn.com>
 - QQ [674936832](mqqwpa://im/chat?chat_type=wpa&uin=674936831)  
 
     ![](./assets/qq.png){width="250px"}

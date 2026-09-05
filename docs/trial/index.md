@@ -11,7 +11,7 @@ hide:
 # FiberArt 试用说明 { .center } 
 
 1. 目前我们可以提供 30 天的免费试用，请点击下方链接填写申请信息，我们会尽快审批
-2. 进入 FiberArt 软件 QQ 交流群: [959826007](https://qm.qq.com/q/4qmMJzRYt2)，获取下载口令；然后[下载最新版FiberArt](/download_latest.html)
+2. 进入 FiberArt 软件 QQ 交流群: [959826007](https://qm.qq.com/q/4qmMJzRYt2)，获取下载口令；然后[下载最新版FiberArt](../download.md)
 3. 如果您的试用申请已经通过，软件启动时会自动下载试用授权证书；不然，请您等待我们的审批，或者[联系我们](../contact.md)
 
 ---

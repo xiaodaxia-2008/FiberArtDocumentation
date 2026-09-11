@@ -1,3 +1,10 @@
+## v0.24.4 (2026.9.11)
+
+- Added a KUKA remote controller plugin to connect to, monitor, and operate KUKA controllers directly in FiberArt, with reliable connection testing
+- Improved integration between script plugins and the main window for more stable menus and interface text in multilingual environments
+- Improved collision-pair validation by identifying nodes without valid collision models before they are added and showing each node's model count
+- Refined Chinese interface translations and feature-menu organization for a clearer workflow
+
 ## v0.24.3 (2026.8.31)
 - Added mesh section curve operations, making it easier to extract and process mesh cross-sections
 - Improved automatic attachment of robots, rails, and tools, along with tool-tip pose handling, for more accurate and stable simulation setup

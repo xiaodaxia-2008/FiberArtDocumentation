@@ -80,18 +80,21 @@ comments: false
 (function () {
   var TEXT = {
     error: '获取最新版本信息失败，请稍后重试。',
-    passwordPrompt: '请输入今日下载口令：',
+    passwordPrompt: '请输入本周下载口令：',
     passwordError: '口令不正确，请重试。'
   };
 
   var statusEl = document.getElementById('fa-status');
   var data = null;
 
-  function dailyPassword() {
+  function weeklyPassword() {
     var d = new Date();
-    var s = d.getFullYear().toString() +
-      ('0' + (d.getMonth() + 1)).slice(-2) +
-      ('0' + d.getDate()).slice(-2);
+    var date = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+    var day = date.getUTCDay() || 7;
+    date.setUTCDate(date.getUTCDate() + 4 - day);
+    var yearStart = new Date(Date.UTC(date.getUTCFullYear(), 0, 1));
+    var week = Math.ceil(((date - yearStart) / 86400000 + 1) / 7);
+    var s = date.getUTCFullYear().toString() + ('0' + week).slice(-2);
     var n = 0x45d9f3b ^ 0x2a6f31;
     for (var i = 0; i < s.length; i++) {
       n = Math.imul(n ^ s.charCodeAt(i), 0x27d4eb2d);
@@ -106,7 +109,7 @@ comments: false
     for (;;) {
       var value = window.prompt(TEXT.passwordPrompt);
       if (value === null) return;
-      if (value.trim() === dailyPassword()) {
+      if (value.trim() === weeklyPassword()) {
         window.location.href = url;
         return;
       }

@@ -1,3 +1,10 @@
+## v0.24.5 (2026.10.14)
+
+- Added parametric CAD geometry modeling and topological-shape merging, making scene geometry easier to create and edit
+- Added support for using axisymmetric CAD shapes directly in filament-winding planning, expanding the available mandrel models
+- Improved editing and display of scene geometry nodes for a more reliable modeling workflow
+- Improved the reliability of layup planning, simulation, and scene-file loading and saving
+
 ## v0.24.4 (2026.9.11)
 
 - Added a KUKA remote controller plugin to connect to, monitor, and operate KUKA controllers directly in FiberArt, with reliable connection testing

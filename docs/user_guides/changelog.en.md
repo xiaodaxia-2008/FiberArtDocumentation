@@ -1,3 +1,9 @@
+## v0.24.6 (2026.10.18)
+
+- Robot pose formats are now shown first, and the pose editor remembers the last format you selected for faster repeated setup
+- The winding mandrel geometry is now identified as an ellipsoidal capped cylinder, making the model easier to recognize and reuse
+- Trajectory export templates handle optional data more gracefully, reducing export failures caused by missing template fields
+
 ## v0.24.5 (2026.10.14)
 
 - Added parametric CAD geometry modeling and topological-shape merging, making scene geometry easier to create and edit

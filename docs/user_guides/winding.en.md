@@ -52,7 +52,9 @@ The intervals between the pole-hole boundaries and the body region are used for 
 
 Set return lengths according to the mandrel shape. The software does not automatically use the geometric junctions between the cylindrical body and the domes. For example, to start the body region at the start of the cylindrical section, set the left return length to the axial distance from the left pole-hole boundary to that junction.
 
-![Pole offsets, return lengths and tow centreline adjustment](./images/winding_intervals.en.svg)
+The diagram below uses the same ellipsoidal capped cylinder profile shown above, with the pole boundaries, return zones and body region marked directly on the model. The upper end is the left end (smaller axial coordinate), and the lower end is the right end. Orange marks the return zones; blue marks the body region. The dome detail on the right shows the half-width adjustment from the pole boundary to the centreline endpoint.
+
+![Pole offsets, return lengths and tow centreline clearance on the ellipsoidal capped cylinder](./images/winding_intervals.en.svg)
 
 For example, with model endpoints at `0 mm` and `1000 mm`, pole offsets of `50 mm` on both sides and return lengths of `150 mm` on both sides place the pole-hole boundaries at `50 mm` and `950 mm`. The body region extends from `200 mm` to `800 mm`.
 

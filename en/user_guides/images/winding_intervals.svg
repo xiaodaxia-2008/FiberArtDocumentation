@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" viewBox="0 0 1160 800" width="1160" height="800" role="img" aria-labelledby="title desc" font-family="Segoe UI, Microsoft YaHei, Arial, sans-serif">
+  <title id="title">Winding intervals on the ellipsoidal capped cylinder</title>
+  <desc id="desc">dL / dR: Left / right pole offsets; rL / rR: Left / right return lengths. Not to scale. Offsets and return lengths define path regions; the model geometry is unchanged.</desc>
+  <!-- Copyright © 2026 Zen Shawn. All rights reserved. Created 2026-10-22. -->
+  <defs>
+    <path id="model" d="M 132 434 L 268 434 A 100 60 0 0 0 300 390 L 300 150 A 100 60 0 0 0 268 106 L 132 106 A 100 60 0 0 0 100 150 L 100 390 A 100 60 0 0 0 132 434 Z"/>
+    <clipPath id="model-clip"><use href="#model" transform="translate(120 -25) scale(1.5)"/></clipPath>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#5f6f82"/></marker>
+  </defs>
+  <rect width="1160" height="800" rx="12" fill="white"/>
+  <g fill="#2c3e50">
+    <text x="35" y="42" font-size="24" font-weight="700">Winding intervals on the ellipsoidal capped cylinder</text>
+    <!-- Reuse the exact profile from winding_mandrel.svg. -->
+    <use href="#model" transform="translate(120 -25) scale(1.5)" fill="#edf0f4"/>
+    <g clip-path="url(#model-clip)">
+      <rect x="260" y="158" width="320" height="42" fill="#fce0bd"/>
+      <rect x="260" y="200" width="320" height="360" fill="#d8e8fa"/>
+      <rect x="260" y="560" width="320" height="42" fill="#fce0bd"/>
+    </g>
+    <use href="#model" transform="translate(120 -25) scale(1.5)" fill="none" stroke="#2c3e50" stroke-width="1.8"/>
+    <path d="M522 134 A150 90 0 0 0 318 134 M318 626 A150 90 0 0 0 522 626" fill="none" stroke="#9ca9b8" stroke-dasharray="5 4"/>
+    <line x1="420" y1="94" x2="420" y2="666" stroke="#5f6f82" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+    <!-- Construction lines connect dimensions to positions on the model. -->
+    <path d="M175 134 H590 M175 626 H590" fill="none" stroke="#8c99a8" stroke-dasharray="4 4"/>
+    <path d="M175 158 H615 M175 602 H615" fill="none" stroke="#0b57d0" stroke-dasharray="5 3"/>
+    <path d="M175 200 H590 M175 560 H590" fill="none" stroke="#b8500f" stroke-dasharray="5 3"/>
+    <g stroke="#5f6f82" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)">
+      <line x1="195" y1="136" x2="195" y2="156"/>
+      <line x1="195" y1="160" x2="195" y2="198"/>
+      <line x1="195" y1="562" x2="195" y2="600"/>
+      <line x1="195" y1="604" x2="195" y2="624"/>
+    </g>
+    <g font-size="18" font-weight="700" text-anchor="end">
+      <text x="178" y="151" fill="#0b57d0">dL</text>
+      <text x="178" y="185" fill="#b8500f">rL</text>
+      <text x="178" y="587" fill="#b8500f">rR</text>
+      <text x="178" y="620" fill="#0b57d0">dR</text>
+    </g>
+    <g font-size="16">
+      <path d="M522 134 H610 V103 H630 M553 158 H630 M570 200 H630 M570 560 H630 M553 602 H630 M522 626 H610 V650 H630" fill="none" stroke="#5f6f82"/>
+      <text x="640" y="108">Left endpoint / z_min</text>
+      <text x="640" y="163" fill="#0b57d0">Left pole boundary</text>
+      <text x="640" y="205" fill="#b8500f">Body region start</text>
+      <text x="640" y="565" fill="#b8500f">Body region end</text>
+      <text x="640" y="607" fill="#0b57d0">Right pole boundary</text>
+      <text x="640" y="655">Right endpoint / z_max</text>
+    </g>
+    <g font-size="17" text-anchor="middle">
+      <text x="420" y="187" fill="#b8500f">Left return</text>
+      <text x="420" y="384">Body region</text>
+      <text x="420" y="587" fill="#b8500f">Right return</text>
+    </g>
+    <text x="300" y="689" font-size="15">Revolution axis / increasing axial coordinate</text>
+    <g font-size="16">
+      <text x="35" y="735" fill="#0b57d0">dL / dR: Left / right pole offsets</text>
+      <text x="365" y="735" fill="#b8500f">rL / rR: Left / right return lengths</text>
+      <text x="35" y="767" fill="#5f6f82" font-size="14">Not to scale. Offsets and return lengths define path regions; the model geometry is unchanged.</text>
+    </g>
+    <text x="640" y="238" font-size="15">All dimension arrows are parallel to the axis.</text>
+    <text x="640" y="264" font-size="15">This example places body boundaries at the dome junctions.</text>
+    <!-- Magnify the left dome with its surface and axial section visible. -->
+    <rect x="695" y="290" width="435" height="250" rx="8" fill="#f8fafc" stroke="#d7dee8"/>
+    <text x="715" y="317" font-size="18" font-weight="700">Left dome detail</text>
+    <g transform="translate(0 143.5) scale(1 .65)">
+    <path d="M785.74 310 L1014.26 310 A160 100 0 0 1 1060 380 V430 H740 V380 A160 100 0 0 1 785.74 310 Z" fill="#d8e8fa" stroke="#2c3e50" stroke-width="2"/>
+    <path d="M1038.56 330 A160 100 0 0 1 1052.63 350" fill="none" stroke="#b8500f" stroke-width="6"/>
+    <line x1="740" y1="380" x2="1060" y2="380" stroke="#5f6f82" stroke-dasharray="4 4"/>
+    <line x1="900" y1="335" x2="900" y2="442" stroke="#5f6f82" stroke-dasharray="5 4"/>
+    <circle cx="1038.56" cy="330" r="5" fill="#0b57d0"/>
+    <circle cx="1052.63" cy="350" r="5" fill="#b8500f"/>
+    </g>
+    <path d="M1038.56 358 H1105 V458 H1010 M1052.63 371 H1085 V488 H1010" fill="none" stroke="#5f6f82"/>
+    <text x="725" y="462" font-size="15" fill="#0b57d0">Pole boundary</text>
+    <text x="725" y="492" font-size="15" fill="#b8500f">Centreline endpoint</text>
+    <text x="715" y="522" font-size="14" fill="#b8500f">Target inward meridian arc length: tow width / 2</text>
+    <g font-size="14">
+      <text x="640" y="704">A short return zone reduces clearance; a zero length cancels it.</text>
+      <text x="640" y="735">Half-width adjustment also runs with a pole offset of 0.</text>
+    </g>
+  </g>
+</svg>

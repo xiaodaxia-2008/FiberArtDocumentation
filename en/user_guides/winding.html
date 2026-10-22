@@ -781,6 +781,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. Setting the Mandrel and Winding Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-pole-hole-boundaries-and-return-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Pole-Hole Boundaries and Return Zones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-how-tow-width-affects-the-centreline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 How Tow Width Affects the Centreline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1342,6 +1370,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. Setting the Mandrel and Winding Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-pole-hole-boundaries-and-return-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Pole-Hole Boundaries and Return Zones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-how-tow-width-affects-the-centreline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 How Tow Width Affects the Centreline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1385,9 +1441,9 @@
 
 <h1 id="filament-winding">Filament Winding</h1>
 <p>The Filament Winding module plans winding paths on axisymmetric bodies of revolution (such as pressure vessels and gas storage tanks). Currently, only axisymmetric surfaces of revolution are supported.</p>
-<p>Show or hide the winding panel from the <strong>Functions &gt; Filament Winding</strong> menu, and create a winding mandrel node from the <strong>Model &gt; Winding Mandrel</strong> menu.</p>
+<p>Show or hide the winding panel from the <strong>Functions &gt; Filament Winding</strong> menu, and create geometry to use as a mandrel from <strong>Model &gt; Ellipsoidal Capped Cylinder</strong>.</p>
 <h2 id="1-creating-a-winding-mandrel">1. Creating a Winding Mandrel</h2>
-<p>Click <strong>Model &gt; Winding Mandrel</strong> to create a winding mandrel node. The mandrel is a body of revolution composed of a cylindrical body section in the middle and elliptical dome sections at both ends. The revolution axis is aligned with the Z axis, as illustrated below:</p>
+<p>Click <strong>Model &gt; Ellipsoidal Capped Cylinder</strong> to create a geometry node to use as a mandrel. It is a body of revolution composed of a cylindrical body section in the middle and elliptical dome sections at both ends. The revolution axis is aligned with the Z axis, as illustrated below:</p>
 <p>
 </p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/winding_mandrel.svg" data-desc-position="bottom"><img src="images/winding_mandrel.svg"></a><figcaption>Winding mandrel geometry and dimensions</figcaption>
 </figure>
@@ -1401,15 +1457,87 @@
 </ul>
 <p>The mandrel geometry updates in real time when parameters change. Note that the minor radius must not exceed the major radius, and the dome height must not exceed the minor radius.</p>
 <h2 id="2-setting-the-mandrel-and-winding-parameters">2. Setting the Mandrel and Winding Parameters</h2>
-<p>Set the following parameters in the winding panel:</p>
-<ul>
-<li>Mandrel: Select a mandrel node in the scene and click <strong>Set</strong> to fill in its node path; the path can also be typed directly into the edit box.</li>
-<li>Friction: The maximum friction coefficient required for the tow to stay in place on the mandrel surface without slipping. Default 0.3.</li>
-<li>Winding Angle: The target winding angle (angle to the revolution axis). Default 10°.</li>
-<li>Angle Tolerance: The allowed angular deviation when searching for feasible winding patterns. Default 1°.</li>
-<li>Tow Width: The width of a single tow. Default 6.4 mm.</li>
-<li>Winding Layers: The number of layers to wind. Default 1.</li>
-</ul>
+<p>Select a mandrel node in the scene and click <strong>Set</strong> in the winding panel to fill in its node path. The path field is read-only. To change the mandrel, select another node and click <strong>Set</strong> again.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Meaning</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Left Pole Offset</td>
+<td>Axial distance inward from the left model endpoint to the left pole-hole boundary</td>
+<td>0 mm</td>
+</tr>
+<tr>
+<td>Right Pole Offset</td>
+<td>Axial distance inward from the right model endpoint to the right pole-hole boundary</td>
+<td>0 mm</td>
+</tr>
+<tr>
+<td>Left Return Length</td>
+<td>Axial distance from the left pole-hole boundary toward the body, defining the boundary between the left return zone and the body region</td>
+<td>0 mm</td>
+</tr>
+<tr>
+<td>Right Return Length</td>
+<td>Axial distance from the right pole-hole boundary toward the body, defining the boundary between the right return zone and the body region</td>
+<td>0 mm</td>
+</tr>
+<tr>
+<td>Friction</td>
+<td>The input remains available in the panel; the required friction coefficient is computed for each pattern, and the current pattern search does not filter results by this input</td>
+<td>0.3</td>
+</tr>
+<tr>
+<td>Winding Angle</td>
+<td>Target winding angle in the body region; on a cylindrical body, this is the angle between the path and the revolution axis</td>
+<td>10°</td>
+</tr>
+<tr>
+<td>Angle Tolerance</td>
+<td>Allowed angular deviation when searching for feasible winding patterns</td>
+<td>1°</td>
+</tr>
+<tr>
+<td>Tow Width</td>
+<td>Width of a single tow, used in both pattern calculation and the centreline adjustment at each end</td>
+<td>6.4 mm</td>
+</tr>
+<tr>
+<td>Winding Layers</td>
+<td>Number of layers to wind</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="21-pole-hole-boundaries-and-return-zones">2.1 Pole-Hole Boundaries and Return Zones</h3>
+<p>Left and right refer to positions along the model's revolution axis: the endpoint with the smaller axial coordinate is the left endpoint, and the endpoint with the larger coordinate is the right endpoint. They do not depend on the viewing direction. Both pole offsets and return lengths are <strong>axial distances</strong>, which may differ from arc lengths along the surface meridian.</p>
+<p>Let <code>z_min</code> and <code>z_max</code> be the axial coordinates of the model endpoints, <code>dL</code> and <code>dR</code> the left and right pole offsets, and <code>rL</code> and <code>rR</code> the left and right return lengths:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Left pole-hole boundary  = z_min + dL
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Right pole-hole boundary = z_max - dR
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Body region start       = Left pole-hole boundary + rL
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Body region end         = Right pole-hole boundary - rR
+</span></code></pre></div>
+<p>The intervals between the pole-hole boundaries and the body region are used for path turnaround. A pole offset of 0 places the pole-hole boundary at the model endpoint. Increasing an offset moves that boundary inward. These settings define the path calculation intervals; they do not modify the mandrel geometry or create physical holes.</p>
+<p>Set return lengths according to the mandrel shape. The software does not automatically use the geometric junctions between the cylindrical body and the domes. For example, to start the body region at the start of the cylindrical section, set the left return length to the axial distance from the left pole-hole boundary to that junction.</p>
+<p>The diagram below uses the same ellipsoidal capped cylinder profile shown above, with the pole boundaries, return zones and body region marked directly on the model. The upper end is the left end (smaller axial coordinate), and the lower end is the right end. Orange marks the return zones; blue marks the body region. The dome detail on the right shows the half-width adjustment from the pole boundary to the centreline endpoint.</p>
+<p>
+</p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/winding_intervals.svg" data-desc-position="bottom"><img src="images/winding_intervals.svg"></a><figcaption>Pole offsets, return lengths and tow centreline clearance on the ellipsoidal capped cylinder</figcaption>
+</figure>
+<p></p>
+<p>For example, with model endpoints at <code>0 mm</code> and <code>1000 mm</code>, pole offsets of <code>50 mm</code> on both sides and return lengths of <code>150 mm</code> on both sides place the pole-hole boundaries at <code>50 mm</code> and <code>950 mm</code>. The body region extends from <code>200 mm</code> to <code>800 mm</code>.</p>
+<p>Keep all boundaries within the model's axial range, with the left pole-hole boundary at or before the right boundary and the body start at or before the body end. If excessive offsets or return lengths make the intervals invalid, no path is generated; check the log for details.</p>
+<h3 id="22-how-tow-width-affects-the-centreline">2.2 How Tow Width Affects the Centreline</h3>
+<p>The planned path represents the tow centreline. Each calculation attempts to move the centreline inward from each configured pole-hole boundary by <strong>half the tow width</strong>, measured along the surface meridian, to leave room for the tow edge. This step is always part of the calculation, including when the pole offset is 0. Changing a pole offset changes the reference boundary for the adjustment.</p>
+<p>For a tow width of <code>6.4 mm</code>, the intended adjustment is <code>3.2 mm</code> inward along the meridian. This is not a fixed axial offset: the corresponding axial distance on a curved dome depends on the surface shape.</p>
+<div class="admonition note">
+<p class="admonition-title">Return lengths limit the centreline adjustment</p>
+<p>The adjusted centreline must not pass the boundary between the return zone and the body region. If the return zone cannot accommodate half the tow width, the actual adjustment is reduced. A return length of 0 limits the centreline back to the pole-hole boundary. Setting the tow width therefore does not guarantee full half-width clearance at both ends.</p>
+</div>
 <h2 id="3-computing-the-winding-path">3. Computing the Winding Path</h2>
 <p>After setting the parameters, click <strong>Compute</strong>. The software searches for feasible integer winding patterns near the target angle and lists the results in the table:</p>
 <ul>
@@ -1418,7 +1546,8 @@
 <li>Angle Error: The difference between the actual winding angle and the target angle.</li>
 <li>Friction: The maximum friction coefficient required by the tow for this pattern.</li>
 </ul>
-<p>After the search finishes, the software automatically generates a winding ply node using the first pattern in the table. Double-clicking any row generates a winding ply with the corresponding pattern. If no feasible pattern is found, an error dialog appears; try adjusting the winding angle, tolerance, or friction coefficient.</p>
+<p>After the search finishes, the software automatically generates a winding ply node using the first pattern in the table. Double-clicking any row generates a winding ply with the corresponding pattern. If no feasible pattern is found, an error dialog appears. Check the intervals at both ends and try adjusting the winding angle, tolerance, tow width or layer count.</p>
+<p>After changing the mandrel or parameters, click <strong>Compute</strong> again to refresh the pattern list before selecting a pattern to generate a path.</p>
 <h2 id="4-winding-ply-node">4. Winding Ply Node</h2>
 <p>The generated winding ply node (e.g. <code>WindingPly 10°</code>) is a trajectory node and can be used directly in simulation and post-processing.</p>
 <p>Winding ply node properties (edited in the node property panel):</p>

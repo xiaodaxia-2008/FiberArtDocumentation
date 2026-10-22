@@ -781,6 +781,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. 设置芯模与缠绕参数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-极孔边界与回转区" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 极孔边界与回转区
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-丝束宽度对中心线路径的影响" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 丝束宽度对中心线路径的影响
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1342,6 +1370,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2. 设置芯模与缠绕参数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-极孔边界与回转区" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 极孔边界与回转区
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-丝束宽度对中心线路径的影响" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 丝束宽度对中心线路径的影响
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1385,9 +1441,9 @@
 
 <h1 id="纤维缠绕">纤维缠绕</h1>
 <p>纤维缠绕（Filament Winding）模块用于对轴对称回转体（如压力容器、储气罐等）进行缠绕路径规划。目前仅支持轴对称回转面。</p>
-<p>在 <strong>功能 &gt; 纤维缠绕</strong> 菜单中显示或隐藏缠绕面板，在 <strong>模型 &gt; 缠绕芯模</strong> 菜单中创建缠绕芯模节点。</p>
+<p>在 <strong>功能 &gt; 纤维缠绕</strong> 菜单中显示或隐藏缠绕面板，在 <strong>模型 &gt; 椭球封头圆柱</strong> 菜单中创建可用作缠绕芯模的几何节点。</p>
 <h2 id="1-创建缠绕芯模">1. 创建缠绕芯模</h2>
-<p>点击 <strong>模型 &gt; 缠绕芯模</strong> 创建一个缠绕芯模节点。芯模是一个回转体，由中间的圆柱筒体段和两端的椭圆封头段组成，回转轴与 Z 轴对齐，示意图如下：</p>
+<p>点击 <strong>模型 &gt; 椭球封头圆柱</strong> 创建一个几何节点作为芯模。该几何是一个回转体，由中间的圆柱筒体段和两端的椭圆封头段组成，回转轴与 Z 轴对齐，示意图如下：</p>
 <p>
 </p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/winding_mandrel.svg" data-desc-position="bottom"><img src="images/winding_mandrel.svg"></a><figcaption>缠绕芯模几何与尺寸标注</figcaption>
 </figure>
@@ -1401,15 +1457,87 @@
 </ul>
 <p>参数修改后芯模几何会实时更新。注意短半轴不能大于长半轴，封头高度不能大于短半轴。</p>
 <h2 id="2-设置芯模与缠绕参数">2. 设置芯模与缠绕参数</h2>
-<p>在缠绕面板中设置以下参数：</p>
-<ul>
-<li>芯模：选中场景中的芯模节点，点击 <strong>设置</strong> 填入芯模节点路径；也可以在文本框中直接填写路径；</li>
-<li>摩擦系数：纱线在芯模表面不打滑所需的最大摩擦系数，默认 0.3；</li>
-<li>缠绕角度：目标缠绕角度（与回转轴的夹角），默认 10°；</li>
-<li>角度容差：搜索可行缠绕线型时允许的角度偏差，默认 1°；</li>
-<li>丝束宽度：单根纱束的宽度，默认 6.4 mm；</li>
-<li>缠绕层数：需要缠绕的层数，默认 1。</li>
-</ul>
+<p>在场景中选中芯模节点，点击缠绕面板中的 <strong>设置（Set）</strong> 填入节点路径。路径文本框为只读，切换芯模时需重新选择节点并点击 <strong>设置</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>参数（英文界面）</th>
+<th>含义</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>左极点偏移（Left Pole Offset）</td>
+<td>从模型左端沿回转轴向内定位左极孔边界的距离</td>
+<td>0 mm</td>
+</tr>
+<tr>
+<td>右极点偏移（Right Pole Offset）</td>
+<td>从模型右端沿回转轴向内定位右极孔边界的距离</td>
+<td>0 mm</td>
+</tr>
+<tr>
+<td>左侧回程长度（Left Return Length）</td>
+<td>从左极孔边界向主体方向量取的轴向距离，用于确定左回转区与主体区的分界</td>
+<td>0 mm</td>
+</tr>
+<tr>
+<td>右侧回程长度（Right Return Length）</td>
+<td>从右极孔边界向主体方向量取的轴向距离，用于确定右回转区与主体区的分界</td>
+<td>0 mm</td>
+</tr>
+<tr>
+<td>摩擦系数（Friction）</td>
+<td>当前面板保留该输入；线型所需摩擦系数由算法计算，当前线型搜索未按此输入值筛选结果</td>
+<td>0.3</td>
+</tr>
+<tr>
+<td>缠绕角度（Winding Angle）</td>
+<td>主体区的目标缠绕角度；在圆柱筒体上为路径与回转轴的夹角</td>
+<td>10°</td>
+</tr>
+<tr>
+<td>角度容差（Angle Tolerance）</td>
+<td>搜索可行缠绕线型时允许的角度偏差</td>
+<td>1°</td>
+</tr>
+<tr>
+<td>丝束宽度（Tow Width）</td>
+<td>单根丝束的宽度，同时用于线型计算和两端中心线位置调整</td>
+<td>6.4 mm</td>
+</tr>
+<tr>
+<td>缠绕层数（Winding Layers）</td>
+<td>需要缠绕的层数</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="21-极孔边界与回转区">2.1 极孔边界与回转区</h3>
+<p>“左”和“右”按模型回转轴上的坐标定义：坐标较小的一端为左端，较大的一端为右端，与观察视角无关。极点偏移和回程长度均为<strong>轴向距离</strong>，沿曲面母线的弧长可能与之不同。</p>
+<p>设模型两端轴向坐标为 <code>z_min</code>、<code>z_max</code>，左、右极点偏移为 <code>dL</code>、<code>dR</code>，左、右回程长度为 <code>rL</code>、<code>rR</code>，则：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>左极孔边界 = z_min + dL
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>右极孔边界 = z_max - dR
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>主体区起点 = 左极孔边界 + rL
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>主体区终点 = 右极孔边界 - rR
+</span></code></pre></div>
+<p>两侧极孔边界与主体区之间的区间用于路径回转。极点偏移为 0 时，极孔边界位于模型端点；增大偏移量会使对应边界向模型内部移动。这些设置用于划分路径计算区间，不会修改芯模几何或创建实际孔洞。</p>
+<p>回程长度需要根据芯模形状设置，软件不会自动采用圆柱筒体与封头的几何接合位置。例如，要让主体区从圆柱筒体起点开始，应将左回程长度设置为左极孔边界到该起点的轴向距离。</p>
+<p>下图沿用前面的椭球封头圆柱轮廓，直接在模型上标出极孔边界、回转区和主体区。图中上端为轴向坐标较小的“左端”，下端为“右端”；橙色区域为回转区，蓝色区域为主体区。右侧放大封头表面，标出极孔边界到中心线端点的半宽补偿。</p>
+<p>
+</p><figure><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/winding_intervals.svg" data-desc-position="bottom"><img src="images/winding_intervals.svg"></a><figcaption>椭球封头圆柱上的极点偏移、回程长度与丝束中心线补偿</figcaption>
+</figure>
+<p></p>
+<p>例如，模型轴向范围为 <code>0～1000 mm</code>，左右极点偏移均为 <code>50 mm</code>，左右回程长度均为 <code>150 mm</code>，则极孔边界位于 <code>50 mm</code> 和 <code>950 mm</code>，主体区为 <code>200～800 mm</code>。</p>
+<p>设置后应保证各边界位于模型轴向范围内，左极孔边界不超过右极孔边界，主体区起点不超过终点。偏移量或回程长度过大导致区间无效时，软件不会生成路径，可在日志中查看提示。</p>
+<h3 id="22-丝束宽度对中心线路径的影响">2.2 丝束宽度对中心线路径的影响</h3>
+<p>规划路径表示丝束的中心线。每次计算时，软件都会以设置后的极孔边界为基准，尝试沿曲面母线向内移动<strong>半个丝束宽度</strong>，为丝束边缘预留空间。该步骤始终参与计算，极点偏移为 0 时也会执行；修改极点偏移会改变补偿的基准边界。</p>
+<p>例如，丝束宽度为 <code>6.4 mm</code> 时，目标调整量为沿母线向内 <code>3.2 mm</code>。这不是固定的轴向偏移，在弯曲封头上对应的轴向距离取决于曲面形状。</p>
+<div class="admonition note">
+<p class="admonition-title">回程长度会限制中心线调整</p>
+<p>调整后的中心线不能越过回转区与主体区的分界。回程区不足以容纳半个丝束宽度时，实际调整量会减小；对应回程长度为 0 时，调整会被限制回极孔边界。因此，不能仅凭设置了丝束宽度就认为两端一定预留了完整的半宽空间。</p>
+</div>
 <h2 id="3-计算缠绕路径">3. 计算缠绕路径</h2>
 <p>设置好参数后点击 <strong>计算</strong>。软件会在目标角度附近搜索可行的整数缠绕线型，并将结果列在表格中：</p>
 <ul>
@@ -1418,7 +1546,8 @@
 <li>角度误差：实际缠绕角度与目标角度之差；</li>
 <li>摩擦系数：该线型对应的纱线所需最大摩擦系数。</li>
 </ul>
-<p>搜索完成后，软件会自动使用表格第一行的线型生成一个缠绕层节点；双击表格中的任意一行，则使用该行对应的线型生成缠绕层。如果找不到可行线型，会弹出错误提示，可尝试调整缠绕角度、容差或摩擦系数。</p>
+<p>搜索完成后，软件会自动使用表格第一行的线型生成一个缠绕层节点；双击表格中的任意一行，则使用该行对应的线型生成缠绕层。如果找不到可行线型，会弹出错误提示，可检查两端区间设置，并尝试调整缠绕角度、容差、丝束宽度或缠绕层数。</p>
+<p>修改芯模或参数后，应重新点击 <strong>计算</strong> 更新线型列表，再选择线型生成路径。</p>
 <h2 id="4-缠绕层节点">4. 缠绕层节点</h2>
 <p>生成的缠绕层节点（如 <code>缠绕层 10°</code>）是轨迹类节点，可以直接参与仿真与后处理。</p>
 <p>缠绕层节点的属性（在节点属性面板中修改）：</p>

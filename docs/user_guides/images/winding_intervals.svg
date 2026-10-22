@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="zh" viewBox="0 0 1120 710" width="1120" height="710" role="img" aria-labelledby="title desc" font-family="Segoe UI, Microsoft YaHei, Arial, sans-serif">
+  <title id="title">极孔边界、回转区与丝束中心线</title>
+  <desc id="desc">上图按轴向位置说明极点偏移与回程长度，下图说明沿母线向内半个丝束宽度的中心线调整。示意不按比例。</desc>
+  <!-- Copyright © 2026 Zen Shawn. All rights reserved. Created 2026-10-22. -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5f6f82"/>
+    </marker>
+  </defs>
+  <rect width="1120" height="710" rx="12" fill="#fff"/>
+  <g fill="#2c3e50">
+    <text x="40" y="40" font-size="24" font-weight="700">极孔边界、回转区与丝束中心线</text>
+    <!-- Axial positions; endpoint and pole labels are staggered. -->
+    <g font-size="16">
+      <text x="60" y="76">模型左端 z_min</text>
+      <text x="1060" y="76" text-anchor="end">模型右端 z_max</text>
+      <text x="300" y="104" text-anchor="middle" fill="#b8500f">主体区起点</text>
+      <text x="820" y="104" text-anchor="middle" fill="#b8500f">主体区终点</text>
+      <text x="130" y="168" text-anchor="middle" fill="#0b57d0">左极孔边界</text>
+      <text x="990" y="168" text-anchor="middle" fill="#0b57d0">右极孔边界</text>
+    </g>
+    <line x1="60" y1="130" x2="1060" y2="130" stroke="#5f6f82" stroke-width="2" marker-end="url(#arrow)"/>
+    <g stroke-width="2">
+      <path d="M60 88 V238 M1060 88 V238" stroke="#5f6f82" stroke-dasharray="4 4"/>
+      <path d="M130 118 V148 M130 176 V238 M990 118 V148 M990 176 V238" stroke="#0b57d0"/>
+      <path d="M300 112 V238 M820 112 V238" stroke="#b8500f"/>
+    </g>
+    <rect x="60" y="192" width="70" height="38" fill="#edf0f4"/>
+    <rect x="130" y="192" width="170" height="38" fill="#fce5ce"/>
+    <rect x="300" y="192" width="520" height="38" fill="#dceafb"/>
+    <rect x="820" y="192" width="170" height="38" fill="#fce5ce"/>
+    <rect x="990" y="192" width="70" height="38" fill="#edf0f4"/>
+    <g font-size="17" text-anchor="middle">
+      <text x="215" y="217">左回转区</text>
+      <text x="560" y="217">主体区</text>
+      <text x="905" y="217">右回转区</text>
+    </g>
+    <g stroke="#5f6f82" stroke-width="1.4" marker-start="url(#arrow)" marker-end="url(#arrow)">
+      <line x1="63" y1="252" x2="127" y2="252"/>
+      <line x1="133" y1="252" x2="297" y2="252"/>
+      <line x1="823" y1="252" x2="987" y2="252"/>
+      <line x1="993" y1="252" x2="1057" y2="252"/>
+    </g>
+    <g font-size="18" font-weight="700" text-anchor="middle">
+      <text x="95" y="280" fill="#0b57d0">dL</text>
+      <text x="215" y="280" fill="#b8500f">rL</text>
+      <text x="905" y="280" fill="#b8500f">rR</text>
+      <text x="1025" y="280" fill="#0b57d0">dR</text>
+    </g>
+    <text x="60" y="319" font-size="17" fill="#0b57d0">dL / dR：极点偏移（端点 → 极孔边界）</text>
+    <text x="580" y="319" font-size="17" fill="#b8500f">rL / rR：回程长度（极孔边界 → 主体区）</text>
+    <text x="60" y="350" font-size="16" fill="#5f6f82">以上距离均沿回转轴测量；轴向坐标从左向右增大。</text>
+    <line x1="40" y1="375" x2="1080" y2="375" stroke="#d7dee8"/>
+    <!-- The orange segment follows the curved meridian, not an axial line. -->
+    <text x="40" y="413" font-size="20" font-weight="700">左端局部：中心线沿母线向内调整</text>
+    <path d="M90 632 Q120 460 450 460" fill="none" stroke="#2c3e50" stroke-width="3"/>
+    <path d="M123.75 556.75 Q150 524.5 195 503" fill="none" stroke="#b8500f" stroke-width="7"/>
+    <circle cx="123.75" cy="556.75" r="6" fill="#0b57d0"/>
+    <circle cx="195" cy="503" r="6" fill="#b8500f"/>
+    <path d="M123.75 563 V621 H190" fill="none" stroke="#0b57d0" stroke-width="1.5"/>
+    <text x="200" y="627" font-size="17" fill="#0b57d0">极孔边界</text>
+    <path d="M195 497 V452 H255" fill="none" stroke="#b8500f" stroke-width="1.5"/>
+    <text x="265" y="447" font-size="16" fill="#b8500f">调整后的中心线端点</text>
+    <text x="300" y="493" font-size="16">曲面母线</text>
+    <g font-size="18">
+      <text x="530" y="475" fill="#b8500f" font-weight="700">目标弧长 = 丝束宽度 / 2</text>
+      <text x="530" y="520">调整受回转区长度限制。</text>
+      <text x="530" y="554" font-size="16">回程长度为 0 时，中心线被限制回极孔边界。</text>
+      <text x="530" y="598" font-size="16">极点偏移为 0 时也会执行中心线调整。</text>
+    </g>
+    <text x="40" y="683" font-size="15" fill="#5f6f82">示意不按比例；极孔边界与中心线均为路径计算位置，模型几何不变。</text>
+  </g>
+</svg>

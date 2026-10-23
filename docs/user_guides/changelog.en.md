@@ -1,3 +1,10 @@
+## v0.24.7 (2026.10.23)
+
+- Cylinder, cone, and sphere surfaces now support angular bounds for creating partial surfaces
+- Create ellipsoidal capped cylinders directly from Modeling > Create Surface and adjust their position and orientation
+- Geometry dimensions now use consistent length units for display and editing
+- Improved winding parameter layout and surface handling for easier planning setup
+
 ## v0.24.6 (2026.10.18)
 
 - Robot pose formats are now shown first, and the pose editor remembers the last format you selected for faster repeated setup

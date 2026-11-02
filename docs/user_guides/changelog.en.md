@@ -1,3 +1,12 @@
+## v0.24.8 (2026.11.2)
+
+- Trajectory postprocessing now accounts for solved positioner angles when transforming waypoints to a fixed reference frame, producing more accurate exported poses
+- Added parametric S-curves and tapered helices to the modeling menu, expanding options for auxiliary curves and path modeling
+- Added support for generating closed letter/text compound wire outlines, making it easy to create character and contour shapes in the scene
+- Added planar curve nodes with atomic point and vector property editing for more convenient and precise geometric parameter adjustments
+- Unified surface node icons and refined translations such as capped cylinders for a more consistent interface experience
+- Improved license entitlement and hardware identifier detection for faster, more reliable startup and authorization
+
 ## v0.24.7 (2026.10.23)
 
 - Cylinder, cone, and sphere surfaces now support angular bounds for creating partial surfaces

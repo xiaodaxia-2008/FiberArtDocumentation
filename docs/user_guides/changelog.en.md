@@ -1,3 +1,9 @@
+## v0.24.9 (2026.11.3)
+
+- Added a "Convert to TrajectoryNode" context menu action for trajectory-derived nodes, allowing easy conversion of fiber plies into standalone trajectory nodes for independent inspection and reuse
+- Added a "Current Waypoint" reference frame to the waypoint pose editor, enabling intuitive relative translation and rotation adjustments directly in the waypoint's local coordinate system
+- Standardized pose adjustment and node hierarchy behaviors for CAD and geometric shape nodes, with quick attachment to newly created coordinate frames
+
 ## v0.24.8 (2026.11.2)
 
 - Trajectory postprocessing now accounts for solved positioner angles when transforming waypoints to a fixed reference frame, producing more accurate exported poses

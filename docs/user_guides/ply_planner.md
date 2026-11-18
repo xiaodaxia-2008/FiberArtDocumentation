@@ -105,3 +105,7 @@ $$
 - 自然曲线-平行偏移
 
 ![NaturalParallel](./images/natural_parallel.png)
+
+## 回转零件的 Course 复制
+
+可先规划一组，再使用[旋转生成丝束组](course_rotation.md)生成其余组；支持多根 Tow。

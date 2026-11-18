@@ -1,3 +1,16 @@
+## develop (not yet released)
+
+- Generate rotated courses around a line-segment axis, retaining all tows with preview and batch undo/redo.
+- Control positioner angles with Lua using workpiece positions and previous joint values, including continuous transitions around rounded ends.
+
+## v0.25.0 (2026.11.13)
+
+- Added joint and Cartesian jogging with custom reference frames for simulation groups.
+- Added a CNC digital twin panel with controller connection and configurable joint mapping.
+- Export machine configurations and lightweight machine packages for use in CNC systems.
+- Added local-service integration for postprocessing tools, plus Inovance scanner-camera and Nabote robot postprocessors.
+- Improved simulation-group layouts and continuous-joint editing, including narrow panels.
+
 ## v0.24.9 (2026.11.3)
 
 - Added a "Convert to TrajectoryNode" context menu action for trajectory-derived nodes, allowing easy conversion of fiber plies into standalone trajectory nodes for independent inspection and reuse

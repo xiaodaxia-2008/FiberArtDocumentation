@@ -105,3 +105,8 @@ With the above concepts in mind, different planning algorithms are simply differ
 - Natural Curve - Parallel Offset
 
 ![NaturalParallel](./images/natural_parallel.png)
+
+
+## Courses on rotational parts
+
+Plan a source course, then use [Rotate to Generate Courses](course_rotation.md) to generate the remaining courses, including multi-tow courses.

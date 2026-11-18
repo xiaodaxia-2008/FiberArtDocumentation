@@ -2,16 +2,11 @@
 
 Open **LayupSimulation & PostProcess** from **Functions** on the main menu. The panel is scrollable and contains a motion-system section, a trajectory-node list, and two tabs: **Simulation and Export** and **Kinematics Setting**.
 
-## Motion System
+## Simulation Group
 
-The **Motion System** section at the top specifies the equipment used by the simulation:
+The current panel selects a **Simulation Group**, rather than individual device selectors. Select the equipment nodes in the scene tree and use **Create Simulation Group** in their context menu. Inspect the group's robot, track, positioner and tool references in its properties. Set a group as the default when it should be used for trajectories without an explicit group.
 
-- **Track**: select a linear track node;
-- **Robot**: select a robot node;
-- **Positioner**: select a positioner node;
-- **Tool**: select a tool or placement-head node.
-
-Each device has **Select** and **Clear** buttons. Select a node of the corresponding type in the scene tree before clicking **Select**; its node path is then shown in the read-only field. The positioner and track tabs in the kinematics settings are disabled when the corresponding device is not set. When the panel opens, it automatically tries to find the first available track, robot, tool, positioner, and trajectory node in the scene tree.
+The robot must be mounted below its track, the tool below its robot, and the workpiece below the positioner for coordinated positioner motion. Save the scene to retain the group configuration. Track and positioner settings are available only when those devices exist.
 
 ## Trajectory Nodes
 
@@ -20,9 +15,9 @@ The trajectory-node list is below the motion-system section:
 - **Add Traj Node**: add the currently selected trajectory node from the scene tree;
 - **Delete Traj Node**: remove the current list item;
 - **Clear**: clear the trajectory-node list;
-- **Auto Select**: automatically select the first available device and trajectory node from the scene tree.
+- **Auto Select**: automatically select an available simulation group and trajectory node from the scene tree.
 
-The list can contain multiple trajectory nodes. Selecting an item displays that trajectory and loads its saved kinematics parameters; sibling trajectories are hidden when the current item changes. At least one valid trajectory node is required before simulation or export.
+The list can contain multiple trajectory nodes, with one current selection; drag items to reorder them. Selecting an item displays that trajectory and loads its saved kinematics parameters; sibling trajectories are hidden when the current item changes. At least one valid trajectory node is required before simulation or export.
 
 ## Simulation and Export
 
@@ -79,7 +74,7 @@ Depending on the strategy, the enabled fields are **Fixed Position**, **Start Ba
 
 After a positioner is selected, the **Positioner** tab becomes available. Under the rule-based algorithm, its strategies are:
 
-- **Align**: align the trajectory direction with the reference direction;
+- **Align**: align the weighted surface-normal/radial direction with the reference direction about the positioner axis;
 - **AlignLinearInterpolation**: solve alignment at the start and end of a course and linearly interpolate intermediate points;
 - **AlignCubicInterpolation**: solve alignment at the start and end of a course and use cubic interpolation for intermediate points;
 - **Fixed**: use a fixed position;
@@ -91,10 +86,21 @@ See [Multi-axis Linkage System Kinematics Settings](../advanced/kinematics.en.md
 
 ## Recommended Order
 
-1. Prepare the robot, tool, track, positioner, and trajectory nodes in the scene tree.
-2. Select the devices in **Motion System**, or click **Auto Select**.
+1. Prepare the equipment, simulation group, and trajectory nodes in the scene tree.
+2. Select the configured **Simulation Group**, or click **Auto Select**.
 3. Add the trajectories to the trajectory-node list.
 4. Choose the algorithm and strategies in **Kinematics Setting**, then click **Apply** or **Apply to All**.
 5. Set the speed in **Simulation and Export** and click **start** to inspect the motion.
 6. Select the post script, export path, and reference node, then click **Export**.
 7. Validate frames, poses, joint limits, speeds, and I/O commands in offline simulation or a controller test environment.
+
+
+## Custom positioner angles (develop)
+
+Select **RuleBased → Positioner → CustomFunction**, then **Edit Custom Function**. Click **Apply** to save the script to the current trajectory. This disables the alignment/fixed-angle fields. See [Lua positioner control](../advanced/positioner_lua.md) for units, callback inputs and rounded-end transitions. This addition is not included in v0.25.0.
+
+## Joint and Cartesian jogging
+
+Open the simulation group's properties to jog joints or TCP pose. Pose display reference and the **Base/Tool** jogging reference serve different purposes. Available pose references include world, robot base, tool, track flange, positioner flange/TIP and added Frame nodes. User frames may follow a track or positioner, but cannot be mounted under the robot. The ordered user-frame list and selection are saved with the scene.
+
+When jogging external axes, **Keep Robot TCP Pose During External Axis Jog** requests robot compensation. Stop simulation before teaching or positioning. Continuous joints retain multi-turn values rather than being normalized to a single revolution. With **Prefer waypoint joints**, valid taught joints take priority before the normal solver fallback.

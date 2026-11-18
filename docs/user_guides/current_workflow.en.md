@@ -1,6 +1,6 @@
 # Current Workflow
 
-This page describes the FiberArt 0.22.0 interface and workflow. The main process is to prepare geometry and equipment, create or plan plies, inspect the result, configure the motion system, simulate, and export a machine program.
+This page describes the FiberArt v0.25.0 and the explicitly marked develop additions interface and workflow. The main process is to prepare geometry and equipment, create or plan plies, inspect the result, configure the motion system, simulate, and export a machine program.
 
 ## 1. Create a Project and Import Models
 
@@ -50,7 +50,7 @@ Use **Workpiece Pose Calibration** for workpiece registration and **TCP Calibrat
 
 Open **LayupSimulation & PostProcess** from **Functions**:
 
-1. Select the track, robot, positioner, and tool.
+1. Create/select a simulation group and verify its track, robot, positioner and tool references.
 2. Add trajectory nodes or use **Auto Select** to select them from the scene tree.
 3. Choose a kinematic algorithm and track/positioner strategies, then click **Apply**. Use **Apply to All** to apply settings to all selected trajectories.
 4. Set the simulation speed and use **start**, **pause**, **continue**, and **stop**.
@@ -77,3 +77,11 @@ When an operation fails, inspect the **Log** panel first and verify node types, 
 - [Simulation](simulation.en.md)
 - [Poses and Calibration](../advanced/pose_calibration.en.md)
 - [Post-processing Customization](../advanced/post_process.en.md)
+
+
+## Recent workflow additions
+
+- Use [course rotation](course_rotation.md) to generate courses around rotational parts (develop).
+- Select a configured simulation group for simulation; use its properties for joint/TCP jogging and saved reference frames. See [Simulation](simulation.md).
+- For end-pole angle flips, see [Lua positioner control](../advanced/positioner_lua.md) (develop).
+- See [Equipment and controller integration](../advanced/equipment_integration.md) for model editing, machine export and telemetry.

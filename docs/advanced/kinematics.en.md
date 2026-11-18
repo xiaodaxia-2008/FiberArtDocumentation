@@ -25,7 +25,7 @@ Computes track and positioner joints using explicit rules, then solves the robot
 
 ## Positioner Strategies
 
-- `Align`: aligns the trajectory direction with a reference direction;
+- `Align`: aligns the weighted surface-normal/radial direction with a reference direction about the positioner axis;
 - `AlignLinearInterpolation`: solves the start and end of a course and linearly interpolates between them;
 - `AlignCubicInterpolation`: solves the start and end and uses cubic interpolation between them;
 - `Fixed`: uses a fixed joint position;
@@ -44,3 +44,8 @@ Check the following:
 3. TCP and workpiece reference frames are correct.
 4. Collision checks include the actual tool, workpiece, and equipment collision geometry.
 5. The exported program has been validated in offline simulation or at low speed.
+
+
+## Custom positioner function
+
+Positioner CustomFunction is available on develop; see [Lua positioner control](positioner_lua.md). Align uses weighted surface-normal and radial directions, not the path tangent.

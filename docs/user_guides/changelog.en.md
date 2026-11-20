@@ -1,5 +1,6 @@
-## develop (not yet released)
+## v0.25.1 (2026.11.20)
 
+- Network licensing now prefers the user ID saved on this Windows account, keeping it aligned with the user ID generator and reducing license mismatches.
 - Generate rotated courses around a line-segment axis, retaining all tows with preview and batch undo/redo.
 - Control positioner angles with Lua using workpiece positions and previous joint values, including continuous transitions around rounded ends.
 

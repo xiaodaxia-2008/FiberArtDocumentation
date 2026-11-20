@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#v0249-2026113" class="md-skip">
+        <a href="#v0251-20261120" class="md-skip">
           跳转至
         </a>
       
@@ -518,6 +518,8 @@
       
         
       
+        
+      
     
     
     
@@ -691,6 +693,34 @@
   
   
     <li class="md-nav__item">
+      <a href="course_rotation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    旋转生成丝束组
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="winding.html" class="md-nav__link">
         
   
@@ -794,10 +824,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10">
         
           
-          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
             
   
   
@@ -815,8 +845,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -911,6 +941,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -924,7 +958,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11">
         
           
           <div class="md-nav__link md-nav__container">
@@ -946,14 +980,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_11">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -980,6 +1014,62 @@
     
   
     多轴联动系统运动学设置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/positioner_lua.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lua 自定义变位机策略
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/equipment_integration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    设备与控制器集成
   
 
     
@@ -1211,6 +1301,28 @@
       目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#v0251-20261120" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v0.25.1 2026.11.20
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v0250-20261113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v0.25.0 2026.11.13
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#v0249-2026113" class="md-nav__link">
@@ -2177,6 +2289,20 @@
 
   <h1>Changelog</h1>
 
+<h2 id="v0251-20261120">v0.25.1 2026.11.20</h2>
+<ul>
+<li>网络授权优先使用本机已保存的用户 ID，与用户 ID 生成器保持一致，减少授权不匹配问题</li>
+<li>新增绕指定轴旋转生成 Course 的操作，便于复用已有铺放路径</li>
+<li>变位机支持 Lua 自定义转角策略，方便适配特殊设备与工艺需求</li>
+</ul>
+<h2 id="v0250-20261113">v0.25.0 2026.11.13</h2>
+<ul>
+<li>仿真组支持关节点动、笛卡尔点动和自定义参考坐标系，调整机器人与外部轴位置更加方便</li>
+<li>新增数控数字孪生面板，支持连接控制器并配置各关节映射，直观查看设备状态</li>
+<li>支持导出机床配置和轻量化机床包，便于将仿真设备及坐标系用于数控系统</li>
+<li>后处理器支持通过本地服务与外部工具协作，并新增汇川扫描相机和纳博特机器人后处理程序</li>
+<li>改进仿真组属性面板布局和连续旋转关节操作，窄窗口下的编辑更加方便</li>
+</ul>
 <h2 id="v0249-2026113">v0.24.9 2026.11.3</h2>
 <ul>
 <li>轨迹类节点右键菜单新增“转换为轨迹节点”操作，支持将铺层等派生轨迹一键提取为标准通用轨迹节点，便于独立管理与复用</li>

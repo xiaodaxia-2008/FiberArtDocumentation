@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#v0249-2026113" class="md-skip">
+        <a href="#v0251-20261120" class="md-skip">
           Skip to content
         </a>
       
@@ -518,6 +518,8 @@
       
         
       
+        
+      
     
     
     
@@ -691,6 +693,34 @@
   
   
     <li class="md-nav__item">
+      <a href="course_rotation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rotating courses around a part axis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="winding.html" class="md-nav__link">
         
   
@@ -794,10 +824,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10">
         
           
-          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
             
   
   
@@ -815,8 +845,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -911,6 +941,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -924,7 +958,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11">
         
           
           <div class="md-nav__link md-nav__container">
@@ -946,14 +980,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_11">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -980,6 +1014,62 @@
     
   
     Multi-axis Linkage System Kinematics Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/positioner_lua.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom positioner angles with Lua
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/equipment_integration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipment and controller integration
   
 
     
@@ -1211,6 +1301,28 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#v0251-20261120" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v0.25.1 (2026.11.20)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v0250-20261113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v0.25.0 (2026.11.13)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#v0249-2026113" class="md-nav__link">
@@ -2529,6 +2641,20 @@
 
   <h1>Changelog</h1>
 
+<h2 id="v0251-20261120">v0.25.1 (2026.11.20)</h2>
+<ul>
+<li>Network licensing now prefers the user ID saved on this Windows account, keeping it aligned with the user ID generator and reducing license mismatches.</li>
+<li>Generate rotated courses around a line-segment axis, retaining all tows with preview and batch undo/redo.</li>
+<li>Control positioner angles with Lua using workpiece positions and previous joint values, including continuous transitions around rounded ends.</li>
+</ul>
+<h2 id="v0250-20261113">v0.25.0 (2026.11.13)</h2>
+<ul>
+<li>Added joint and Cartesian jogging with custom reference frames for simulation groups.</li>
+<li>Added a CNC digital twin panel with controller connection and configurable joint mapping.</li>
+<li>Export machine configurations and lightweight machine packages for use in CNC systems.</li>
+<li>Added local-service integration for postprocessing tools, plus Inovance scanner-camera and Nabote robot postprocessors.</li>
+<li>Improved simulation-group layouts and continuous-joint editing, including narrow panels.</li>
+</ul>
 <h2 id="v0249-2026113">v0.24.9 (2026.11.3)</h2>
 <ul>
 <li>Added a "Convert to TrajectoryNode" context menu action for trajectory-derived nodes, allowing easy conversion of fiber plies into standalone trajectory nodes for independent inspection and reuse</li>

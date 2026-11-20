@@ -526,6 +526,8 @@
       
         
       
+        
+      
     
     
     
@@ -726,6 +728,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#recent-workflow-additions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recent workflow additions
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -806,6 +819,34 @@
     
   
     Ply Planner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="course_rotation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rotating courses around a part axis
   
 
     
@@ -932,10 +973,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10">
         
           
-          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_10" id="__nav_4_10_label" tabindex="">
             
   
   
@@ -953,8 +994,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1049,6 +1090,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1065,7 +1110,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11">
         
           
           <div class="md-nav__link md-nav__container">
@@ -1087,14 +1132,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4_10" id="__nav_4_10_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4_11" id="__nav_4_11_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_11">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1121,6 +1166,62 @@
     
   
     Multi-axis Linkage System Kinematics Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/positioner_lua.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom positioner angles with Lua
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/equipment_integration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipment and controller integration
   
 
     
@@ -1432,6 +1533,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#recent-workflow-additions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recent workflow additions
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1450,7 +1562,7 @@
 
 
 <h1 id="current-workflow">Current Workflow</h1>
-<p>This page describes the FiberArt 0.22.0 interface and workflow. The main process is to prepare geometry and equipment, create or plan plies, inspect the result, configure the motion system, simulate, and export a machine program.</p>
+<p>This page describes the FiberArt v0.25.0 and the explicitly marked develop additions interface and workflow. The main process is to prepare geometry and equipment, create or plan plies, inspect the result, configure the motion system, simulate, and export a machine program.</p>
 <h2 id="1-create-a-project-and-import-models">1. Create a Project and Import Models</h2>
 <ol>
 <li>Use <strong>File &gt; Open</strong> to open a project or file. In the open-file dialog, choose a file-type filter such as <strong>CADPart</strong>, <strong>CADAssembly</strong>, <strong>CADOneShape</strong>, <strong>SurfaceMesh</strong>, <strong>Model</strong>, <strong>Scene</strong>, or <strong>Node</strong>; you can also choose <strong>All</strong> and let FiberArt select the factory from the file extension. Use <strong>Save</strong> or <strong>Save As</strong> to save the project. You can also start from the blank scene shown at startup and add nodes.</li>
@@ -1485,7 +1597,7 @@
 <h2 id="5-simulate-and-export">5. Simulate and Export</h2>
 <p>Open <strong>LayupSimulation &amp; PostProcess</strong> from <strong>Functions</strong>:</p>
 <ol>
-<li>Select the track, robot, positioner, and tool.</li>
+<li>Create/select a simulation group and verify its track, robot, positioner and tool references.</li>
 <li>Add trajectory nodes or use <strong>Auto Select</strong> to select them from the scene tree.</li>
 <li>Choose a kinematic algorithm and track/positioner strategies, then click <strong>Apply</strong>. Use <strong>Apply to All</strong> to apply settings to all selected trajectories.</li>
 <li>Set the simulation speed and use <strong>start</strong>, <strong>pause</strong>, <strong>continue</strong>, and <strong>stop</strong>.</li>
@@ -1510,6 +1622,13 @@
 <li><a href="simulation.html">Simulation</a></li>
 <li><a href="../advanced/pose_calibration.html">Poses and Calibration</a></li>
 <li><a href="../advanced/post_process.html">Post-processing Customization</a></li>
+</ul>
+<h2 id="recent-workflow-additions">Recent workflow additions</h2>
+<ul>
+<li>Use <a href="course_rotation.html">course rotation</a> to generate courses around rotational parts (develop).</li>
+<li>Select a configured simulation group for simulation; use its properties for joint/TCP jogging and saved reference frames. See <a href="simulation.html">Simulation</a>.</li>
+<li>For end-pole angle flips, see <a href="../advanced/positioner_lua.html">Lua positioner control</a> (develop).</li>
+<li>See <a href="../advanced/equipment_integration.html">Equipment and controller integration</a> for model editing, machine export and telemetry.</li>
 </ul>
 
 

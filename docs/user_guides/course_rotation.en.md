@@ -1,7 +1,7 @@
 # Rotating courses around a part axis
 
 !!! note "Availability"
-    Added on the develop branch after v0.25.0; not included in the v0.25.0 installer.
+    Available in FiberArt v0.25.1 and later.
 
 Use **Rotate to Generate Courses** in a Course node's context menu to create
 rotated copies in the same ply. Each copy contains all tows from the source

@@ -1,6 +1,6 @@
 # Current Workflow
 
-This page describes the FiberArt v0.25.0 and the explicitly marked develop additions interface and workflow. The main process is to prepare geometry and equipment, create or plan plies, inspect the result, configure the motion system, simulate, and export a machine program.
+This page describes the FiberArt v0.25.2 interface and workflow. The main process is to prepare geometry and equipment, create or plan plies, inspect the result, configure the motion system, simulate, and export a machine program.
 
 ## 1. Create a Project and Import Models
 
@@ -81,7 +81,15 @@ When an operation fails, inspect the **Log** panel first and verify node types, 
 
 ## Recent workflow additions
 
-- Use [course rotation](course_rotation.md) to generate courses around rotational parts (develop).
+- Use [course rotation](course_rotation.md) to generate courses around rotational parts.
 - Select a configured simulation group for simulation; use its properties for joint/TCP jogging and saved reference frames. See [Simulation](simulation.md).
-- For end-pole angle flips, see [Lua positioner control](../advanced/positioner_lua.md) (develop).
+- For end-pole angle flips, see [Lua positioner control](../advanced/positioner_lua.md).
 - See [Equipment and controller integration](../advanced/equipment_integration.md) for model editing, machine export and telemetry.
+
+
+## Scene tree and remote controllers
+
+- Use Model > Create Surface to create a cylindrical, conical, or spherical surface. The scene tree uses the corresponding surface icon. Cylinder and cone icons show open rims.
+- Use Explode on an OCC shape to expose its immediate subshapes in the scene tree. Right-click the original node and choose Restore Exploded Shape to fold the subtree back into the original shape. Undo restores the exploded nodes.
+- Select two or more OCC shape nodes, right-click a selected node, and choose Merge Topo Shapes to create a compound that preserves their positions. The merge can be undone.
+- Open the KUKA Remote Controller or CNC Digital Twin from Functions > Remote Controllers.

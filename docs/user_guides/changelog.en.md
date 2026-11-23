@@ -1,3 +1,12 @@
+## v0.25.2 (2026.11.23)
+
+- Open the KUKA Remote Controller and CNC Digital Twin from Functions > Remote Controllers.
+- Restore exploded OCC shapes and merge multiple selected shape nodes from the context menu.
+- Use consistent icons for surface creation and scene nodes, with open rims for cylindrical and conical surfaces.
+- Updated the welcome page with current scene file and menu guidance.
+- Fixed premature trimming of surface offsets caused by undercounting curve length.
+- Corrected dwell output for the Syntec postprocessor.
+
 ## v0.25.1 (2026.11.20)
 
 - Network licensing now prefers the user ID saved on this Windows account, keeping it aligned with the user ID generator and reducing license mismatches.

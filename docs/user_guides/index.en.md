@@ -6,16 +6,16 @@ This documentation provides guidance for using the `FiberArt` software. Users ar
 
 | Item | Current coverage |
 | --- | --- |
-| Released version | FiberArt **v0.25.0** |
-| Unreleased features | **develop**: course rotation and Lua custom positioner control; marked on their pages and not included in the v0.25.0 installer |
-| FiberArt source reviewed through | `badabeaa97a06aeb01888791b1efbf33b6b54d24` |
-| Last updated | **2026-11-18** |
+| Released version | FiberArt **v0.25.2** |
+| Unreleased features | None separately documented in this update |
+| FiberArt source reviewed through | `f9689aed2581073bc0e5006c22fd282208301cdb` |
+| Last updated | **2026-11-23** |
 | Known omissions | No outstanding feature instructions recorded within this review scope; this does not mean every older page has been revalidated |
 
 Update this table in both languages whenever the manual changes. For the next update, compare user-visible source changes from the recorded commit to the target version, inspect and document them, then advance the baseline. List any remaining gaps explicitly; a new release alone does not advance manual coverage.
 
 !!! attention "Version differences"
-    Features marked develop are unreleased. Other versions may have different interfaces. Please [contact us](mailto:fiberart@myshawn.com) if you find discrepancies.
+    Other versions may have different interfaces. Please [contact us](mailto:fiberart@myshawn.com) if you find discrepancies.
 
 ## Quick Start Tutorial
 

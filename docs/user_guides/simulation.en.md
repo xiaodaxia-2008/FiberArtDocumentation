@@ -95,7 +95,7 @@ See [Multi-axis Linkage System Kinematics Settings](../advanced/kinematics.en.md
 7. Validate frames, poses, joint limits, speeds, and I/O commands in offline simulation or a controller test environment.
 
 
-## Custom positioner angles (develop)
+## Custom positioner angles
 
 Select **RuleBased → Positioner → CustomFunction**, then **Edit Custom Function**. Click **Apply** to save the script to the current trajectory. This disables the alignment/fixed-angle fields. See [Lua positioner control](../advanced/positioner_lua.md) for units, callback inputs and rounded-end transitions. This addition is not included in v0.25.0.
 

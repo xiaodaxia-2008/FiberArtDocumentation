@@ -1,7 +1,7 @@
 # Custom positioner angles with Lua
 
 !!! note "Availability"
-    Added on develop after v0.25.0; not included in the v0.25.0 installer.
+    Available in FiberArt v0.25.1 and later.
 
 1. Open the **Simulation/PostProcess** panel and select the simulation group.
 2. Select **RuleBased** as the system IK algorithm.

@@ -739,6 +739,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#scene-tree-and-remote-controllers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scene tree and remote controllers
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1544,6 +1555,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#scene-tree-and-remote-controllers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scene tree and remote controllers
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1562,7 +1584,7 @@
 
 
 <h1 id="current-workflow">Current Workflow</h1>
-<p>This page describes the FiberArt v0.25.0 and the explicitly marked develop additions interface and workflow. The main process is to prepare geometry and equipment, create or plan plies, inspect the result, configure the motion system, simulate, and export a machine program.</p>
+<p>This page describes the FiberArt v0.25.2 interface and workflow. The main process is to prepare geometry and equipment, create or plan plies, inspect the result, configure the motion system, simulate, and export a machine program.</p>
 <h2 id="1-create-a-project-and-import-models">1. Create a Project and Import Models</h2>
 <ol>
 <li>Use <strong>File &gt; Open</strong> to open a project or file. In the open-file dialog, choose a file-type filter such as <strong>CADPart</strong>, <strong>CADAssembly</strong>, <strong>CADOneShape</strong>, <strong>SurfaceMesh</strong>, <strong>Model</strong>, <strong>Scene</strong>, or <strong>Node</strong>; you can also choose <strong>All</strong> and let FiberArt select the factory from the file extension. Use <strong>Save</strong> or <strong>Save As</strong> to save the project. You can also start from the blank scene shown at startup and add nodes.</li>
@@ -1625,10 +1647,17 @@
 </ul>
 <h2 id="recent-workflow-additions">Recent workflow additions</h2>
 <ul>
-<li>Use <a href="course_rotation.html">course rotation</a> to generate courses around rotational parts (develop).</li>
+<li>Use <a href="course_rotation.html">course rotation</a> to generate courses around rotational parts.</li>
 <li>Select a configured simulation group for simulation; use its properties for joint/TCP jogging and saved reference frames. See <a href="simulation.html">Simulation</a>.</li>
-<li>For end-pole angle flips, see <a href="../advanced/positioner_lua.html">Lua positioner control</a> (develop).</li>
+<li>For end-pole angle flips, see <a href="../advanced/positioner_lua.html">Lua positioner control</a>.</li>
 <li>See <a href="../advanced/equipment_integration.html">Equipment and controller integration</a> for model editing, machine export and telemetry.</li>
+</ul>
+<h2 id="scene-tree-and-remote-controllers">Scene tree and remote controllers</h2>
+<ul>
+<li>Use Model &gt; Create Surface to create a cylindrical, conical, or spherical surface. The scene tree uses the corresponding surface icon. Cylinder and cone icons show open rims.</li>
+<li>Use Explode on an OCC shape to expose its immediate subshapes in the scene tree. Right-click the original node and choose Restore Exploded Shape to fold the subtree back into the original shape. Undo restores the exploded nodes.</li>
+<li>Select two or more OCC shape nodes, right-click a selected node, and choose Merge Topo Shapes to create a compound that preserves their positions. The merge can be undone.</li>
+<li>Open the KUKA Remote Controller or CNC Digital Twin from Functions &gt; Remote Controllers.</li>
 </ul>
 
 

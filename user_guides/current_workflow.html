@@ -739,6 +739,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#场景树与远程控制器" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        场景树与远程控制器
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1544,6 +1555,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#场景树与远程控制器" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        场景树与远程控制器
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1562,7 +1584,7 @@
 
 
 <h1 id="当前版本工作流">当前版本工作流</h1>
-<p>本文覆盖 v0.25.0 工作流及明确标注的 develop 新增功能。软件的核心工作流是：准备几何与设备模型，创建或规划铺层，检查铺层质量，配置运动系统，仿真并导出设备程序。</p>
+<p>本文覆盖 FiberArt v0.25.2 的工作流。软件的核心工作流是：准备几何与设备模型，创建或规划铺层，检查铺层质量，配置运动系统，仿真并导出设备程序。</p>
 <h2 id="1-创建工程与导入模型">1. 创建工程与导入模型</h2>
 <ol>
 <li>使用 <strong>文件 &gt; 打开</strong> 打开工程或文件。在打开文件对话框中，按需要选择 <strong>CAD 零件</strong>、<strong>CAD 装配体</strong>、<strong>CAD 单体</strong>、<strong>网格化曲面</strong>、<strong>模型</strong>、<strong>场景</strong>、<strong>节点</strong> 等文件类型过滤器；也可以选择 <strong>全部</strong>，由软件根据文件扩展名识别类型。使用 <strong>保存</strong> 或 <strong>另存为</strong> 保存工程；启动后也可以从空白场景开始添加节点。</li>
@@ -1638,10 +1660,17 @@
 </ul>
 <h2 id="近期工作流补充">近期工作流补充</h2>
 <ul>
-<li>回转零件先规划源 Course，再使用<a href="course_rotation.html">旋转生成丝束组</a>（develop）。</li>
+<li>回转零件先规划源 Course，再使用<a href="course_rotation.html">旋转生成丝束组</a>。</li>
 <li>仿真面板选择已配置的仿真组；点动、TCP 和参考坐标系在组属性中管理，见<a href="simulation.html">仿真</a>。</li>
-<li>端头角度翻转可使用 <a href="../advanced/positioner_lua.html">Lua 自定义变位机策略</a>（develop）。</li>
+<li>端头角度翻转可使用 <a href="../advanced/positioner_lua.html">Lua 自定义变位机策略</a>。</li>
 <li>模型编辑、机床包导出与遥测同步见<a href="../advanced/equipment_integration.html">设备与控制器集成</a>。</li>
+</ul>
+<h2 id="场景树与远程控制器">场景树与远程控制器</h2>
+<ul>
+<li>在“建模 → 创建曲面”中创建圆柱面、圆锥面或球面。场景树使用对应的曲面图标，圆柱面和圆锥面的轮廓显示开口。</li>
+<li>对 OCC 形状使用“爆炸分解”可将直接子形状展开成场景树节点。右键单击原节点并选择“还原爆炸分解”，即可折回原形状。可用撤销恢复拆分节点。</li>
+<li>在场景树中多选两个或更多 OCC 形状节点，右键单击其中一个并选择“合并拓扑形状”，即可创建保留各形状位置的复合形状。合并可撤销。</li>
+<li>在“功能 → 远程控制器”中打开 KUKA 机器人远程控制器或 CNC 数字孪生。</li>
 </ul>
 
 

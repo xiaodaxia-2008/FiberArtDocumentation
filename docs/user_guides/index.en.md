@@ -2,17 +2,11 @@
 
 This documentation provides guidance for using the `FiberArt` software. Users are encouraged to follow the tutorial steps while performing the software operations.
 
-## Manual version and coverage baseline
+## Manual version
 
-| Item | Current coverage |
+| Applicable version | Last updated |
 | --- | --- |
-| Released version | FiberArt **v0.25.2** |
-| Unreleased features | None separately documented in this update |
-| FiberArt source reviewed through | `f9689aed2581073bc0e5006c22fd282208301cdb` |
-| Last updated | **2026-11-23** |
-| Known omissions | No outstanding feature instructions recorded within this review scope; this does not mean every older page has been revalidated |
-
-Update this table in both languages whenever the manual changes. For the next update, compare user-visible source changes from the recorded commit to the target version, inspect and document them, then advance the baseline. List any remaining gaps explicitly; a new release alone does not advance manual coverage.
+| FiberArt **v0.25.2** | **2026-11-23** |
 
 !!! attention "Version differences"
     Other versions may have different interfaces. Please [contact us](mailto:fiberart@myshawn.com) if you find discrepancies.

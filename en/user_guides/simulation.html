@@ -1652,7 +1652,7 @@
 
 
 <h1 id="simulation">Simulation</h1>
-<p>Open <strong>LayupSimulation &amp; PostProcess</strong> from <strong>Functions</strong> on the main menu. The panel is scrollable and contains a motion-system section, a trajectory-node list, and two tabs: <strong>Simulation and Export</strong> and <strong>Kinematics Setting</strong>.</p>
+<p>Open <strong>Simulation/PostProcess</strong> from <strong>Functions</strong> on the main menu. The panel is scrollable and contains a motion-system section, a trajectory-node list, and two tabs: <strong>Simulation and Export</strong> and <strong>Kinematics Setting</strong>.</p>
 <h2 id="simulation-group">Simulation Group</h2>
 <p>The current panel selects a <strong>Simulation Group</strong>, rather than individual device selectors. Select the equipment nodes in the scene tree and use <strong>Create Simulation Group</strong> in their context menu. Inspect the group's robot, track, positioner and tool references in its properties. Set a group as the default when it should be used for trajectories without an explicit group.</p>
 <p>The robot must be mounted below its track, the tool below its robot, and the workpiece below the positioner for coordinated positioner motion. Save the scene to retain the group configuration. Track and positioner settings are available only when those devices exist.</p>
@@ -1672,16 +1672,17 @@
 <li><strong>Speed</strong>: simulation speed ratio from 1% to 2000%, with a default of 100%;</li>
 <li><strong>Default</strong>: restore 100% speed;</li>
 <li><strong>Max</strong>: set the speed to 2000%;</li>
-<li>The playback buttons are <strong>start</strong>, <strong>pause</strong>, <strong>continue</strong>, and <strong>stop</strong>; the progress bar shows simulation progress.</li>
+<li>The playback button changes between <strong>Start simulation</strong>, <strong>Pause simulation</strong>, and <strong>Resume simulation</strong>. A separate <strong>Stop simulation</strong> button ends playback. The progress bar shows simulation progress.</li>
 </ul>
-<p>Click <strong>start</strong> to run the simulation using the selected trajectories, devices, and kinematics settings. If no trajectory is selected, the simulation does not start. Use <strong>continue</strong> after pausing and <strong>stop</strong> to terminate the current simulation.</p>
+<p>Click <strong>Start simulation</strong> to calculate the trajectories using your devices and kinematics settings and then play them back. The log records calculation, playback start, pause, resume, completion, or stop. If playback fails to start, check the log for configuration or solver errors.</p>
 <h3 id="post-processing-and-export">Post-processing and Export</h3>
 <p>The export area on the same tab contains:</p>
 <ul>
 <li><strong>Post Script</strong>: select an installed <code>.py</code> post-processing script or <code>.jinja</code> template;</li>
+<li><strong>Browse Online</strong> opens the catalog with post-processor names, versions, and supported FiberArt versions. Select a compatible entry and click <strong>Install</strong>, then click <strong>Use</strong> to select that version in the panel. The catalog marks incompatible entries. Use <strong>Remove</strong> in the catalog to uninstall an online version.</li>
 <li><strong>Install</strong>: choose a <code>.py</code> or <code>.jinja</code> post-processing script, copy it into the software post-processor directory, and add it to the combo box; if a script with the same name already exists, you are asked to confirm before it is overwritten;</li>
-<li><strong>Edit</strong>: open the selected post-processing script in an editing dialog and modify it directly; <code>.jinja</code> templates support Jinja syntax highlighting for easier authoring and review;</li>
-<li><strong>Delete</strong>: delete the selected post-processing script; after confirmation the file is removed from disk and from the combo box;</li>
+<li><strong>Edit</strong>: open the selected local post-processing script in an editing dialog and modify it directly; <code>.jinja</code> templates support Jinja syntax highlighting for easier authoring and review;</li>
+<li><strong>Delete</strong>: delete the selected local post-processing script; after confirmation the file is removed from disk and from the combo box;</li>
 <li><strong>Export Path</strong>: enter the program output path, or click <strong>Select</strong> to open a save-file dialog; changing the post script or trajectory list updates the default filename from the trajectory names and script suffix;</li>
 <li><strong>Reference</strong>: set the coordinate frame used by the exported program. It defaults to the scene root and therefore the world frame;</li>
 <li><strong>Reset</strong>: restore the world reference frame;</li>
@@ -1724,7 +1725,7 @@
 <li>Select the configured <strong>Simulation Group</strong>, or click <strong>Auto Select</strong>.</li>
 <li>Add the trajectories to the trajectory-node list.</li>
 <li>Choose the algorithm and strategies in <strong>Kinematics Setting</strong>, then click <strong>Apply</strong> or <strong>Apply to All</strong>.</li>
-<li>Set the speed in <strong>Simulation and Export</strong> and click <strong>start</strong> to inspect the motion.</li>
+<li>Set the speed in <strong>Simulation and Export</strong> and click <strong>Start simulation</strong> to inspect the motion.</li>
 <li>Select the post script, export path, and reference node, then click <strong>Export</strong>.</li>
 <li>Validate frames, poses, joint limits, speeds, and I/O commands in offline simulation or a controller test environment.</li>
 </ol>

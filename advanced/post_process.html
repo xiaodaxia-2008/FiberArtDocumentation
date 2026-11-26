@@ -1208,6 +1208,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#cnc-重送轴" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CNC 重送轴
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#自定义模板" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1404,6 +1415,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#cnc-重送轴" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CNC 重送轴
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#自定义模板" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1437,14 +1459,17 @@
 <p>当前版本包含以下常用模板：</p>
 <ul>
 <li><code>KukaKRLLW</code>：Layway KUKA KRL 后处理器，支持按层号、线号和生成进度组织输出；</li>
-<li><code>KukaKRLXR</code>、<code>KukaKRLSubProg</code>、<code>KRLFS</code>：KUKA KRL 输出模板；</li>
+<li><code>KukaKRLXR</code>、<code>KukaKRLFS</code>：KUKA KRL 输出模板；</li>
 <li><code>KukaCNC</code>：KUKA CNC 输出模板；</li>
-<li><code>InovanceScan</code>：汇川扫描轨迹输出模板；</li>
+<li><code>CNC</code>、<code>XDCNC</code>、<code>XDAxisCNC</code>：含重送轴输出的 CNC 模板；</li>
 <li><code>ToJson</code>、<code>ToPoses</code>：将轨迹导出为 JSON 或位姿数据，便于调试和与其他程序交换。</li>
 </ul>
+<h2 id="cnc-重送轴">CNC 重送轴</h2>
+<p>航点的 <code>registers.feed_position</code> 以米记录每道丝路的累计送丝指令位置。有通道处于重送时，它按 TCP 路径增量乘以重送速度比例累加，重送空闲时保持。<code>CNC</code> 将它转换为毫米并输出到 <code>E2</code>，<code>XDCNC</code> 和 <code>XDAxisCNC</code> 输出到 <code>W</code>。这些模板在每道丝路的起点输出 <code>G92</code>，将当前物理位置设为新坐标零点。</p>
+<p><code>XDCNC</code> 和 <code>XDAxisCNC</code> 使用 <code>M101</code> 启动程序、<code>M102</code> 结束程序、<code>M103</code> 开启加热和吹气、<code>M104</code> 关闭加热和吹气。默认切刀停留为 1 秒。控制器的指令和轴映射须与现场配置一致。</p>
 <h2 id="自定义模板">自定义模板</h2>
 <p>高级用户可以复制现有模板并按设备控制器语法修改。模板接收轨迹、机器人/变位机自由度、工具和程序信息，并可使用内置的位姿转换过滤器生成 KUKA 姿态、轴角或其他格式。</p>
-<p>在 <strong>仿真及后处理</strong> 面板的导出区域可以直接管理后处理脚本：</p>
+<p>在 <strong>仿真及后处理</strong> 面板的导出区域可以直接管理本地后处理脚本。在线版本的安装、使用及移除见<a href="../user_guides/simulation.html">仿真与导出</a>。</p>
 <ul>
 <li><strong>安装</strong>：选择一个 <code>.py</code> 或 <code>.jinja</code> 脚本，复制到软件的后处理器目录并加入下拉列表；存在同名脚本时会先确认再覆盖；</li>
 <li><strong>编辑</strong>：在内置编辑器中修改所选脚本，<code>.jinja</code> 模板带有 Jinja 语法高亮；</li>

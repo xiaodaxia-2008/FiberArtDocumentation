@@ -1672,16 +1672,17 @@
 <li><strong>速度</strong>：仿真速度比例，范围为 1% 到 2000%，默认值为 100%；</li>
 <li><strong>默认</strong>：将速度恢复为 100%；</li>
 <li><strong>最大</strong>：将速度设置为 2000%；</li>
-<li>播放控制按钮依次为 <strong>开始</strong>、<strong>暂停</strong>、<strong>继续</strong> 和 <strong>停止</strong>；进度条显示当前仿真进度。</li>
+<li>同一个播放按钮随状态切换为 <strong>开始仿真</strong>、<strong>暂停仿真</strong> 或 <strong>继续仿真</strong>。旁边的 <strong>停止仿真</strong> 单独结束当前播放，进度条显示当前进度。</li>
 </ul>
-<p>点击 <strong>开始</strong> 后，软件根据轨迹节点、设备和运动学参数启动仿真。没有选择轨迹节点时，仿真不会开始。暂停后使用 <strong>继续</strong> 恢复，使用 <strong>停止</strong> 终止当前仿真。</p>
+<p>点击 <strong>开始仿真</strong> 后，软件先根据轨迹、设备和运动学参数计算轨迹，再开始播放。日志会分别记录计算、开始播放、暂停、继续、完成或停止。若仿真未开始播放，可查看日志中的配置或求解错误。</p>
 <h3 id="后处理与导出">后处理与导出</h3>
 <p>同一页签的导出区域包含：</p>
 <ul>
 <li><strong>后置程序</strong>：从已安装的 <code>.py</code> 后处理脚本或 <code>.jinja</code> 模板中选择；</li>
+<li><strong>在线浏览</strong>可打开后处理器目录，查看名称、版本和 FiberArt 兼容范围。选择兼容项后点击 <strong>安装</strong>，下载完成后点击 <strong>使用</strong>，将该版本选入面板下拉列表。目录会标出不兼容的条目。在线版本可在目录中通过 <strong>移除</strong> 卸载。</li>
 <li><strong>安装</strong>：从文件中选择一个 <code>.py</code> 或 <code>.jinja</code> 后处理脚本，复制到软件的后处理器目录并加入下拉列表；如果存在同名脚本，会先弹出确认框，确认后才覆盖；</li>
-<li><strong>编辑</strong>：打开所选后处理脚本的编辑对话框，直接修改脚本内容；<code>.jinja</code> 模板支持 Jinja 语法高亮，编写和检查脚本更直观；</li>
-<li><strong>删除</strong>：删除所选后处理脚本，确认后从磁盘移除该文件并从下拉列表中删除；</li>
+<li><strong>编辑</strong>：打开所选本地后处理脚本的编辑对话框，直接修改脚本内容；<code>.jinja</code> 模板支持 Jinja 语法高亮，编写和检查脚本更直观；</li>
+<li><strong>删除</strong>：删除所选本地后处理脚本，确认后从磁盘移除该文件并从下拉列表中删除；</li>
 <li><strong>导出路径</strong>：填写程序输出路径，点击 <strong>选择</strong> 打开保存文件对话框；切换后置程序或轨迹列表时，软件会根据轨迹名称和后缀更新默认文件名；</li>
 <li><strong>参考节点</strong>：指定导出程序使用的参考坐标系，默认是场景根节点对应的世界坐标系；</li>
 <li><strong>重置</strong>：将参考节点恢复为世界坐标系；</li>
@@ -1724,7 +1725,7 @@
 <li>选择已配置的仿真组，或点击 <strong>自动选择</strong>。</li>
 <li>将需要处理的轨迹加入轨迹节点列表。</li>
 <li>在 <strong>运动学设置</strong> 中选择算法和策略，点击 <strong>应用</strong> 或 <strong>应用到所有轨迹</strong>。</li>
-<li>在 <strong>仿真与导出</strong> 中设置速度并点击 <strong>开始</strong> 检查运动过程。</li>
+<li>在 <strong>仿真与导出</strong> 中设置速度并点击 <strong>开始仿真</strong> 检查运动过程。</li>
 <li>选择后置程序、导出路径和参考节点，点击 <strong>导出</strong> 生成设备程序。</li>
 <li>在离线仿真或控制器测试环境中检查坐标系、姿态、关节限位、速度和 I/O 指令。</li>
 </ol>

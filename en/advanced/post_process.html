@@ -1208,6 +1208,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#cnc-feed-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CNC Feed Axis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#custom-templates" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1404,6 +1415,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#cnc-feed-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CNC Feed Axis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#custom-templates" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1437,14 +1459,17 @@
 <p>The current release includes these commonly used templates:</p>
 <ul>
 <li><code>KukaKRLLW</code>: the Layway KUKA KRL post-processor, with layer, line, and generation-progress tracking;</li>
-<li><code>KukaKRLXR</code>, <code>KukaKRLSubProg</code>, and <code>KRLFS</code>: KUKA KRL output templates;</li>
+<li><code>KukaKRLXR</code> and <code>KukaKRLFS</code> generate KUKA KRL output;</li>
 <li><code>KukaCNC</code>: KUKA CNC output template;</li>
-<li><code>InovanceScan</code>: Inovance scanning trajectory output template;</li>
+<li><code>CNC</code>, <code>XDCNC</code>, and <code>XDAxisCNC</code> generate CNC programs with feed-axis output;</li>
 <li><code>ToJson</code> and <code>ToPoses</code>: export trajectories as JSON or pose data for debugging and data exchange.</li>
 </ul>
+<h2 id="cnc-feed-axis">CNC Feed Axis</h2>
+<p>The <code>registers.feed_position</code> waypoint field stores the cumulative feed command in metres for each course. While any channel is restarting, it increases by the TCP path increment multiplied by the restart speed ratio. The position holds when feeding is idle. <code>CNC</code> converts it to millimetres on <code>E2</code>. <code>XDCNC</code> and <code>XDAxisCNC</code> output it on <code>W</code>. At the start of each course, these templates emit <code>G92</code> to define the current physical position as the new coordinate zero.</p>
+<p><code>XDCNC</code> and <code>XDAxisCNC</code> use <code>M101</code> to start the program, <code>M102</code> to close it, <code>M103</code> to turn heat and blow on, and <code>M104</code> to turn them off. The default cut dwell is one second. Match the controller commands and axis assignments to the machine configuration.</p>
 <h2 id="custom-templates">Custom Templates</h2>
 <p>Advanced users can copy an existing template and adapt it to the target controller syntax. Templates receive trajectory, robot/positioner degrees of freedom, tool, and program data. They can also use built-in pose-conversion filters to generate KUKA poses, axis-angle values, or other representations.</p>
-<p>Post-processing scripts can be managed directly in the export area of the <strong>Simulation/PostProcess</strong> panel:</p>
+<p>Manage local scripts in the export area of the <strong>Simulation/PostProcess</strong> panel. See <a href="../user_guides/simulation.html">Simulation and Export</a> for installing, using, and removing online versions.</p>
 <ul>
 <li><strong>Install</strong>: choose a <code>.py</code> or <code>.jinja</code> script, copy it into the software post-processor directory, and add it to the combo box; if a script with the same name exists, you are asked to confirm before it is overwritten;</li>
 <li><strong>Edit</strong>: modify the selected script in the built-in editor; <code>.jinja</code> templates come with Jinja syntax highlighting;</li>

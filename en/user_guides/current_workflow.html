@@ -1617,13 +1617,13 @@
 <p>Prepare the robot, tool, track, positioner, and workpiece in the scene. Verify parent-child transforms, base frames, flange frames, TCP, and collision geometry. The 0.21.x releases provide URDF generator panels for positioners, tracks, and tools, as well as general model and URDF export.</p>
 <p>Use <strong>Workpiece Pose Calibration</strong> for workpiece registration and <strong>TCP Calibration</strong> for tool-center-point calibration. See <a href="../advanced/pose_calibration.html">Poses and Calibration</a> for pose formats, clipboard transfer, and calibration results.</p>
 <h2 id="5-simulate-and-export">5. Simulate and Export</h2>
-<p>Open <strong>LayupSimulation &amp; PostProcess</strong> from <strong>Functions</strong>:</p>
+<p>Open <strong>Simulation/PostProcess</strong> from <strong>Functions</strong>:</p>
 <ol>
 <li>Create/select a simulation group and verify its track, robot, positioner and tool references.</li>
 <li>Add trajectory nodes or use <strong>Auto Select</strong> to select them from the scene tree.</li>
 <li>Choose a kinematic algorithm and track/positioner strategies, then click <strong>Apply</strong>. Use <strong>Apply to All</strong> to apply settings to all selected trajectories.</li>
-<li>Set the simulation speed and use <strong>start</strong>, <strong>pause</strong>, <strong>continue</strong>, and <strong>stop</strong>.</li>
-<li>Select a post-processing script, export path, reference node, and whether to export each ply separately.</li>
+<li>Set the simulation speed. The playback button changes between <strong>Start simulation</strong>, <strong>Pause simulation</strong>, and <strong>Resume simulation</strong>. Click the separate <strong>Stop simulation</strong> button to end playback.</li>
+<li>Select a post-processing script, export path, and reference node. To add a post-processor, use <strong>Browse Online</strong> for a compatible version or click <strong>Install</strong> to select a local file.</li>
 <li>Click <strong>Export</strong> and validate the program in the target controller or offline simulator.</li>
 </ol>
 <p>Exported waypoints include trajectory-boundary markers. Post-processing templates can use them to distinguish courses or path segments. See <a href="../advanced/post_process.html">Post-processing Customization</a> for template details.</p>

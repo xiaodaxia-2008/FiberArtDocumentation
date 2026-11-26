@@ -17,7 +17,7 @@ hide:
 
 **FiberArt** is an independently developed trajectory planning and simulation software for Automated Fiber Placement (^^AFP^^), featuring simple operation, comprehensive functionality, and excellent performance!
 
-A trial version is currently available; please visit the **[Trial Application](./trial/index.md)** page to apply.
+A trial version is currently available; please visit the **[License Application](./trial/index.md)** page to apply.
 
 ![](./assets/fiberart_plan_spar_demo.gif){ data-title="FiberArt trajectory planning for C-spar parts" width=75% }
 ///caption | >

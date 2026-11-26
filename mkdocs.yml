@@ -53,7 +53,7 @@ theme:
 
 nav:
   - 主页: index.md
-  - 试用申请: trial/index.md
+  - 申请授权: trial/index.md
   - 下载软件: download.md
   - 用户手册:
       - user_guides/index.md
@@ -165,7 +165,7 @@ plugins:
             and compatible with various equipment. Trial is available.
           nav_translations:
             主页: Home
-            试用申请: Trial Application
+            申请授权: License Application
             下载软件: Download Software
             用户手册: User Manual
             节点属性: Node Properties

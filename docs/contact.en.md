@@ -25,4 +25,4 @@ You can contact us through the following ways:
 
 You can also leave a message directly below.
 
-After you submit a [Trial Application](./trial/index.md), we will obtain your phone number, email, and other information and will contact you promptly.
+After you submit a [License Application](./trial/index.md), we will obtain your phone number, email, and other information and will contact you promptly.

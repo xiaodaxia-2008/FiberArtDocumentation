@@ -1,6 +1,6 @@
 # Simulation
 
-Open **LayupSimulation & PostProcess** from **Functions** on the main menu. The panel is scrollable and contains a motion-system section, a trajectory-node list, and two tabs: **Simulation and Export** and **Kinematics Setting**.
+Open **Simulation/PostProcess** from **Functions** on the main menu. The panel is scrollable and contains a motion-system section, a trajectory-node list, and two tabs: **Simulation and Export** and **Kinematics Setting**.
 
 ## Simulation Group
 
@@ -28,18 +28,19 @@ In the **Simulation and Export** tab:
 - **Speed**: simulation speed ratio from 1% to 2000%, with a default of 100%;
 - **Default**: restore 100% speed;
 - **Max**: set the speed to 2000%;
-- The playback buttons are **start**, **pause**, **continue**, and **stop**; the progress bar shows simulation progress.
+- The playback button changes between **Start simulation**, **Pause simulation**, and **Resume simulation**. A separate **Stop simulation** button ends playback. The progress bar shows simulation progress.
 
-Click **start** to run the simulation using the selected trajectories, devices, and kinematics settings. If no trajectory is selected, the simulation does not start. Use **continue** after pausing and **stop** to terminate the current simulation.
+Click **Start simulation** to calculate the trajectories using your devices and kinematics settings and then play them back. The log records calculation, playback start, pause, resume, completion, or stop. If playback fails to start, check the log for configuration or solver errors.
 
 ### Post-processing and Export
 
 The export area on the same tab contains:
 
 - **Post Script**: select an installed `.py` post-processing script or `.jinja` template;
+- **Browse Online** opens the catalog with post-processor names, versions, and supported FiberArt versions. Select a compatible entry and click **Install**, then click **Use** to select that version in the panel. The catalog marks incompatible entries. Use **Remove** in the catalog to uninstall an online version.
 - **Install**: choose a `.py` or `.jinja` post-processing script, copy it into the software post-processor directory, and add it to the combo box; if a script with the same name already exists, you are asked to confirm before it is overwritten;
-- **Edit**: open the selected post-processing script in an editing dialog and modify it directly; `.jinja` templates support Jinja syntax highlighting for easier authoring and review;
-- **Delete**: delete the selected post-processing script; after confirmation the file is removed from disk and from the combo box;
+- **Edit**: open the selected local post-processing script in an editing dialog and modify it directly; `.jinja` templates support Jinja syntax highlighting for easier authoring and review;
+- **Delete**: delete the selected local post-processing script; after confirmation the file is removed from disk and from the combo box;
 - **Export Path**: enter the program output path, or click **Select** to open a save-file dialog; changing the post script or trajectory list updates the default filename from the trajectory names and script suffix;
 - **Reference**: set the coordinate frame used by the exported program. It defaults to the scene root and therefore the world frame;
 - **Reset**: restore the world reference frame;
@@ -90,7 +91,7 @@ See [Multi-axis Linkage System Kinematics Settings](../advanced/kinematics.en.md
 2. Select the configured **Simulation Group**, or click **Auto Select**.
 3. Add the trajectories to the trajectory-node list.
 4. Choose the algorithm and strategies in **Kinematics Setting**, then click **Apply** or **Apply to All**.
-5. Set the speed in **Simulation and Export** and click **start** to inspect the motion.
+5. Set the speed in **Simulation and Export** and click **Start simulation** to inspect the motion.
 6. Select the post script, export path, and reference node, then click **Export**.
 7. Validate frames, poses, joint limits, speeds, and I/O commands in offline simulation or a controller test environment.
 

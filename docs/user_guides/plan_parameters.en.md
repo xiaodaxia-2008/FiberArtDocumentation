@@ -27,7 +27,7 @@ The positions of the above key points are calculated from the parameters given i
 ### Range Definitions {#range-definition}
 - 1-2, 11-12: Endpoint Lift Distance;
 - 2-4: Lead Distance;
-- 4-5: Restart Distance;
+- 4–5 is the TCP travel during restart. At a restart speed ratio of 100%, it equals the physical restart distance;
 - 8-10: Cutting Distance;
 - 3-4, 5-6, 7-8, 8-9: Restart/Cutting speed control range;
 
@@ -130,7 +130,7 @@ Using bidirectional placement can improve efficiency, but the placement equipmen
 
 ### Placement Head
 - Maximum Number of Tows: The maximum number of prepreg tows that the placement head can place in one course, typical values are 4, 8, 16, 32, etc.;
-- Restart Distance: See [Range Definitions](#range-definition)
+- Restart Distance is the calibrated physical feed distance. Set it separately for odd and even channels. See [Range Definitions](#range-definition).
 - Cutting Distance: See [Range Definitions](#range-definition)
 - Minimum Placement Distance: The shortest prepreg tow length the placement head can place, usually close to the restart and cutting distances;
 - Roller Radius: The radius of the placement head roller;
@@ -183,7 +183,9 @@ Using bidirectional placement can improve efficiency, but the placement equipmen
 - Path Linking Strategy: Refer to [Path Linking Strategy](#link-path-policy). This parameter is set in the ply's attribute interface.
 - Transverse Layup Direction: Whether to place from left to right or right to left when generating a transition path.
 - Longitudinal Layup Direction: Whether to reverse the planned placement path direction.
-- Restart Speed: The linear speed of the placement head in the restart segment, m/s;
+- **Restart Speed** is the TCP linear speed in the restart region, in m/s.
+- **Restart Speed Ratio** is the feed motor's linear speed divided by TCP path speed. The editor accepts 1% to 100%, with a default of 100%. For example, a calibrated feed distance of 100 mm at 80% requires about 125 mm of TCP travel before the ply boundary. Export again after changing the ratio to recalculate the restart, contact, and ramp positions.
+- Open reference curves extrapolate restart points and ramp pivots along the endpoint tangent. On closed reference curves, the restart advance must fit within one lap. Restart intervals for adjacent segments on the same channel must stay separate.
 - Placement Speed: The linear speed of the placement head during normal placement, m/s;
 - Idle Speed: The linear speed of the placement head during transition trajectories, m/s;
 - Heat On Offset Distance: The offset of the heat-on command relative to the first start boundary; positive values delay heat-on, negative values advance it.

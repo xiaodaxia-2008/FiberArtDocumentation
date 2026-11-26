@@ -1,5 +1,9 @@
 # Quick Start Tutorial
 
+## Apply for a Software License
+
+Run the license application tool on the Windows computer where FiberArt will be used. After approval, the software-licensed edition downloads a certificate bound to that computer at startup. See [License Application](../trial/index.md).
+
 ## Software Interface Basic Operations
 
 When you first open the software, the interface shown below will appear. Read the [Current Workflow](current_workflow.en.md) first for the complete current-version process; the screenshots on this page mainly explain the basic layout.

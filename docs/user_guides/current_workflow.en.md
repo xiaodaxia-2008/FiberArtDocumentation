@@ -48,13 +48,13 @@ Use **Workpiece Pose Calibration** for workpiece registration and **TCP Calibrat
 
 ## 5. Simulate and Export
 
-Open **LayupSimulation & PostProcess** from **Functions**:
+Open **Simulation/PostProcess** from **Functions**:
 
 1. Create/select a simulation group and verify its track, robot, positioner and tool references.
 2. Add trajectory nodes or use **Auto Select** to select them from the scene tree.
 3. Choose a kinematic algorithm and track/positioner strategies, then click **Apply**. Use **Apply to All** to apply settings to all selected trajectories.
-4. Set the simulation speed and use **start**, **pause**, **continue**, and **stop**.
-5. Select a post-processing script, export path, reference node, and whether to export each ply separately.
+4. Set the simulation speed. The playback button changes between **Start simulation**, **Pause simulation**, and **Resume simulation**. Click the separate **Stop simulation** button to end playback.
+5. Select a post-processing script, export path, and reference node. To add a post-processor, use **Browse Online** for a compatible version or click **Install** to select a local file.
 6. Click **Export** and validate the program in the target controller or offline simulator.
 
 Exported waypoints include trajectory-boundary markers. Post-processing templates can use them to distinguish courses or path segments. See [Post-processing Customization](../advanced/post_process.en.md) for template details.

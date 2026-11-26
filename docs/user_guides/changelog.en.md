@@ -1,3 +1,13 @@
+## v0.25.3 (2026.11.26)
+
+- Browse, install, and use compatible online post-processors from the simulation panel. You can also install local scripts.
+- Start, pause, and resume simulation with one button. The log shows playback status and failure details.
+- Fixed a crash that could occur when exporting with Python scripts or Jinja templates.
+- Set the restart feed speed relative to TCP speed and regenerate the corresponding restart path on export. Open reference curves support endpoint extrapolation for restart moves before the curve start.
+- Updated the Syntec CNC output for program start and end, heating, and blowing. The default cut dwell is one second.
+- The software-licensed edition supports device-bound certificates.
+- Updated the welcome page with simulation and post-processing steps and the support email address.
+
 ## v0.25.2 (2026.11.23)
 
 - Open the KUKA Remote Controller and CNC Digital Twin from Functions > Remote Controllers.

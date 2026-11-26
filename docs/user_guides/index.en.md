@@ -6,7 +6,7 @@ This documentation provides guidance for using the `FiberArt` software. Users ar
 
 | Applicable version | Last updated |
 | --- | --- |
-| FiberArt **v0.25.2** | **2026-11-23** |
+| FiberArt **v0.25.3** | **2026-11-26** |
 
 !!! attention "Version differences"
     Other versions may have different interfaces. Please [contact us](mailto:fiberart@myshawn.com) if you find discrepancies.
